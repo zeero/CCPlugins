@@ -64,10 +64,11 @@ Pre-configured commands that make Claude Code work like the senior engineer you 
 
 ### Development Workflow
 
+Remove debug artifacts and clean up after development sessions
 ```
 /cleanproject
 ```
-Remove debug artifacts and clean up after development sessions
+___
 
 ```
 /commit
