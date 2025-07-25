@@ -126,15 +126,17 @@ Find all TODO, FIXME, and HACK comments in your codebase
 
 ### Session Management
 
+Begin a documented coding session with goals tracking
 ```
 /session-start
 ```
-Begin a documented coding session with goals tracking
-___
+
+---
+
+Summarize accomplishments and prepare handoff notes
 ```
 /session-end
 ```
-Summarize accomplishments and prepare handoff notes
 ___
 ## Real World Example
 
