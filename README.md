@@ -142,7 +142,7 @@ CCPlugins are markdown files that provide intelligent instructions to Claude Cod
 
 No configuration required. Commands adapt to your project's structure and conventions.
 
-## 📝 Technical Notes
+## Technical Notes
 
 ### Command Philosophy
 Commands are written in **first person** ("I'll help you...") rather than imperative ("Do this..."). This design choice transforms Claude Code from a command executor into a **collaborative assistant**, creating a more conversational and helpful interaction.
