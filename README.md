@@ -38,6 +38,14 @@ CCPlugins is a curated set of commands that extend Claude Code Cli with common d
 
 *Built for developers tired of typing "please act like a senior engineer" in every conversation.*
 
+## Quick Links
+
+- [Installation](#installation) - Get started in 30 seconds
+- [Commands](#commands) - See all available commands
+- [How It Works](#how-it-works) - Understanding the magic
+- [Technical Notes on Prompt Engineering](#technical-notes) - Why conversational design matters
+- [Contributing](#contributing) - Help make it better
+
 ## Installation
 
 ### Quick Install
