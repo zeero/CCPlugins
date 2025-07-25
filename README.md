@@ -209,7 +209,7 @@ Custom commands appear with a `(user)` tag in Claude Code CLI to distinguish the
 ## Time Savings
 
 | Task | Manual Time | With Commands | Time Saved |
-|||||
+|------|-------------|---------------|------------|
 | Git commits | 5-10 min | 30 sec | ~9 min |
 | Code cleanup | 20-30 min | 1 min | ~25 min |
 | Test fixes | 15-20 min | 2-5 min | ~15 min |
