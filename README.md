@@ -52,41 +52,63 @@ python install.py
 
 ### Development Workflow
 
-`/cleanproject`  
+```
+/cleanproject
+```
 Remove debug artifacts and clean up after development sessions
 
-`/commit`  
+```
+/commit
+```  
 Analyze changes and create conventional commit messages
 
-`/format`  
+```
+/format
+```
 Auto-detect and run the project's code formatter
 
-`/test`  
+```
+/test
+```
 Run tests and automatically fix simple failures
 
 ### Code Quality
 
-`/review`  
+```
+/review
+```
 Comprehensive code review for bugs, security, and performance
 
-`/remove-comments`  
+```
+/remove-comments
+```
 Remove obvious comments while preserving valuable documentation
 
-`/cleanup-types`  
+```
+/cleanup-types
+```
 Remove TypeScript 'any' types and suggest proper types
 
-`/fix-imports`  
+```
+/fix-imports
+```
 Fix broken imports after moving or renaming files
 
-`/find-todos`  
+```
+/find-todos
+```
 Find all TODO, FIXME, and HACK comments in your codebase
 
 ### Session Management
 
-`/session-start`  
+```
+/session-start
+```
 Begin a documented coding session with goals tracking
 
-`/session-end`  
+```
+/session-end
+```
 Summarize accomplishments and prepare handoff notes
 
 ## Real World Example
