@@ -7,16 +7,16 @@
  ╚═════╝ ╚═════╝╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝
 ```
 
-# Claude Commands
+# CCPlugins
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/yourusername/claude-commands)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yourusername/claude-commands/blob/main/CONTRIBUTING.md)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/brennercruvinel/CCPlugins/blob/main/CONTRIBUTING.md)
 
 Productivity commands for Claude Code CLI that save 2-3 hours per week on repetitive tasks.
 
 *Built for developers tired of typing "please act like a senior engineer" in every conversation.*
 
-## What is Claude Commands?
+## What is CCPlugins?
 
 A curated set of commands that extend Claude Code with common development workflows. Each command uses Claude's context awareness to intelligently handle tasks that normally require manual work.
 
@@ -26,7 +26,7 @@ A curated set of commands that extend Claude Code with common development workfl
 
 **Mac/Linux:**
 ```bash
-curl -sSL https://raw.githubusercontent.com/yourusername/claude-commands/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/brennercruvinel/CCPlugins/main/install.sh | bash
 ```
 
 **Windows/Cross-platform:**
@@ -36,8 +36,8 @@ python install.py
 
 ### Manual Install
 ```bash
-git clone https://github.com/yourusername/claude-commands.git
-cd claude-commands
+git clone https://github.com/brennercruvinel/CCPlugins.git
+cd CCPlugins
 python install.py
 ```
 
@@ -79,7 +79,7 @@ src/
 
 ## How It Works
 
-Claude Commands are markdown files that provide intelligent instructions to Claude Code. When you type a command:
+CCPlugins are markdown files that provide intelligent instructions to Claude Code. When you type a command:
 
 1. Claude reads the command definition from `~/.claude/commands/`
 2. Analyzes your project context

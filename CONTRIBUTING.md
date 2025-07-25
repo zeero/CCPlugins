@@ -1,6 +1,6 @@
-# Contributing to Claude Commands
+# Contributing to CCPlugins
 
-Thanks for your interest in improving Claude Commands! This project helps developers save time with practical automation.
+Thanks for your interest in improving CCPlugins! This project helps developers save time with practical automation.
 
 ## How to Contribute
 
@@ -32,8 +32,8 @@ Open an issue with:
 ## Development Setup
 
 ```bash
-git clone https://github.com/[user]/claude-commands
-cd claude-commands
+git clone https://github.com/[user]/CCPlugins
+cd CCPlugins
 python install.py  # Test your changes
 ```
 

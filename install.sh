@@ -1,5 +1,5 @@
 #!/bin/bash
-# Claude Commands Installer for Mac/Linux
+# CCPlugins Installer for Mac/Linux
 
 set -e
 COMMANDS_DIR="$HOME/.claude/commands"
@@ -12,5 +12,5 @@ if [ -n "$(ls -A "$COMMANDS_DIR"/*.md 2>/dev/null)" ]; then
 fi
 
 cp "$(dirname "$0")/commands"/*.md "$COMMANDS_DIR/"
-echo "✨ Claude Commands installed to $COMMANDS_DIR"
+echo "✨ CCPlugins installed to $COMMANDS_DIR"
 echo "📖 Type / in Claude Code to see available commands"

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Claude Commands Installer
+CCPlugins Installer
 Copies command files to ~/.claude/commands/
 """
 
@@ -17,7 +17,7 @@ def main():
     claude_dir = Path.home() / ".claude"
     commands_dest = claude_dir / "commands"
     
-    print("🚀 Claude Commands Installer")
+    print("🚀 CCPlugins Installer")
     print("=" * 40)
     
     # Check source directory exists
