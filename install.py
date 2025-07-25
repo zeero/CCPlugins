@@ -34,9 +34,9 @@ def main():
     # Backup existing commands if any exist
     existing_files = list(commands_dest.glob("*.md"))
     if existing_files:
-        backup_dir = commands_dest / f"backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        backup_dir = claude_dir / f"commands_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
         backup_dir.mkdir(exist_ok=True)
-        print(f"\n📦 Backing up {len(existing_files)} existing commands to {backup_dir.name}")
+        print(f"\n📦 Backing up {len(existing_files)} existing commands to ~/.claude/{backup_dir.name}")
         for file in existing_files:
             shutil.copy2(file, backup_dir)
     

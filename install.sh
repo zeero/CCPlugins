@@ -6,7 +6,7 @@ COMMANDS_DIR="$HOME/.claude/commands"
 mkdir -p "$COMMANDS_DIR"
 
 if [ -n "$(ls -A "$COMMANDS_DIR"/*.md 2>/dev/null)" ]; then
-    BACKUP_DIR="$COMMANDS_DIR/backup_$(date +%Y%m%d_%H%M%S)"
+    BACKUP_DIR="$HOME/.claude/commands_backup_$(date +%Y%m%d_%H%M%S)"
     mkdir -p "$BACKUP_DIR"
     cp "$COMMANDS_DIR"/*.md "$BACKUP_DIR/" 2>/dev/null || true
 fi
