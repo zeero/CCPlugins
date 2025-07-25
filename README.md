@@ -70,47 +70,59 @@ Remove debug artifacts and clean up after development sessions
 ```
 ___
 
+Analyze changes and create conventional commit messages
 ```
 /commit
-```  
-Analyze changes and create conventional commit messages
-___
+```
+
+---
+
+Auto-detect and run the project's code formatter
 ```
 /format
 ```
-Auto-detect and run the project's code formatter
-___
+
+---
+
+Run tests and automatically fix simple failures
 ```
 /test
 ```
-Run tests and automatically fix simple failures
 
 ### Code Quality
 
+Comprehensive code review for bugs, security, and performance
 ```
 /review
 ```
-Comprehensive code review for bugs, security, and performance
-___
+
+---
+
+Remove obvious comments while preserving valuable documentation
 ```
 /remove-comments
 ```
-Remove obvious comments while preserving valuable documentation
-___
+
+---
+
+Remove TypeScript 'any' types and suggest proper types
 ```
 /cleanup-types
 ```
-Remove TypeScript 'any' types and suggest proper types
-___
+
+---
+
+Fix broken imports after moving or renaming files
 ```
 /fix-imports
 ```
-Fix broken imports after moving or renaming files
-___
+
+---
+
+Find all TODO, FIXME, and HACK comments in your codebase
 ```
 /find-todos
 ```
-Find all TODO, FIXME, and HACK comments in your codebase
 
 ### Session Management
 
