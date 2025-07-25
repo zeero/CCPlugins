@@ -23,10 +23,6 @@
 
 Productivity commands for Claude Code CLI that save 2-3 hours per week on repetitive tasks.
 
-A curated and tested set of commands that extend Claude Code with common development workflows. Each command uses Claude's context awareness to intelligently handle tasks that normally require manual work.
-
-*Built for developers tired of typing "please act like a senior engineer" in every conversation.*
-
 ### You know the drill...
 
 🤦 Ask Claude to fix a bug, get 15 test files  
@@ -34,8 +30,10 @@ A curated and tested set of commands that extend Claude Code with common develop
 🙄 "Please add a button" → Complete UI framework rewrite  
 😭 Every conversation: "Act like a google engineer who doesn't overengineer"
 
-**CCPlugins:** Pre-configured commands that make Claude work like the senior engineer you keep asking for.
+CCPlugins is a curated set of commands that extend Claude Code with common development workflows. These commands handle the boring stuff, since the agent already knows your codebase, they just tell it what to do with that knowledge.
 
+
+*Built for developers tired of typing "please act like a senior engineer" in every conversation.*
 
 ## Installation
 
@@ -59,6 +57,7 @@ python install.py
 ```
 
 ## Commands
+Pre-configured commands that make Claude Code work like the senior engineer you keep asking for.
 
 ### Development Workflow
 
