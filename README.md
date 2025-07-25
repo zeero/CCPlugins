@@ -15,26 +15,26 @@
 ```
 
 # Claude Code Plugins
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
+[![Version](https://img.shields.io/badge/version-1.6.0-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/brennercruvinel/CCPlugins/blob/main/CONTRIBUTING.md)
 
-Productivity commands for Claude Code CLI that save 2-3 hours per week on repetitive tasks.
-
-*Built for developers tired of typing "please act like a senior engineer" in every conversation.*
 
 ## What is CCPlugins?
 
+Productivity commands for Claude Code CLI that save 2-3 hours per week on repetitive tasks.
+
 A curated and tested set of commands that extend Claude Code with common development workflows. Each command uses Claude's context awareness to intelligently handle tasks that normally require manual work.
+
+*Built for developers tired of typing "please act like a senior engineer" in every conversation.*
 
 ### You know the drill...
 
 🤦 Ask Claude to fix a bug, get 15 test files  
 😤 Request a simple refactor, receive a dissertation on clean code  
 🙄 "Please add a button" → Complete UI framework rewrite  
-😭 Every conversation: "Act like a senior engineer who doesn't overengineer"
+😭 Every conversation: "Act like a google engineer who doesn't overengineer"
 
-**CCPlugins:** Because Claude should already know what you want.
+**CCPlugins:** Pre-configured commands that make Claude work like the senior engineer you keep asking for.
 
 
 ## Installation
