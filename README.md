@@ -67,81 +67,81 @@ python install.py
 ```
 
 ## Commands
-Pre-configured commands that make Claude Code work like the senior engineer you keep asking for.
+*Pre-configured commands that make Claude Code work like the senior engineer you keep asking for.*
 
 ### Development Workflow
 
-Remove debug artifacts and clean up after development sessions
+*Remove debug artifacts and clean up after development sessions*
 ```
 /cleanproject
 ```
 
 
 
-Analyze changes and create conventional commit messages
+*Analyze changes and create conventional commit messages*
 ```
 /commit
 ```
 
 
 
-Auto-detect and run the project's code formatter
+*Auto-detect and run the project's code formatter*
 ```
 /format
 ```
 
 
 
-Run tests and automatically fix simple failures
+*Run tests and automatically fix simple failures*
 ```
 /test
 ```
 
 ### Code Quality
 
-Comprehensive code review for bugs, security, and performance
+*Comprehensive code review for bugs, security, and performance*
 ```
 /review
 ```
 
 
 
-Remove obvious comments while preserving valuable documentation
+*Remove obvious comments while preserving valuable documentation*
 ```
 /remove-comments
 ```
 
 
 
-Remove TypeScript 'any' types and suggest proper types
+*Remove TypeScript 'any' types and suggest proper types*
 ```
 /cleanup-types
 ```
 
 
 
-Fix broken imports after moving or renaming files
+*Fix broken imports after moving or renaming files*
 ```
 /fix-imports
 ```
 
 
 
-Find all TODO, FIXME, and HACK comments in your codebase
+*Find all TODO, FIXME, and HACK comments in your codebase*
 ```
 /find-todos
 ```
 
 ### Session Management
 
-Begin a documented coding session with goals tracking
+*Begin a documented coding session with goals tracking*
 ```
 /session-start
 ```
 
 
 
-Summarize accomplishments and prepare handoff notes
+*Summarize accomplishments and prepare handoff notes*
 ```
 /session-end
 ```
