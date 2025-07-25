@@ -14,10 +14,11 @@
 ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝                               
 ```
 
-# Claude Code Plugins
+# Claude Code Commands | Automate the Boring Stuff 
 [![Version](https://img.shields.io/badge/version-1.6.0-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
 [![Claude Code CLI](https://img.shields.io/badge/for-Claude%20Code%20CLI-purple.svg)](https://docs.anthropic.com/en/docs/claude-code)
 [![Tested on](https://img.shields.io/badge/tested%20on-Opus%204%20%26%20Sonnet%204-orange.svg)](https://claude.ai)
+[![Also works with](https://img.shields.io/badge/also%20works%20with-Kimi%20K2-1783ff.svg)](https://www.kimi.com)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/brennercruvinel/CCPlugins/blob/main/CONTRIBUTING.md)
 
 
@@ -32,7 +33,7 @@ Productivity commands for Claude Code CLI that save 2-3 hours per week on repeti
 🙄 "Please add a button" → Complete UI framework rewrite  
 😭 Every conversation: "Act like a google engineer who doesn't overengineer"
 
-CCPlugins is a curated set of commands that extend Claude Code Cli with common development workflows. These commands handle the boring stuff, since the agent already knows your codebase, they just tell it what to do with that knowledge.
+CCPlugins is a curated set of commands that extend Claude Code Cli with common development workflows. These commands handle the dumb work, since the agent (opus 4 / sonnet 4 or kimi k2) already knows your codebase, they just tell it what to do with that knowledge.
 
 
 *Built for developers tired of typing "please act like a senior engineer" in every conversation.*
