@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# CCPlugins Installer for Windows
+
 """
 CCPlugins Installer
 Copies command files to ~/.claude/commands/
