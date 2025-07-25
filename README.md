@@ -28,10 +28,10 @@ Productivity commands for Claude Code CLI that save 2-3 hours per week on repeti
 
 ### You know the drill...
 
-🤦 Ask Claude to fix a bug, get 15 test files  
-😤 Request a simple refactor, receive a dissertation on clean code  
-🙄 "Please add a button" → Complete UI framework rewrite  
-😭 Every conversation: "Act like a google engineer who doesn't overengineer"
+🤦 Ask Claude to fix a bug, `get 15 test files`
+😤 Request a simple refactor, `receive a dissertation on clean code` 
+🙄 "Please add a button" →  `Complete UI framework rewrite`   
+😭 Every conversation: `"Act like a google engineer who doesn't overengineer"`
 
 CCPlugins is a curated set of commands that extend Claude Code Cli with common development workflows. These commands handle the dumb work, since the agent (opus 4 / sonnet 4 or kimi k2) already knows your codebase, they just tell it what to do with that knowledge.
 
