@@ -68,7 +68,8 @@ Remove debug artifacts and clean up after development sessions
 ```
 /cleanproject
 ```
-___
+
+---
 
 Analyze changes and create conventional commit messages
 ```
@@ -137,7 +138,8 @@ Summarize accomplishments and prepare handoff notes
 ```
 /session-end
 ```
-___
+
+---
 ## Real World Example
 
 ### Before `/cleanproject`:
