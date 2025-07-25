@@ -35,7 +35,6 @@ Productivity commands for Claude Code CLI that `save 2-3 hours per week` on repe
 CCPlugins is a curated set of commands that extend Claude Code Cli with common development workflows. These commands handle the dumb work, since the agent (opus 4 / sonnet 4 or kimi k2) already knows your codebase, they just tell it what to do with that knowledge.
 
 *Built for developers tired of typing `"please act like a senior engineer"` in every conversation.*
-> **Note:** Basic testing with Kimi K2 shows excellent compatibility, but more validation and testing is needed to ensure full accuracy across all commands.
 
 ## Quick Links
 
@@ -193,6 +192,8 @@ This approach:
 - Sets `clear expectations` about what will happen
 - Creates a more natural, `human-like interaction`
 - `Reduces the intimidation` factor for new users
+
+> **Note:** Basic testing with Kimi K2 shows excellent compatibility, but more validation and testing is needed to ensure full accuracy across all commands.
 
 ### User Commands Indicator
 Custom commands appear with a `(user)` tag in Claude Code CLI to distinguish them from built-in commands. This is normal and indicates your commands are properly installed.
