@@ -67,7 +67,7 @@ python install.py
 ```
 
 ## Commands
-*Pre-configured commands that make Claude Code work like the senior engineer you keep asking for.*
+Pre-configured commands that make Claude Code work like the senior engineer you keep asking for.
 ---
 ### Development Workflow
 
