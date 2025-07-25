@@ -32,7 +32,7 @@ Open an issue with:
 ## Development Setup
 
 ```bash
-git clone https://github.com/[user]/CCPlugins
+git clone https://github.com/brennercruvinel/CCPlugins
 cd CCPlugins
 python install.py  # Test your changes
 ```
