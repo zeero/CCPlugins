@@ -74,12 +74,12 @@ ___
 /commit
 ```  
 Analyze changes and create conventional commit messages
-
+___
 ```
 /format
 ```
 Auto-detect and run the project's code formatter
-
+___
 ```
 /test
 ```
@@ -91,22 +91,22 @@ Run tests and automatically fix simple failures
 /review
 ```
 Comprehensive code review for bugs, security, and performance
-
+___
 ```
 /remove-comments
 ```
 Remove obvious comments while preserving valuable documentation
-
+___
 ```
 /cleanup-types
 ```
 Remove TypeScript 'any' types and suggest proper types
-
+___
 ```
 /fix-imports
 ```
 Fix broken imports after moving or renaming files
-
+___
 ```
 /find-todos
 ```
@@ -118,12 +118,12 @@ Find all TODO, FIXME, and HACK comments in your codebase
 /session-start
 ```
 Begin a documented coding session with goals tracking
-
+___
 ```
 /session-end
 ```
 Summarize accomplishments and prepare handoff notes
-
+___
 ## Real World Example
 
 ### Before `/cleanproject`:
