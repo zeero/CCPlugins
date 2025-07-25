@@ -28,8 +28,8 @@ Productivity commands for Claude Code CLI that save 2-3 hours per week on repeti
 
 ### You know the drill...
 
-🤦 Ask Claude to fix a bug, `get 15 test files`<br>
-😤 Request a simple refactor, `receive a dissertation on clean code`<br>
+🤦 Ask Claude to fix a bug, `Get 15 test files`<br>
+😤 Request a simple refactor, `Receive a dissertation on clean code`<br>
 🙄 "Please add a button" → `Complete UI framework rewrite`<br>
 😭 Every conversation: "`Act like a google engineer who doesn't overengineer`"
 
