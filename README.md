@@ -68,7 +68,7 @@ python install.py
 
 ## Commands
 *Pre-configured commands that make Claude Code work like the senior engineer you keep asking for.*
-
+---
 ### Development Workflow
 
 *Remove debug artifacts and clean up after development sessions*
@@ -96,7 +96,7 @@ python install.py
 ```
 /test
 ```
-
+---
 ### Code Quality
 
 *Comprehensive code review for bugs, security, and performance*
@@ -131,7 +131,7 @@ python install.py
 ```
 /find-todos
 ```
-
+---
 ### Session Management
 
 *Begin a documented coding session with goals tracking*
