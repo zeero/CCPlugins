@@ -21,9 +21,6 @@
 [![Also works with](https://img.shields.io/badge/also%20works%20with-Kimi%20K2-1783ff.svg)](https://github.com/MoonshotAI/Kimi-K2)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/brennercruvinel/CCPlugins/blob/main/CONTRIBUTING.md)
 
-> **Note:** Basic testing with Kimi K2 shows excellent compatibility, but more validation and testing is needed to ensure full accuracy across all commands.
-
-
 ## What is CCPlugins?
 
 Productivity commands for Claude Code CLI that save 2-3 hours per week on repetitive tasks.
@@ -38,6 +35,7 @@ Productivity commands for Claude Code CLI that save 2-3 hours per week on repeti
 CCPlugins is a curated set of commands that extend Claude Code Cli with common development workflows. These commands handle the dumb work, since the agent (opus 4 / sonnet 4 or kimi k2) already knows your codebase, they just tell it what to do with that knowledge.
 
 *Built for developers tired of typing "please act like a senior engineer" in every conversation.*
+> **Note:** Basic testing with Kimi K2 shows excellent compatibility, but more validation and testing is needed to ensure full accuracy across all commands.
 
 ## Quick Links
 
