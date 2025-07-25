@@ -51,7 +51,10 @@ python install.py
 
 ### Code Quality
 **`/review`** - Comprehensive code review for bugs, security, and performance  
-**`/remove-comments`** - Remove obvious comments while preserving valuable documentation
+**`/remove-comments`** - Remove obvious comments while preserving valuable documentation  
+**`/cleanup-types`** - Remove TypeScript 'any' types and suggest proper types  
+**`/fix-imports`** - Fix broken imports after moving or renaming files  
+**`/find-todos`** - Find all TODO, FIXME, and HACK comments in your codebase
 
 ### Session Management
 **`/session-start`** - Begin a documented coding session with goals tracking  
@@ -87,6 +90,12 @@ CCPlugins are markdown files that provide intelligent instructions to Claude Cod
 4. Provides clear feedback
 
 No configuration required. Commands adapt to your project's structure and conventions.
+
+### Technical Notes
+
+**Command Style:** Commands are written in first person ("I'll help you...") rather than imperative ("Do this..."). This design choice makes Claude Code feel like a collaborative assistant rather than a command executor, creating a more conversational and helpful interaction.
+
+**User Commands:** Custom commands appear with a `(user)` tag in Claude Code CLI to distinguish them from built-in commands. This is normal and indicates your commands are properly installed.
 
 ## Time Savings
 
