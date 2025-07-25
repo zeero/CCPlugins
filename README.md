@@ -69,21 +69,21 @@ Remove debug artifacts and clean up after development sessions
 /cleanproject
 ```
 
----
+
 
 Analyze changes and create conventional commit messages
 ```
 /commit
 ```
 
----
+
 
 Auto-detect and run the project's code formatter
 ```
 /format
 ```
 
----
+
 
 Run tests and automatically fix simple failures
 ```
@@ -97,28 +97,28 @@ Comprehensive code review for bugs, security, and performance
 /review
 ```
 
----
+
 
 Remove obvious comments while preserving valuable documentation
 ```
 /remove-comments
 ```
 
----
+
 
 Remove TypeScript 'any' types and suggest proper types
 ```
 /cleanup-types
 ```
 
----
+
 
 Fix broken imports after moving or renaming files
 ```
 /fix-imports
 ```
 
----
+
 
 Find all TODO, FIXME, and HACK comments in your codebase
 ```
@@ -132,14 +132,14 @@ Begin a documented coding session with goals tracking
 /session-start
 ```
 
----
+
 
 Summarize accomplishments and prepare handoff notes
 ```
 /session-end
 ```
 
----
+
 ## Real World Example
 
 ### Before `/cleanproject`:
@@ -200,7 +200,7 @@ Custom commands appear with a `(user)` tag in Claude Code CLI to distinguish the
 ## Time Savings
 
 | Task | Manual Time | With Commands | Time Saved |
-|------|------------|---------------|------------|
+|||||
 | Git commits | 5-10 min | 30 sec | ~9 min |
 | Code cleanup | 20-30 min | 1 min | ~25 min |
 | Test fixes | 15-20 min | 2-5 min | ~15 min |
@@ -222,6 +222,6 @@ We welcome contributions that help developers save time. See [CONTRIBUTING.md](C
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
----
+
 
 *Built for developers tired of typing "please act like a senior engineer" in every conversation.*
