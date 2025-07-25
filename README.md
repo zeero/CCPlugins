@@ -40,11 +40,11 @@ CCPlugins is a curated set of commands that extend Claude Code Cli with common d
 
 ## Quick Links
 
-[Installation](#installation) - Get started in 30 seconds
-[Commands](#commands) - See all available commands
-[How It Works](#how-it-works) - Understanding the magic
-[Technical Notes](#technical-notes) - Why conversational design matters
-[Contributing](#contributing) - Help make it better
+- [Installation](#installation) - Get started in 30 seconds
+- [Commands](#commands) - See all available commands
+- [How It Works](#how-it-works) - Understanding the magic
+- [Technical Notes](#technical-notes) - Why conversational design matters
+- [Contributing](#contributing) - Help make it better
 
 ## Installation
 
