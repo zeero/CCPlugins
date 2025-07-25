@@ -1,13 +1,20 @@
 ```
- ██████╗ ██████╗██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗███████╗
-██╔════╝██╔════╝██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║██╔════╝
-██║     ██║     ██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║███████╗
-██║     ██║     ██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║╚════██║
-╚██████╗╚██████╗██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║
- ╚═════╝ ╚═════╝╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝
+ ██████╗██╗      █████╗ ██╗   ██╗██████╗ ███████╗     ██████╗ ██████╗ ██████╗ ███████╗
+██╔════╝██║     ██╔══██╗██║   ██║██╔══██╗██╔════╝    ██╔════╝██╔═══██╗██╔══██╗██╔════╝
+██║     ██║     ███████║██║   ██║██║  ██║█████╗      ██║     ██║   ██║██║  ██║█████╗  
+██║     ██║     ██╔══██║██║   ██║██║  ██║██╔══╝      ██║     ██║   ██║██║  ██║██╔══╝  
+╚██████╗███████╗██║  ██║╚██████╔╝██████╔╝███████╗    ╚██████╗╚██████╔╝██████╔╝███████╗
+ ╚═════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝     ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
+                                                                                         
+██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗███████╗                               
+██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║██╔════╝                               
+██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║███████╗                               
+██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║╚════██║                               
+██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║                               
+╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝                               
 ```
 
-# CCPlugins
+# Claude Code Plugins
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/brennercruvinel/CCPlugins/blob/main/CONTRIBUTING.md)
@@ -18,7 +25,7 @@ Productivity commands for Claude Code CLI that save 2-3 hours per week on repeti
 
 ## What is CCPlugins?
 
-A curated set of commands that extend Claude Code with common development workflows. Each command uses Claude's context awareness to intelligently handle tasks that normally require manual work.
+A curated and tested set of commands that extend Claude Code with common development workflows. Each command uses Claude's context awareness to intelligently handle tasks that normally require manual work.
 
 ## Installation
 
@@ -44,21 +51,43 @@ python install.py
 ## Commands
 
 ### Development Workflow
-**`/cleanproject`** - Remove debug artifacts and clean up after development sessions  
-**`/commit`** - Analyze changes and create conventional commit messages  
-**`/format`** - Auto-detect and run the project's code formatter  
-**`/test`** - Run tests and automatically fix simple failures
+
+`/cleanproject`  
+Remove debug artifacts and clean up after development sessions
+
+`/commit`  
+Analyze changes and create conventional commit messages
+
+`/format`  
+Auto-detect and run the project's code formatter
+
+`/test`  
+Run tests and automatically fix simple failures
 
 ### Code Quality
-**`/review`** - Comprehensive code review for bugs, security, and performance  
-**`/remove-comments`** - Remove obvious comments while preserving valuable documentation  
-**`/cleanup-types`** - Remove TypeScript 'any' types and suggest proper types  
-**`/fix-imports`** - Fix broken imports after moving or renaming files  
-**`/find-todos`** - Find all TODO, FIXME, and HACK comments in your codebase
+
+`/review`  
+Comprehensive code review for bugs, security, and performance
+
+`/remove-comments`  
+Remove obvious comments while preserving valuable documentation
+
+`/cleanup-types`  
+Remove TypeScript 'any' types and suggest proper types
+
+`/fix-imports`  
+Fix broken imports after moving or renaming files
+
+`/find-todos`  
+Find all TODO, FIXME, and HACK comments in your codebase
 
 ### Session Management
-**`/session-start`** - Begin a documented coding session with goals tracking  
-**`/session-end`** - Summarize accomplishments and prepare handoff notes
+
+`/session-start`  
+Begin a documented coding session with goals tracking
+
+`/session-end`  
+Summarize accomplishments and prepare handoff notes
 
 ## Real World Example
 
@@ -91,11 +120,31 @@ CCPlugins are markdown files that provide intelligent instructions to Claude Cod
 
 No configuration required. Commands adapt to your project's structure and conventions.
 
-### Technical Notes
+## 📝 Technical Notes
 
-**Command Style:** Commands are written in first person ("I'll help you...") rather than imperative ("Do this..."). This design choice makes Claude Code feel like a collaborative assistant rather than a command executor, creating a more conversational and helpful interaction.
+### Command Philosophy
+Commands are written in **first person** ("I'll help you...") rather than imperative ("Do this..."). This design choice transforms Claude Code from a command executor into a **collaborative assistant**, creating a more conversational and helpful interaction.
 
-**User Commands:** Custom commands appear with a `(user)` tag in Claude Code CLI to distinguish them from built-in commands. This is normal and indicates your commands are properly installed.
+```markdown
+✅ Good: "I'll analyze your code and fix broken imports..."
+❌ Avoid: "Analyze code and fix broken imports..."
+```
+
+This approach:
+- Makes Claude feel like a partner, not a tool
+- Sets clear expectations about what will happen
+- Creates a more natural, human-like interaction
+- Reduces the intimidation factor for new users
+
+### User Commands Indicator
+Custom commands appear with a `(user)` tag in Claude Code CLI to distinguish them from built-in commands. This is normal and indicates your commands are properly installed.
+
+```
+/commit
+    Smart Git Commit (user)    ← Your custom command
+/help
+    Show help                  ← Built-in command
+```
 
 ## Time Savings
 
