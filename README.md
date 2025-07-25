@@ -30,7 +30,7 @@ Productivity commands for Claude Code CLI that save 2-3 hours per week on repeti
 🙄 "Please add a button" → Complete UI framework rewrite  
 😭 Every conversation: "Act like a google engineer who doesn't overengineer"
 
-CCPlugins is a curated set of commands that extend Claude Code with common development workflows. These commands handle the boring stuff, since the agent already knows your codebase, they just tell it what to do with that knowledge.
+CCPlugins is a curated set of commands that extend Claude Code Cli with common development workflows. These commands handle the boring stuff, since the agent already knows your codebase, they just tell it what to do with that knowledge.
 
 
 *Built for developers tired of typing "please act like a senior engineer" in every conversation.*
