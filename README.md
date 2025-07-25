@@ -17,7 +17,7 @@
 # Claude Code Plugins
 [![Version](https://img.shields.io/badge/version-1.6.0-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
 [![Claude Code CLI](https://img.shields.io/badge/for-Claude%20Code%20CLI-purple.svg)](https://docs.anthropic.com/en/docs/claude-code)
-[![Works with](https://img.shields.io/badge/works%20with-Opus%204%20%26%20Sonnet%204-orange.svg)](https://claude.ai)
+[![Tested on](https://img.shields.io/badge/tested%20on-Opus%204%20%26%20Sonnet%204-orange.svg)](https://claude.ai)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/brennercruvinel/CCPlugins/blob/main/CONTRIBUTING.md)
 
 
@@ -164,7 +164,7 @@ Commands are written in **first person** ("I'll help you...") rather than impera
 ```
 
 This approach:
-- Makes Claude feel like a partner, not a tool
+- Makes Claude feel like a "partner", not a tool (and for some reason, it actually works better this way)
 - Sets clear expectations about what will happen
 - Creates a more natural, human-like interaction
 - Reduces the intimidation factor for new users
