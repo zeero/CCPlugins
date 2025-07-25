@@ -21,9 +21,9 @@
 [![Also works with](https://img.shields.io/badge/also%20works%20with-Kimi%20K2-1783ff.svg)](https://github.com/MoonshotAI/Kimi-K2)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/brennercruvinel/CCPlugins/blob/main/CONTRIBUTING.md)
 
-## What is CCPlugins?
+## What is `CCPlugins`?
 
-Productivity commands for Claude Code CLI that save 2-3 hours per week on repetitive tasks.
+Productivity commands for Claude Code CLI that `save 2-3 hours per week` on repetitive tasks.
 
 ### You know the drill...
 
@@ -34,7 +34,7 @@ Productivity commands for Claude Code CLI that save 2-3 hours per week on repeti
 
 CCPlugins is a curated set of commands that extend Claude Code Cli with common development workflows. These commands handle the dumb work, since the agent (opus 4 / sonnet 4 or kimi k2) already knows your codebase, they just tell it what to do with that knowledge.
 
-*Built for developers tired of typing "please act like a senior engineer" in every conversation.*
+*Built for developers tired of typing `"please act like a senior engineer"` in every conversation.*
 > **Note:** Basic testing with Kimi K2 shows excellent compatibility, but more validation and testing is needed to ensure full accuracy across all commands.
 
 ## Quick Links
@@ -85,63 +85,63 @@ Pre-configured commands that make Claude Code work like the senior engineer you 
 
 
 
-*Auto-detect and run the project's code formatter*
+*Auto-detect and run the `project's code formatter`*
 ```
 /format
 ```
 
 
 
-*Run tests and automatically fix simple failures*
+*Run tests and automatically `fix simple failures`*
 ```
 /test
 ```
 ---
 ### Code Quality
 
-*Comprehensive code review for bugs, security, and performance*
+*`Comprehensive code review` for bugs, security, and performance*
 ```
 /review
 ```
 
 
 
-*Remove obvious comments while preserving valuable documentation*
+*`Remove obvious comments` while preserving valuable documentation*
 ```
 /remove-comments
 ```
 
 
 
-*Remove TypeScript 'any' types and suggest proper types*
+*Remove TypeScript `any types` and suggest proper types*
 ```
 /cleanup-types
 ```
 
 
 
-*Fix broken imports after moving or renaming files*
+*`Fix broken imports` after moving or renaming files*
 ```
 /fix-imports
 ```
 
 
 
-*Find all TODO, FIXME, and HACK comments in your codebase*
+*Find all `TODO`, `FIXME` , and `HACK` comments in your codebase*
 ```
 /find-todos
 ```
 ---
 ### Session Management
 
-*Begin a documented coding session with goals tracking*
+*Begin a `documented coding session` with goals tracking*
 ```
 /session-start
 ```
 
 
 
-*Summarize accomplishments and prepare handoff notes*
+*`Summarize accomplishments` and prepare handoff notes*
 ```
 /session-end
 ```
@@ -176,7 +176,7 @@ CCPlugins are markdown files that provide intelligent instructions to Claude Cod
 3. Executes the appropriate actions
 4. Provides clear feedback
 
-No configuration required. Commands adapt to your project's structure and conventions.
+**Language/Framework Agnostic**: Commands are designed to work with any programming language, framework, or project structure. They analyze your codebase context and adapt accordingly, no framework-specific assumptions or hardcoded patterns that could interfere with your existing setup.
 
 ## Technical Notes
 
@@ -189,10 +189,10 @@ Commands are written in **first person** ("I'll help you...") rather than impera
 ```
 
 This approach:
-- Makes Claude feel like a "partner", not a tool (and for some reason, it actually works better this way)
-- Sets clear expectations about what will happen
-- Creates a more natural, human-like interaction
-- Reduces the intimidation factor for new users
+- Makes Claude feel like a `"partner"`, not a tool (and for some reason, it actually works better this way)
+- Sets `clear expectations` about what will happen
+- Creates a more natural, `human-like interaction`
+- `Reduces the intimidation` factor for new users
 
 ### User Commands Indicator
 Custom commands appear with a `(user)` tag in Claude Code CLI to distinguish them from built-in commands. This is normal and indicates your commands are properly installed.
@@ -231,4 +231,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 
 
-*Built for developers tired of typing "please act like a senior engineer" in every conversation.*
+*Built for developers tired of typing `"please act like a senior engineer"` in every conversation.*
