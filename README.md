@@ -229,5 +229,4 @@ We welcome contributions that help developers save time. See [CONTRIBUTING.md](C
 MIT License - see [LICENSE](LICENSE) file for details.
 
 
-
-*Built for developers tired of typing `please act like a senior engineer` in every conversation.*
+*Built by a developer tired of typing `please act like a senior engineer` in every conversation.*
