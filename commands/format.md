@@ -11,4 +11,9 @@ I'll format only the files that have been modified to:
 
 After formatting, I'll show you what changed.
 
+If formatting fails or no formatter is found:
+- I'll explain what I tried
+- Show available options
+- Let you decide how to proceed
+
 This ensures consistent code style according to your project's standards.

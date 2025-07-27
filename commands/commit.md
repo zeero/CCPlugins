@@ -24,6 +24,11 @@ Now I'll analyze the changes to determine:
 2. The nature of changes (feature, fix, refactor, etc.)
 3. The scope/component affected
 
+If the analysis or commit encounters errors:
+- I'll explain what went wrong
+- Suggest how to resolve it
+- Ensure no partial commits occur
+
 ```bash
 # If nothing is staged, I'll stage modified files (not untracked)
 if git diff --cached --quiet; then

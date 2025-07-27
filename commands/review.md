@@ -29,4 +29,9 @@ For each issue I find, I'll:
 - Explain why it's a problem
 - Suggest how to fix it
 
+If I encounter errors during review:
+- I'll continue checking other files
+- Report what couldn't be analyzed
+- Focus on the code I can access
+
 This review focuses on real problems that could affect your application.
