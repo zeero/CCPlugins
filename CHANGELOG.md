@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `/undo` - Rollback last destructive operation with backup support
+- `/context-cache` - Cache project information to speed up subsequent commands
+- Enhanced error handling across all commands
+- Ambiguity checking for `/fix-imports` command
+- Automatic backup creation in `/cleanproject`
+
+### Changed
+- Improved error handling and recovery instructions in all commands
+- Commands now report failures gracefully and suggest alternatives
+- Maintained minimalist approach without framework-specific assumptions
+
 ## [1.6.0] - 2025-01-25
 
 ### Added

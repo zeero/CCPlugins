@@ -142,6 +142,20 @@ Pre-configured commands that make Claude Code work like the senior engineer you 
 ```
 /session-end
 ```
+---
+### Safety & Performance
+
+*`Rollback last operation` with automatic backup restore*
+```
+/undo
+```
+
+
+
+*Cache project context to `speed up` subsequent commands*
+```
+/context-cache
+```
 
 
 ## Real World Example
@@ -211,8 +225,9 @@ Custom commands appear with a `(user)` tag in Claude Code CLI to distinguish the
 | Code cleanup | 20-30 min | 1 min | ~25 min |
 | Test fixes | 15-20 min | 2-5 min | ~15 min |
 | Code review | 20 min | 2 min | ~18 min |
+| Rollback mistakes | 10-15 min | 30 sec | ~12 min |
 
-**Average: 1-3 hours saved per week**
+**Average: 2-3 hours saved per week**
 
 ## Requirements
 
