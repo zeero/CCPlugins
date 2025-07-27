@@ -187,7 +187,16 @@ CCPlugins are markdown files that provide intelligent instructions to Claude Cod
 3. Executes the appropriate actions
 4. Provides clear feedback
 
-**Language/Framework Agnostic**: Commands are designed to work with any programming language, framework, or project structure. They analyze your codebase context and adapt accordingly, no framework-specific assumptions or hardcoded patterns that could interfere with your existing setup.
+**Key Principles:**
+- Commands are **conversational instructions**, not rigid scripts
+- Claude interprets and adapts to your specific project context
+- Multiple tools can be used in parallel for efficiency
+- Works with any language or framework through contextual analysis
+
+**Limitations:**
+- Commands rely on Claude's contextual interpretation
+- May need guidance in unconventional project structures
+- Subject to model usage limits (Opus/Sonnet)
 
 ## Technical Notes
 
@@ -234,6 +243,34 @@ Custom commands appear with a `(user)` tag in Claude Code CLI to distinguish the
 - Claude Code CLI
 - Python 3.6+ (for installer)
 - Git (for version control commands)
+
+## Advanced Usage
+
+### Creating Custom Commands
+Create your own commands by adding markdown files to `~/.claude/commands/`:
+
+```markdown
+# My Custom Command
+
+I'll help you with your specific workflow.
+
+[Your instructions here]
+```
+
+### Using Arguments
+Commands support arguments via `$ARGUMENTS`:
+
+```bash
+/mycommand some-file.js
+# $ARGUMENTS will contain "some-file.js"
+```
+
+### CI/CD Integration
+Commands work seamlessly in automated workflows:
+
+```bash
+claude /test && claude /commit
+```
 
 ## Contributing
 
