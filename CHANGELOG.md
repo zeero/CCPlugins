@@ -18,6 +18,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improved error handling and recovery instructions in all commands
 - Commands now report failures gracefully and suggest alternatives
 - Maintained minimalist approach without framework-specific assumptions
+- Enhanced README with clearer technical explanation of how commands work
+- Added advanced usage examples and limitations section to documentation
 
 ## [1.6.0] - 2025-01-25
 
