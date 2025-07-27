@@ -2,7 +2,16 @@
 
 I'll help clean up development artifacts while preserving your working code.
 
-First, let me create a safety checkpoint if possible, then identify what should be cleaned based on:
+First, let me create a safety checkpoint and backup:
+
+```bash
+# Create backup directory
+BACKUP_DIR="$HOME/.claude/.ccplugins_backups/$(date +%Y%m%d_%H%M%S)"
+mkdir -p "$BACKUP_DIR"
+echo "Creating safety backup at: $BACKUP_DIR"
+```
+
+Then I'll identify what should be cleaned based on:
 - Our conversation history
 - Common development patterns
 - Temporary files and artifacts
@@ -16,9 +25,19 @@ I'll look for and remove:
 
 Before removing anything, I'll:
 1. Show you what I plan to remove
-2. Explain why it should be removed
-3. Wait for your confirmation
+2. Create backups of files before deletion
+3. Explain why it should be removed
+4. Wait for your confirmation
 
-After cleanup, I'll verify the project still works properly.
+If the cleanup encounters any errors:
+- I'll stop immediately
+- Report what failed
+- Ensure partial changes can be rolled back
+- Suggest alternative approaches
 
-The goal is to keep only the clean, working solution.
+After cleanup, I'll verify the project still works properly by:
+- Checking build/compile status
+- Running basic sanity checks
+- Confirming no critical files were affected
+
+The goal is to keep only the clean, working solution while maintaining safety.

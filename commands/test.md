@@ -18,4 +18,9 @@ After running the tests, I'll:
 
 If tests fail due to missing dependencies or configuration issues, I'll help identify and resolve those problems.
 
+If I can't find or run tests:
+- I'll explain what I looked for
+- Show you what I checked
+- Suggest next steps
+
 My goal is to help you understand and fix test failures, not to hide them by changing assertions.
