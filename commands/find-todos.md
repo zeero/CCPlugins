@@ -9,10 +9,10 @@ First, let me scan for various TODO patterns:
 echo "Searching for TODOs, FIXMEs, and other markers..."
 
 # Count different types (excluding common build/dependency directories)
-TODO_COUNT=$(grep -r "TODO\|Todo\|todo" --exclude-dir=.git . 2>/dev/null | grep -v -E "(vendor/|deps/|dependencies/|build/|dist/|target/|out/)" | wc -l)
-FIXME_COUNT=$(grep -r "FIXME\|Fixme\|fixme" --exclude-dir=.git . 2>/dev/null | grep -v -E "(vendor/|deps/|dependencies/|build/|dist/|target/|out/)" | wc -l)
-HACK_COUNT=$(grep -r "HACK\|Hack\|hack" --exclude-dir=.git . 2>/dev/null | grep -v -E "(vendor/|deps/|dependencies/|build/|dist/|target/|out/)" | wc -l)
-NOTE_COUNT=$(grep -r "NOTE:\|Note:\|XXX" --exclude-dir=.git . 2>/dev/null | grep -v -E "(vendor/|deps/|dependencies/|build/|dist/|target/|out/)" | wc -l)
+TODO_COUNT=$(grep -r -E "TODO|Todo|todo" --exclude-dir=.git --exclude-dir=vendor --exclude-dir=deps --exclude-dir=dependencies --exclude-dir=build --exclude-dir=dist --exclude-dir=target --exclude-dir=out . 2>/dev/null | wc -l)
+FIXME_COUNT=$(grep -r -E "FIXME|Fixme|fixme" --exclude-dir=.git --exclude-dir=vendor --exclude-dir=deps --exclude-dir=dependencies --exclude-dir=build --exclude-dir=dist --exclude-dir=target --exclude-dir=out . 2>/dev/null | wc -l)
+HACK_COUNT=$(grep -r -E "HACK|Hack|hack" --exclude-dir=.git --exclude-dir=vendor --exclude-dir=deps --exclude-dir=dependencies --exclude-dir=build --exclude-dir=dist --exclude-dir=target --exclude-dir=out . 2>/dev/null | wc -l)
+NOTE_COUNT=$(grep -r -E "NOTE:|Note:|XXX" --exclude-dir=.git --exclude-dir=vendor --exclude-dir=deps --exclude-dir=dependencies --exclude-dir=build --exclude-dir=dist --exclude-dir=target --exclude-dir=out . 2>/dev/null | wc -l)
 
 echo "Found: $TODO_COUNT TODOs, $FIXME_COUNT FIXMEs, $HACK_COUNT HACKs, $NOTE_COUNT NOTEs"
 ```
