@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Enhanced error handling across all commands
 - Ambiguity checking for `/fix-imports` command
 - Automatic backup creation in `/cleanproject`
+- Uninstall scripts (uninstall.py and uninstall.sh) for easy removal
 
 ### Changed
 - Improved error handling and recovery instructions in all commands
