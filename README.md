@@ -63,6 +63,15 @@ cd CCPlugins
 python install.py
 ```
 
+### Uninstall
+```bash
+# Mac/Linux
+./uninstall.sh
+
+# Windows/Cross-platform
+python uninstall.py
+```
+
 ## Commands
 Pre-configured commands that make Claude Code work like the senior engineer you keep asking for.
 

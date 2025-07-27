@@ -4,22 +4,11 @@ I'll help improve type safety in your code by finding and fixing loose type decl
 
 First, let me analyze your project to understand what needs attention. I'll look for:
 
-**TypeScript Projects:**
-- `any` types that could be more specific
-- Missing type annotations
-- Implicit `any` usage
+- Loose or generic type declarations
+- Missing type annotations where your language supports them
+- Overly permissive types that could be more specific
 - Type assertions that might hide issues
-
-**Python Projects:**
-- Missing type hints
-- Generic `Any` from typing module
-- Functions without return type annotations
-- Untyped function parameters
-
-**Other Languages:**
-- Language-specific type issues
-- Missing annotations where supported
-- Generic object types that could be specific
+- Functions without proper type signatures
 
 I'll scan your codebase based on file extensions and patterns I find. For each issue discovered, I'll:
 

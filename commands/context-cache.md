@@ -10,7 +10,7 @@ CACHE_DIR="$HOME/.claude/.ccplugins_cache"
 mkdir -p "$CACHE_DIR"
 
 # Generate cache file name based on project path
-PROJECT_HASH=$(pwd | md5sum | cut -d' ' -f1)
+PROJECT_HASH=$(pwd | (md5sum 2>/dev/null || md5) | cut -d' ' -f1)
 CACHE_FILE="$CACHE_DIR/project_${PROJECT_HASH}.cache"
 ```
 

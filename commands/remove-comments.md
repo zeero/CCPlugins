@@ -7,11 +7,11 @@ First, let me identify files with comments to review:
 ```bash
 # Find files modified recently that likely have comments
 if [ -d .git ]; then
-    echo "Checking recently modified files for comments:"
-    git diff --name-only HEAD~5 2>/dev/null | grep -E "\.(js|jsx|ts|tsx|py|go|java|rs)$" | head -20
+    echo "Checking recently modified files for comments..."
+    # I'll look at files changed recently in your project
 else
-    echo "Checking common source files:"
-    find . -type f \( -name "*.js" -o -name "*.py" -o -name "*.go" \) -mtime -7 | head -20
+    echo "Checking source files in the project..."
+    # I'll scan for files that typically contain code
 fi
 ```
 

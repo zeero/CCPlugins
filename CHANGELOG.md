@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Enhanced error handling across all commands
 - Ambiguity checking for `/fix-imports` command
 - Automatic backup creation in `/cleanproject`
+- Uninstall scripts (uninstall.py and uninstall.sh) for easy removal
 
 ### Changed
 - Improved error handling and recovery instructions in all commands
@@ -20,6 +21,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Maintained minimalist approach without framework-specific assumptions
 - Enhanced README with clearer technical explanation of how commands work
 - Added advanced usage examples and limitations section to documentation
+
+### Fixed
+- Removed all language-specific references for true framework agnosticism
+- Fixed md5sum compatibility issue for macOS in `/context-cache`
+- Replaced framework-specific directory patterns with generic ones
+- Removed hardcoded file extensions from commands
 
 ## [1.6.0] - 2025-01-25
 
