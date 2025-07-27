@@ -8,11 +8,11 @@ First, let me scan for various TODO patterns:
 # Common TODO patterns across different languages
 echo "Searching for TODOs, FIXMEs, and other markers..."
 
-# Count different types
-TODO_COUNT=$(grep -r "TODO\|Todo\|todo" --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=dist --exclude-dir=build . 2>/dev/null | wc -l)
-FIXME_COUNT=$(grep -r "FIXME\|Fixme\|fixme" --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=dist --exclude-dir=build . 2>/dev/null | wc -l)
-HACK_COUNT=$(grep -r "HACK\|Hack\|hack" --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=dist --exclude-dir=build . 2>/dev/null | wc -l)
-NOTE_COUNT=$(grep -r "NOTE:\|Note:\|XXX" --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=dist --exclude-dir=build . 2>/dev/null | wc -l)
+# Count different types (excluding common build/dependency directories)
+TODO_COUNT=$(grep -r "TODO\|Todo\|todo" --exclude-dir=.git . 2>/dev/null | grep -v -E "(vendor/|deps/|dependencies/|build/|dist/|target/|out/)" | wc -l)
+FIXME_COUNT=$(grep -r "FIXME\|Fixme\|fixme" --exclude-dir=.git . 2>/dev/null | grep -v -E "(vendor/|deps/|dependencies/|build/|dist/|target/|out/)" | wc -l)
+HACK_COUNT=$(grep -r "HACK\|Hack\|hack" --exclude-dir=.git . 2>/dev/null | grep -v -E "(vendor/|deps/|dependencies/|build/|dist/|target/|out/)" | wc -l)
+NOTE_COUNT=$(grep -r "NOTE:\|Note:\|XXX" --exclude-dir=.git . 2>/dev/null | grep -v -E "(vendor/|deps/|dependencies/|build/|dist/|target/|out/)" | wc -l)
 
 echo "Found: $TODO_COUNT TODOs, $FIXME_COUNT FIXMEs, $HACK_COUNT HACKs, $NOTE_COUNT NOTEs"
 ```
@@ -23,9 +23,7 @@ I'll search for these patterns:
 - **HACK/Hack/hack**: Temporary workarounds
 - **XXX**: Warnings or problematic code
 - **NOTE/Note**: Important notes that might indicate incomplete work
-- **@todo**: JSDoc style todos
-- **#TODO**: Python/Shell style todos
-- **// TODO**: C-style comment todos
+- Various comment styles based on your project's languages
 
 For each marker found, I'll show:
 1. **File location** with line number
