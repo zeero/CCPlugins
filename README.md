@@ -15,6 +15,7 @@
 ```
 
 # Automate the `Boring Stuff`
+![GitHub Repo stars](https://img.shields.io/github/stars/brennercruvinel/CCPlugins?style=social)
 [![Version](https://img.shields.io/badge/version-1.6.0-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
 [![Claude Code CLI](https://img.shields.io/badge/for-Claude%20Code%20CLI-purple.svg)](https://docs.anthropic.com/en/docs/claude-code)
 [![Tested on](https://img.shields.io/badge/tested%20on-Opus%204%20%26%20Sonnet%204-orange.svg)](https://claude.ai)
@@ -289,5 +290,9 @@ We welcome contributions that help developers save time. See [CONTRIBUTING.md](C
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
+
+## 🌟 Thank you to all +300+people who starred CCPlugins! ![GitHub Repo stars](https://img.shields.io/github/stars/brennercruvinel/CCPlugins?style=social)
+
+[![Star History Chart](https://api.star-history.com/svg?repos=brennercruvinel/CCPlugins&type=Date)](https://star-history.com/#brennercruvinel/CCPlugins&Date)
 
 *Built by a developer tired of typing `please act like a senior engineer` in every conversation.*
