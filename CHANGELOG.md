@@ -23,6 +23,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added advanced usage examples and limitations section to documentation
 
 ### Fixed
+- **Critical**: `/cleanproject` no longer attempts to remove `.claude` directory (#5)
+- `/cleanproject` now explicitly protects critical directories (.claude, .git)
+- `/commit` no longer adds Claude signatures or co-authorship to commits
+- `/format` and `/test` commands now properly detect tools without assuming specific languages
 - Removed all language-specific references for true framework agnosticism
 - Fixed md5sum compatibility issue for macOS in `/context-cache`
 - Replaced framework-specific directory patterns with generic ones
