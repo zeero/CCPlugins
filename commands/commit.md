@@ -2,9 +2,16 @@
 
 I'll analyze your changes and create a meaningful commit message.
 
-First, let me check what's changed:
+First, let me check if this is a git repository and what's changed:
 
 ```bash
+# Verify we're in a git repository
+if ! git rev-parse --git-dir > /dev/null 2>&1; then
+    echo "Error: Not a git repository"
+    echo "This command requires git version control"
+    exit 1
+fi
+
 # Check if we have changes to commit
 if ! git diff --cached --quiet || ! git diff --quiet; then
     echo "Changes detected:"
@@ -52,3 +59,11 @@ Based on the analysis, I'll create a conventional commit message:
 ```
 
 The commit message will be concise, meaningful, and follow your project's conventions if I can detect them from recent commits.
+
+**Important**: I will NEVER:
+- Add "Co-authored-by" or any Claude signatures
+- Include "Generated with Claude Code" or similar messages
+- Modify git config or user credentials
+- Add any AI/assistant attribution to the commit
+
+The commit will use only your existing git user configuration, maintaining full ownership and authenticity of your commits.

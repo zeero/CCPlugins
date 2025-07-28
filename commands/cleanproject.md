@@ -9,6 +9,11 @@ First, let me create a safety checkpoint and backup:
 BACKUP_DIR="$HOME/.claude/.ccplugins_backups/$(date +%Y%m%d_%H%M%S)"
 mkdir -p "$BACKUP_DIR"
 echo "Creating safety backup at: $BACKUP_DIR"
+
+# Verify critical directories are protected
+if [ -d "$HOME/.claude" ]; then
+    echo "✓ .claude directory detected and will be protected"
+fi
 ```
 
 Then I'll identify what should be cleaned based on:
@@ -22,6 +27,12 @@ I'll look for and remove:
 - Failed implementation attempts
 - Development artifacts
 - Debug statements in code
+
+Important: I will NEVER remove:
+- The .claude directory (contains commands and configurations)
+- .git directory
+- Essential configuration files
+- Source code files unless explicitly identified as temporary
 
 Before removing anything, I'll:
 1. Show you what I plan to remove
