@@ -289,10 +289,9 @@ We welcome contributions that help developers save time. See [CONTRIBUTING.md](C
 ## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
+*Built by a developer tired of typing `please act like a senior engineer` in every conversation.*
 
 
-## 🌟 Thank you to all +300+people who starred CCPlugins! ![GitHub Repo stars](https://img.shields.io/github/stars/brennercruvinel/CCPlugins?style=social)
+## 🌟 Community ![GitHub Repo stars](https://img.shields.io/github/stars/brennercruvinel/CCPlugins?style=social)
 
 [![Star History Chart](https://api.star-history.com/svg?repos=brennercruvinel/CCPlugins&type=Date)](https://star-history.com/#brennercruvinel/CCPlugins&Date)
-
-*Built by a developer tired of typing `please act like a senior engineer` in every conversation.*
