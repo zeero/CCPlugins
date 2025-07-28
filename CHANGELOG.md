@@ -58,7 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Installation script compatibility across different operating systems
 
-## [1.5.0] - 2024-12-15
+## [1.5.0] - 2025-12-15
 
 ### Added
 - Initial release with core command set
