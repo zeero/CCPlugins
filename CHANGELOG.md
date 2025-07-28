@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed md5sum compatibility issue for macOS in `/context-cache`
 - Replaced framework-specific directory patterns with generic ones
 - Removed hardcoded file extensions from commands
+- Fixed curl installation error on Linux - install script now downloads command files from GitHub directly instead of expecting local files
 
 ## [1.6.0] - 2025-01-25
 
