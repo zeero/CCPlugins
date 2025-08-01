@@ -147,17 +147,17 @@ CCPlugins are markdown files that provide intelligent instructions to Claude Cod
 
 **Architecture Principles:**
 - Commands use Claude Code CLI native tools (Grep, Glob, Read, TodoWrite)
-- Sub-agent architecture for specialized analysis
+- Sub-agent architecture for specialized analysis  
 - Git-based safety with automatic checkpoints
 - Framework-agnostic with intelligent auto-detection
-- TodoWrite integration for multi-step operations
 - CLAUDE.md memory system integration
+- Professional-grade analysis without over-engineering
 
 **Performance Optimizations:**
 - Reduced verbosity for senior developer efficiency
-- Parallel tool execution where beneficial
 - Context-aware analysis without technology assumptions
 - Built-in error recovery and alternative suggestions
+- Streamlined workflows for maximum productivity
 
 ## Technical Notes
 
@@ -235,35 +235,36 @@ Commands support arguments via `$ARGUMENTS`:
 # $ARGUMENTS will contain "some-file.js"
 ```
 
-### GitHub Actions Integration
-Example workflow for automated quality checks:
+### CI/CD Integration
+Use commands in automated workflows:
 
-```yaml
-- name: Security Analysis
-  run: claude "/security-scan"
-  
-- name: Architecture Review  
-  run: claude "/review"
-  
-- name: Predictive Analysis
-  run: claude "/predict-issues"
+```bash
+# Quality pipeline
+claude "/security-scan" && claude "/review" && claude "/test"
+
+# Pre-commit validation  
+claude "/format" && claude "/commit"
+
+# Feature development
+claude "/scaffold api-users" && claude "/test"
 ```
 
-### Hooks Integration
-Automatic formatting after file modifications:
+### Manual Workflow Integration
+Perfect for development routines:
 
-```json
-{
-  "hooks": {
-    "PostToolUse": [{
-      "matcher": "Edit|MultiEdit|Write",
-      "hooks": [{
-        "type": "command",
-        "command": "prettier --write $file_path || black $file_path || gofmt -w $file_path"
-      }]
-    }]
-  }
-}
+```bash
+# Morning routine
+claude "/session-start"
+claude "/security-scan"
+
+# During development
+claude "/scaffold user-management"
+claude "/review" 
+claude "/format"
+
+# End of day
+claude "/commit"
+claude "/session-end"
 ```
 
 ## Contributing
