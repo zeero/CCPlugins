@@ -64,4 +64,10 @@ git add -A
 git commit -m "Prettify code: improve readability and organization" || echo "No changes made"
 ```
 
+**Important**: I will NEVER:
+- Add "Co-authored-by" or any Claude signatures
+- Include "Generated with Claude Code" or similar messages
+- Modify git config or user credentials
+- Add any AI/assistant attribution to the commit
+
 This helps transform working code into maintainable code without risk.

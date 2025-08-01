@@ -8,6 +8,12 @@ git add -A
 git commit -m "Pre-cleanup checkpoint" || echo "No changes to commit"
 ```
 
+**Important**: I will NEVER:
+- Add "Co-authored-by" or any Claude signatures
+- Include "Generated with Claude Code" or similar messages
+- Modify git config or user credentials
+- Add any AI/assistant attribution to the commit
+
 I'll identify cleanup targets using native tools:
 - **Glob tool** to find temporary and debug files
 - **Grep tool** to detect debug statements in code

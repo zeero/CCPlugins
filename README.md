@@ -74,7 +74,7 @@ python uninstall.py
 ```
 
 ## Commands
-19 professional commands optimized for Claude Code CLI's native capabilities.
+21 professional commands optimized for Claude Code CLI's native capabilities.
 
 ### Development Workflow
 
@@ -82,8 +82,8 @@ python uninstall.py
 /cleanproject          # Remove debug artifacts with git safety
 /commit                # Smart conventional commits with analysis
 /format                # Auto-detect and apply project formatter
-/test                  # Run tests with intelligent failure analysis
 /scaffold feature-name # Generate complete features from patterns
+/test                  # Run tests with intelligent failure analysis
 ```
 
 ### Code Quality & Security
@@ -95,6 +95,8 @@ python uninstall.py
 /remove-comments       # Clean obvious comments, preserve valuable docs
 /fix-imports           # Repair broken imports after refactoring
 /find-todos            # Locate and organize development tasks
+/create-todos          # Add contextual TODO comments based on analysis results
+/fix-todos             # Intelligently implement TODO fixes with context
 ```
 
 ### Advanced Analysis
@@ -205,6 +207,7 @@ Custom commands appear with a `(user)` tag in Claude Code CLI to distinguish the
 | Import fixing | 15-25 min | 1-2 min | ~20 min |
 | Code review | 20-30 min | 2-4 min | ~20 min |
 | Issue prediction | 60+ min | 5-10 min | ~50 min |
+| TODO resolution | 30-45 min | 3-5 min | ~35 min |
 
 **Total: 3-4 hours saved per week with professional-grade analysis**
 
@@ -247,6 +250,12 @@ claude "/format" && claude "/commit"
 
 # Feature development
 claude "/scaffold api-users" && claude "/test"
+
+# Complete workflow
+claude "/security-scan" && claude "/create-todos" && claude "/todos-to-issues"
+
+# TODO resolution workflow
+claude "/find-todos" && claude "/fix-todos" && claude "/test"
 ```
 
 ### Manual Workflow Integration
@@ -266,6 +275,22 @@ claude "/format"
 claude "/commit"
 claude "/session-end"
 ```
+
+## Security & Git Instructions
+
+All commands that interact with git include security instructions to prevent AI attribution:
+
+**Commands with git protection:**
+- `/commit`, `/scaffold`, `/make-it-pretty`, `/cleanproject`, `/fix-imports`, `/review`, `/security-scan`
+- `/contributing`, `/todos-to-issues`, `/predict-issues`, `/find-todos`, `/create-todos`, `/fix-todos`
+
+These commands will NEVER:
+- Add "Co-authored-by" or AI signatures
+- Include "Generated with Claude Code" messages
+- Modify git config or credentials
+- Add AI attribution to commits/issues
+
+You can modify these instructions in individual command files if needed.
 
 ## Contributing
 

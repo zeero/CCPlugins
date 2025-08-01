@@ -15,6 +15,7 @@ COMMANDS=(
     "commit.md"
     "context-cache.md"     # Old command (removed)
     "contributing.md"
+    "create-todos.md"
     "explain-like-senior.md"
     "find-todos.md"
     "fix-imports.md"
@@ -23,6 +24,7 @@ COMMANDS=(
     "make-it-pretty.md"
     "predict-issues.md"
     "remove-comments.md"
+    "fix-todos.md"
     "review.md"
     "scaffold.md"
     "security-scan.md"

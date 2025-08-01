@@ -34,6 +34,12 @@ After analysis, I'll ask: "How would you like to track these predictions?"
 - Create GitHub issues: I'll generate properly formatted issues with details
 - Summary only: I'll provide actionable report without task creation
 
+**Important**: I will NEVER:
+- Add "Created by Claude" or any AI attribution to issues
+- Include "Generated with Claude Code" in descriptions
+- Modify repository settings or permissions
+- Add any AI/assistant signatures or watermarks
+
 Predictions will include:
 - Risk level assessment (Critical/High/Medium/Low)
 - Estimated timeline for potential issues

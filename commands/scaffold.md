@@ -33,6 +33,12 @@ git add -A
 git commit -m "Scaffold: $ARGUMENTS feature structure"
 ```
 
+**Important**: I will NEVER:
+- Add "Co-authored-by" or any Claude signatures
+- Include "Generated with Claude Code" or similar messages
+- Modify git config or user credentials
+- Add any AI/assistant attribution to the commit
+
 The scaffolded feature will be:
 - Immediately functional with basic implementation
 - Following your project's established conventions

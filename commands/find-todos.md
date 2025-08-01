@@ -29,4 +29,10 @@ After scanning, I'll ask: "Convert these to GitHub issues?"
 - Todos only: I'll maintain the local todo list
 - Summary: I'll provide organized report
 
+**Important**: I will NEVER:
+- Add "Created by Claude" or any AI attribution to issues
+- Include "Generated with Claude Code" in descriptions
+- Modify repository settings or permissions
+- Add any AI/assistant signatures or watermarks
+
 This helps track and prioritize unfinished work systematically.

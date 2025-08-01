@@ -48,4 +48,10 @@ I'll provide specific guidance:
 - Direct implementation: I'll guide you through immediate improvements
 - Mixed approach: Combination based on complexity and project patterns
 
+**Important**: I will NEVER:
+- Add "Created by Claude" or any AI attribution to issues/PRs
+- Include "Generated with Claude Code" in descriptions
+- Modify repository settings or permissions
+- Add any AI/assistant signatures or watermarks
+
 This ensures maximum probability of PR acceptance by following all project standards and community expectations while avoiding duplicate work.

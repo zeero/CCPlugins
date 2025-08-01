@@ -7,6 +7,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **New Commands:**
+  - `/create-todos` - Intelligently creates contextual TODO comments in code based on recent operations
+  - `/fix-todos` - Analyzes and implements TODO fixes with full context understanding
+  
+- **Security Enhancements:**
+  - Added anti-attribution instructions to all git/GitHub commands
+  - Prevents AI signatures in commits, issues, and PRs
+  - Protects user identity and maintains code ownership
+
+### Enhanced
+- **`/test` Command:**
+  - Build verification before running tests
+  - Console output and log monitoring
+  - Auto-fix for common test failures
+  - Pattern detection for memory leaks, port conflicts, timeouts
+  - Advanced diagnostics with log analysis
+
+- **`/todos-to-issues` Command:**
+  - Complete project context analysis
+  - Reads all documentation (README, CONTRIBUTING, templates)
+  - Adapts to repository type (fork, personal, organization)
+  - Follows upstream guidelines for forks
+  - Smart issue generation matching project style
+
+### Fixed
+- Removed specific build tool references from `/test` for better framework agnosticism
+- Updated all git-related commands with security instructions
+
 ## [2.0.0] - 2025-08-01
 
 ### Added

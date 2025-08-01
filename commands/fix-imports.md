@@ -29,6 +29,12 @@ git add -A
 git commit -m "Pre-import-fix checkpoint" || echo "No changes to commit"
 ```
 
+**Important**: I will NEVER:
+- Add "Co-authored-by" or any Claude signatures
+- Include "Generated with Claude Code" or similar messages
+- Modify git config or user credentials
+- Add any AI/assistant attribution to the commit
+
 After fixing imports:
 - Verify syntax correctness for your project
 - Use Grep to ensure no new conflicts

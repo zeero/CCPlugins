@@ -40,4 +40,11 @@ After analysis, I'll ask: "Create GitHub issues for these vulnerabilities?"
 - Todos only: I'll maintain local tracking for resolution
 - Summary: I'll provide actionable security report
 
+**Important**: I will NEVER:
+- Add "Co-authored-by" or any Claude signatures to commits
+- Add "Created by Claude" or any AI attribution to issues
+- Include "Generated with Claude Code" in any output
+- Modify git config or repository settings
+- Add any AI/assistant signatures or watermarks
+
 This provides actionable security improvements tailored to your project without overwhelming detail.
