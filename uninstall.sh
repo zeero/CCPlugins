@@ -33,6 +33,7 @@ COMMANDS=(
     "test.md"
     "todos-to-issues.md"
     "undo.md"
+    "understand.md"
 )
 
 # Count installed commands

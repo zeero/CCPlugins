@@ -35,7 +35,8 @@ def main():
         "session-start.md",
         "test.md",
         "todos-to-issues.md",
-        "undo.md"
+        "undo.md",
+        "understand.md"
     ]
     
     commands_dir = Path.home() / ".claude" / "commands"

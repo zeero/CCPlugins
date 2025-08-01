@@ -74,7 +74,7 @@ python uninstall.py
 ```
 
 ## Commands
-21 professional commands optimized for Claude Code CLI's native capabilities.
+22 professional commands optimized for Claude Code CLI's native capabilities.
 
 ### Development Workflow
 
@@ -102,6 +102,7 @@ python uninstall.py
 ### Advanced Analysis
 
 ```bash
+/understand            # Analyze entire project architecture and patterns
 /explain-like-senior   # Senior-level code explanations with context
 /contributing          # Complete contribution readiness analysis
 /make-it-pretty        # Improve readability without functional changes

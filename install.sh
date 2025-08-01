@@ -30,6 +30,7 @@ COMMANDS=(
     "test.md"
     "todos-to-issues.md"
     "undo.md"
+    "understand.md"
 )
 
 # Check for existing commands
