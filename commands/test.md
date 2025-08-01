@@ -1,6 +1,37 @@
-# Smart Test Runner
+# Smart Test Runner - Context Aware
 
-I'll intelligently run tests and actively help fix failures using advanced analysis.
+I'll intelligently run tests based on your current context and actively help fix failures.
+
+**Context Detection First:**
+Let me understand what context I'm in:
+
+1. **Cold Start** (no previous context):
+   - Run full test suite with coverage
+   - Generate complete health report
+   - Identify chronic failures
+
+2. **Active Session** (you're implementing features):
+   - Check git diff for modified files
+   - Read CLAUDE.md for session goals
+   - Test ONLY what you've been working on
+   - Incremental testing as you code
+
+3. **Post-Command Context**:
+   - After `/scaffold`: Test the new component
+   - After `/fix-todos`: Test modified files
+   - After `/fix-imports`: Re-run previously failed tests
+   - After `/security-scan`: Security-focused tests
+   - After `/format`: Quick smoke tests only
+
+4. **Debug Context** (previous test failures):
+   - Focus on failed tests with verbose output
+   - Add strategic debug logging
+   - Run in isolation mode
+
+5. **Pre-Commit Context**:
+   - Full suite + lint + typecheck
+   - Coverage report for PR
+   - No skipped tests allowed
 
 **Phase 1: Deep Project Analysis**
 Using native tools to understand your testing setup:
@@ -91,10 +122,38 @@ If build fails before tests:
 - Suggest specific fixes based on error patterns
 - Offer to install missing packages if detected
 
+**Smart Context-Based Strategy:**
+Based on the detected context, I'll choose the optimal approach:
+
+- **No Context**: Full test discovery and execution
+- **Active Development**: Watch mode on changed files only  
+- **Post-Implementation**: Test coverage for new code
+- **Debugging Mode**: Isolated test with maximum verbosity
+- **Pre-Deploy**: Complete validation suite
+
+**Intelligent Test Selection:**
+```bash
+# Context: After implementing UserService
+# I'll run: UserService tests + integration tests that use it
+
+# Context: After /scaffold user-auth  
+# I'll run: New user-auth tests + smoke tests
+
+# Context: Fixing failing tests
+# I'll run: Only the specific failing test with debug info
+```
+
+**Session Awareness:**
+- Read session goals from CLAUDE.md
+- Track all modified files during session
+- Prioritize tests based on session objectives
+- Generate session test report at the end
+
 **Integration with other commands:**
 - After `/test` failures → `/create-todos` to track fixes
 - Complex failures → `/explain-like-senior` for deep analysis
 - Test improvements → `/review` for quality check
+- Session testing → `/session-end` includes test summary
 
 **Important**: I will NEVER:
 - Modify tests to pass incorrectly

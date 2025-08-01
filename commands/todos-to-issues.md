@@ -61,6 +61,15 @@ Using native tools for comprehensive analysis:
 - **Read tool** to understand code context
 - **Glob tool** to check project structure
 
+**MANDATORY Pre-Checks:**
+Before creating ANY GitHub issues, I MUST:
+1. Run build command - Must pass
+2. Run all tests - Must be green
+3. Run linter - No errors allowed
+4. Verify code compiles without warnings
+
+If ANY check fails → I'll STOP and help fix it first!
+
 I'll intelligently analyze each TODO:
 1. Understand the technical context and implementation
 2. Determine priority based on impact and location
