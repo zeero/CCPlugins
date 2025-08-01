@@ -1,0 +1,51 @@
+name: CCPlugins Integration Example
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  code-quality:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Claude Code CLI
+      run: |
+        npm install -g @anthropic-ai/claude-code
+        
+    - name: Install CCPlugins
+      run: |
+        curl -sSL https://raw.githubusercontent.com/brennercruvinel/CCPlugins/main/install.sh | bash
+        
+    - name: Run Security Scan
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: |
+        claude "/security-scan" || true
+        
+    - name: Run Code Review
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: |
+        claude "/review" || true
+        
+    - name: Check for TODOs
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: |
+        claude "/find-todos" || true
+        
+    - name: Format Code
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: |
+        claude "/format" || true
+        
+    - name: Run Tests
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: |
+        claude "/test" || true

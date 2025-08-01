@@ -17,13 +17,18 @@ def main():
         "cleanup-types.md",  # Old command (removed)
         "commit.md",
         "context-cache.md",  # Old command (removed)
+        "contributing.md",
+        "explain-like-senior.md",
         "find-todos.md",
         "fix-imports.md",
         "format.md",
         "human-mode.md",
         "make-it-pretty.md",
+        "predict-issues.md",
         "remove-comments.md",
         "review.md",
+        "scaffold.md",
+        "security-scan.md",
         "session-end.md",
         "session-start.md",
         "test.md",

@@ -2,41 +2,41 @@
 
 I'll help fix import statements that broke after moving or renaming files.
 
-First, let me analyze your project structure and identify any broken imports. I'll:
+I'll use native tools to analyze your project systematically:
+- **Glob tool** to find files with import patterns
+- **Grep tool** to search for broken import references
+- **Read tool** to analyze import syntax and context
 
-1. **Detect your project type** from file patterns and configurations
-2. **Identify import/include patterns** specific to your language
-3. **Check which imports are broken** by verifying if referenced files exist
-4. **Find where files were moved** by searching for matching filenames
+First, I'll detect your project structure and import patterns automatically without assuming specific technologies.
 
-Based on what I find, I'll:
-- Detect the import patterns used in your project
-- Handle the specific syntax for your language
-- Preserve your existing code style
-
-If I find multiple broken imports, I'll create a todo list to fix them systematically.
+When I find multiple broken imports, I'll create a todo list to fix them systematically.
 
 For each broken import, I'll:
-1. Show you the broken import with its location
-2. Search for the moved/renamed file
-3. Check for ambiguous matches
+1. Show the broken import with exact file location
+2. Use Glob to search for moved/renamed files
+3. Analyze context to determine correct target
 
 **For ambiguous cases:**
 - If multiple files could match the import
-- I'll list all possible options
-- Show you the context
+- I'll list all possible options with context
+- Show you the usage patterns
 - Ask which file is the correct target
-- Never guess when unsure
+- Never guess when uncertain
 
-**Error handling:**
-- If an import can't be resolved
-- I'll report why it failed
-- Continue with other fixable imports
-- Suggest manual fixes if needed
+**Safety measures:**
+```bash
+git add -A
+git commit -m "Pre-import-fix checkpoint" || echo "No changes to commit"
+```
 
 After fixing imports:
-- Verify the syntax is correct
-- Ensure no new conflicts were introduced
-- Report summary of changes made
+- Verify syntax correctness for your project
+- Use Grep to ensure no new conflicts
+- Report summary of all changes made
 
-This ensures your code continues to work after file reorganization with safety and clarity.
+**Error handling:**
+- If an import can't be resolved, I'll report why
+- Continue with other fixable imports
+- Suggest manual investigation for complex cases
+
+This ensures your code works after reorganization while maintaining safety and precision.
