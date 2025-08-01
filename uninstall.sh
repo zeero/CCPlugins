@@ -16,6 +16,7 @@ COMMANDS=(
     "context-cache.md"     # Old command (removed)
     "contributing.md"
     "create-todos.md"
+    "docs.md"
     "explain-like-senior.md"
     "find-todos.md"
     "fix-imports.md"

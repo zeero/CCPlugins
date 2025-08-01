@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `/create-todos` - Intelligently creates contextual TODO comments in code based on recent operations
   - `/fix-todos` - Analyzes and implements TODO fixes with full context understanding
   - `/understand` - Analyzes entire project architecture, patterns, and component relationships
+  - `/docs` - Smart documentation management with multiple modes (read, update, session-based)
   
 - **Security Enhancements:**
   - Added anti-attribution instructions to all git/GitHub commands

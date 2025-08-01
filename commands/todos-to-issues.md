@@ -86,12 +86,49 @@ I'll intelligently analyze each TODO:
 - Milestone alignment with project roadmap
 - Language style matching documentation tone
 
-**Smart Issue Generation:**
-- If TODO says "Fix auth bug" → Create detailed bug report with steps
-- If TODO says "Add caching" → Create feature request with rationale
-- If TODO says "Refactor X" → Create technical debt issue with impact
-- Group related TODOs into single comprehensive issues
-- Link code locations for easy navigation
+**Smart Issue Type Detection:**
+I'll analyze each TODO to determine the correct issue type:
+
+**Bug Issues** (bug label):
+- TODO/FIXME about errors, crashes, incorrect behavior
+- Keywords: fix, bug, broken, error, crash, wrong, incorrect
+- Will include: steps to reproduce, expected vs actual behavior
+
+**Feature Requests** (enhancement label):
+- TODO about new functionality or improvements
+- Keywords: add, implement, create, new, feature, support
+- Will include: use case, benefits, implementation approach
+
+**Documentation** (documentation label):
+- TODO about missing or outdated docs
+- Keywords: document, docs, README, explain, describe
+- Will include: what needs documenting, why it's important
+
+**Performance** (performance label):
+- TODO about optimization, speed, memory
+- Keywords: optimize, slow, performance, cache, improve
+- Will include: current metrics, expected improvement
+
+**Security** (security label):
+- TODO about vulnerabilities, validation, auth
+- Keywords: security, validate, sanitize, auth, permission
+- Will include: risk level, potential impact
+
+**Technical Debt** (tech-debt label):
+- TODO about refactoring, cleanup, architecture
+- Keywords: refactor, cleanup, reorganize, technical debt
+- Will include: current issues, proposed solution
+
+**Chore/Maintenance** (chore label):
+- TODO about updates, dependencies, tooling
+- Keywords: update, upgrade, migrate, deprecate
+- Will include: what needs updating, timeline
+
+I'll also:
+- Group related TODOs into single issues when appropriate
+- Set priority based on keywords (CRITICAL, HIGH, TODO, NOTE)
+- Link to exact code location
+- Use project's existing labels if different
 
 I'll handle rate limits and show you a summary of all created issues.
 
