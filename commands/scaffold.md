@@ -12,6 +12,8 @@ First, let me analyze your project architecture:
 
 I'll scaffold the feature following your established patterns:
 - Generate all necessary files (logic, tests, documentation)
+- Create contextual tests based on your testing frameworks and patterns
+- Generate intelligent documentation following your docs structure
 - Apply consistent naming conventions from your codebase
 - Include appropriate boilerplate based on existing code
 - Maintain architectural consistency

@@ -12,6 +12,7 @@ I'll use specialized sub-agents for comprehensive analysis:
 - **Security sub-agent**: Credential exposure, input validation, vulnerabilities
 - **Performance sub-agent**: Bottlenecks, memory issues, optimization opportunities  
 - **Quality sub-agent**: Code complexity, maintainability, best practices
+- **Architecture sub-agent**: Layer separation, dependency direction, scalability patterns
 
 I'll examine files using the Read and Grep tools to analyze:
 1. **Security Issues** - credential exposure, input validation

@@ -7,40 +7,74 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2025-08-01
+
 ### Added
-- `/undo` - Rollback last destructive operation with backup support
-- `/make-it-pretty` - Improve code readability without changing functionality (includes type improvements)
-- `/todos-to-issues` - Convert TODO comments to GitHub issues automatically
-- `/human-mode` - Switch to pragmatic mode for practical solutions
-- Enhanced error handling across all commands
-- Ambiguity checking for `/fix-imports` command
-- Automatic backup creation in `/cleanproject`
-- Uninstall scripts (uninstall.py and uninstall.sh) for easy removal
-- TodoWrite integration in commands that process multiple items
-- Prompt before overwriting existing commands during installation
+- **New Commands (5):**
+  - `/security-scan` - Comprehensive security analysis with dependency health checking
+  - `/scaffold` - Intelligent feature scaffolding with auto-generated tests and docs
+  - `/predict-issues` - Proactive problem detection with timeline estimates  
+  - `/contributing` - Complete contribution readiness analysis comparing local vs remote
+  - `/explain-like-senior` - Senior-level code explanations with architectural context
+
+- **Claude Code CLI Native Integration:**
+  - Migration to native tools (Grep, Glob, Read, TodoWrite) across all commands
+  - Sub-agent architecture for specialized analysis (security, performance, quality, architecture)
+  - CLAUDE.md memory system integration replacing parallel session system
+  - Git checkpoint safety replacing custom backup systems
+
+- **Advanced Features:**
+  - Multi-step operation tracking with TodoWrite integration
+  - GitHub Actions workflow examples for CI/CD integration
+  - Hooks configuration examples for automatic formatting
+  - Context-aware analysis without technology stack assumptions
+  - Intelligent issue creation with duplicate detection
+
+### Changed
+- **Performance Optimizations:**
+  - Reduced verbosity across all commands for senior developer efficiency
+  - Native tool usage for improved performance on large codebases
+  - Parallel execution optimization where beneficial
+  - Streamlined command outputs with actionable results
+
+- **Architecture Improvements:**
+  - `/review` now uses specialized sub-agents (security, performance, quality, architecture)
+  - `/session-start` and `/session-end` integrated with Claude Code CLI memory system
+  - `/cleanproject` uses git checkpoints instead of custom backup directories
+  - `/find-todos` and `/fix-imports` migrated to native Grep/Glob tools
+  - All commands follow consistent safety-first design with git checkpoints
+
+- **Documentation:**
+  - Complete README overhaul with technical architecture details
+  - GitHub Actions integration examples
+  - Hooks configuration guidance
+  - Performance metrics updated with new command capabilities
+
+### Enhanced
+- **Security:**
+  - Input validation and sanitization across all commands
+  - Safe file operations with proper validation
+  - Secure handling of sensitive information detection
+  - Security audit of all existing commands
+
+- **Functionality Consolidation:**
+  - Dependency health analysis integrated into `/security-scan`
+  - Architecture review capabilities added to `/review` sub-agents
+  - Auto-documentation and smart test generation integrated into `/scaffold`
+  - Improvement suggestions distributed across relevant analysis commands
+
+### Fixed
+- Session management system now uses native CLAUDE.md instead of parallel tracking
+- Commands no longer use framework-specific detection, rely on intelligent analysis
+- Removed all hardcoded technology references for true framework agnosticism
+- Git safety operations consistent across all destructive commands
+- TodoWrite integration prevents lost progress in multi-step operations
 
 ### Removed
 - `/context-cache` - Removed as Claude Code already maintains context automatically
 - `/cleanup-types` - Merged functionality into `/make-it-pretty`
-- Automatic backup folders during installation (was creating unnecessary duplicates)
-
-### Changed
-- Improved error handling and recovery instructions in all commands
-- Commands now report failures gracefully and suggest alternatives
-- Maintained minimalist approach without framework-specific assumptions
-- Enhanced README with clearer technical explanation of how commands work
-- Added advanced usage examples and limitations section to documentation
-
-### Fixed
-- **Critical**: `/cleanproject` no longer attempts to remove `.claude` directory (#5)
-- `/cleanproject` now explicitly protects critical directories (.claude, .git)
-- `/commit` no longer adds Claude signatures or co-authorship to commits
-- `/format` and `/test` commands now properly detect tools without assuming specific languages
-- Removed all language-specific references for true framework agnosticism
-- Fixed md5sum compatibility issue for macOS in `/context-cache`
-- Replaced framework-specific directory patterns with generic ones
-- Removed hardcoded file extensions from commands
-- Fixed curl installation error on Linux - install script now downloads command files from GitHub directly instead of expecting local files
+- Custom backup systems replaced with git checkpoint safety
+- Parallel session directory system replaced with CLAUDE.md integration
 
 ## [1.6.0] - 2025-01-25
 
@@ -74,6 +108,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Python-based installer
 - Shell script for Unix-like systems
 
-[Unreleased]: https://github.com/brennercruvinel/CCPlugins/compare/v1.6.0...HEAD
+[Unreleased]: https://github.com/brennercruvinel/CCPlugins/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/brennercruvinel/CCPlugins/compare/v1.6.0...v2.0.0
 [1.6.0]: https://github.com/brennercruvinel/CCPlugins/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/brennercruvinel/CCPlugins/releases/tag/v1.5.0

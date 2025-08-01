@@ -29,9 +29,10 @@ For each finding, I'll:
 
 I'll analyze patterns like:
 - Hardcoded secrets (API keys, passwords, tokens)
-- Insecure configurations
-- Dependency vulnerabilities
-- Input validation issues
+- Insecure configurations and permissions
+- Dependency vulnerabilities and outdated packages
+- Dependency health and security advisories
+- Input validation issues and injection risks
 - Authentication/authorization weaknesses
 
 After analysis, I'll ask: "Create GitHub issues for these vulnerabilities?"
