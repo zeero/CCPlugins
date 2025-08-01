@@ -1,0 +1,36 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|MultiEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "# Auto-format after file modifications\nif command -v prettier >/dev/null 2>&1; then\n  prettier --write \"$file_path\" 2>/dev/null || true\nelif command -v black >/dev/null 2>&1; then\n  black \"$file_path\" 2>/dev/null || true\nelif command -v gofmt >/dev/null 2>&1; then\n  gofmt -w \"$file_path\" 2>/dev/null || true\nfi"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "# Log bash commands for audit\necho \"[$(date)] Claude executing: $command\" >> ~/.claude/command-log.txt"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "# Auto-commit after significant changes\nif git diff --quiet; then\n  exit 0\nfi\ngit add -A\ngit commit -m \"Auto-commit: Claude Code session changes\" || true"
+          }
+        ]
+      }
+    ]
+  }
+}
