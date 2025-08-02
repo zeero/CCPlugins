@@ -4,6 +4,8 @@ I'll help you restructure your code systematically - preserving functionality wh
 
 Arguments: `$ARGUMENTS` - files, directories, or refactoring scope
 
+**KEY FEATURE: Built-in validation and refinement after EVERY change ensures nothing breaks and no code is left behind. The AI will automatically fix its own mistakes during the refactoring process.**
+
 **SESSION FILES LOCATION: Always use refactor/ folder in current directory**
 
 ## Session Intelligence
@@ -139,11 +141,36 @@ I'll apply refactorings systematically:
 4. Progress to higher-impact refactorings
 5. Update plan with completion status
 
-**Continuous Validation:**
-- Run tests after each refactoring
-- Check for compilation/syntax errors
-- Verify behavior preservation
-- Monitor performance impact
+**Continuous Validation & Refinement:**
+After EVERY refactoring change:
+1. **Immediate Testing:**
+   - Run unit tests for modified files
+   - Execute integration tests if applicable
+   - Verify no test regressions
+   
+2. **Deep Comparison:**
+   - Compare function outputs before/after
+   - Validate API contracts maintained
+   - Check for missing edge cases
+   - Verify error handling preserved
+   
+3. **Automated Fixes:**
+   - Update broken imports automatically
+   - Fix reference errors
+   - Adjust type definitions
+   - Resolve linting issues
+   
+4. **Quality Gates:**
+   - STOP if tests fail - fix immediately
+   - STOP if behavior changes - investigate
+   - STOP if performance degrades - optimize
+   - Only proceed when 100% validated
+
+5. **Continuous Refinement:**
+   - Re-scan for missed patterns
+   - Update all related files
+   - Clean up orphaned code
+   - Document breaking changes
 
 ## Phase 4: Pattern Application
 
@@ -209,9 +236,19 @@ Continuing from checkpoint...
 /refactor validate  # Validate completeness and find loose ends
 ```
 
-## Phase 6: Validation & Refinement
+**Deep Validation & Enhancement Commands:**
+```
+/refactor finish    # Complete with full validation & behavior comparison
+/refactor enhance   # Deep analysis comparing original vs refactored
+/refactor verify    # Run original code, capture behavior, compare with new
+/refactor complete  # Ensure 100% migration with behavior preservation
+```
 
-When you run `/refactor validate` after completing refactoring:
+## Phase 6: Automatic Final Validation & Refinement
+
+**AUTOMATIC EXECUTION:** This phase runs automatically after all refactorings are complete. You can also trigger it manually with `/refactor validate`.
+
+**Final Validation Process:**
 
 **Deep Validation Analysis:**
 1. **Coverage Check** - Find all remaining old patterns
@@ -245,6 +282,59 @@ SUGGESTED REFINEMENTS:
 - Create migration guide for team
 - Fix remaining issues automatically
 - Ensure 100% pattern consistency
+
+## Deep Validation Commands (All-in-One Process)
+
+**ALL these commands (`finish`, `enhance`, `verify`, `complete`) execute the SAME comprehensive validation process:**
+
+### Complete Validation & Enhancement Process
+When you run ANY of these: `/refactor finish`, `/refactor enhance`, `/refactor verify`, or `/refactor complete`
+
+**I will AUTOMATICALLY execute ALL these steps:**
+
+1. **Original Behavior Capture**
+   - Run original code with test inputs
+   - Save all function outputs, API responses, logs
+   - Create behavior snapshot in `refactor/original-behavior.json`
+
+2. **Complete Migration**
+   - Apply ALL remaining refactorings
+   - Find and fix ALL instances of old patterns
+   - Update ALL imports and references
+   - Clean up ALL orphaned code
+
+3. **Deep Behavior Comparison**
+   - Run SAME inputs on refactored code
+   - Compare outputs byte-by-byte
+   - Test ALL edge cases
+   - Verify error handling preserved
+
+4. **Comprehensive Analysis**
+   - Line-by-line code comparison
+   - Complexity metrics (before/after)
+   - Performance benchmarks
+   - Memory usage analysis
+   - Test coverage verification
+
+5. **Automatic Fixes**
+   - Fix ANY behavioral discrepancies
+   - Update broken references
+   - Resolve type issues
+   - Correct import paths
+
+6. **Final Validation**
+   - Run full test suite
+   - Execute integration tests
+   - Verify build passes
+   - Ensure 100% behavior preservation
+
+7. **Complete Report**
+   - De-para mapping of ALL changes
+   - Migration guide for team
+   - Risk assessment
+   - Rollback instructions if needed
+
+**The result:** 100% guarantee that NOTHING was broken, NOTHING was left behind, and the application behaves EXACTLY the same as before refactoring.
 
 ## Safety Guarantees
 
