@@ -36,26 +36,43 @@ Let me analyze what type of implementation this is:
 
 Based on what you've provided, I'll analyze and adapt the implementation:
 
-## Source Analysis
+## IMPORTANT: Complete File Reading
 
-I'll start by examining the source using my available tools:
+I will ALWAYS read files completely:
+- **Read tool**: Used WITHOUT limit parameter = reads ENTIRE file
+- **WebFetch tool**: Explicitly instructed to read ALL content
+- **No summarization**: I get COMPLETE code, not snippets
+- **Full analysis**: Every import, every function, every line
 
-**For Web Sources (GitHub, CodePen, etc):**
-Using WebFetch to get the content and analyze:
-- Code structure and patterns
-- Dependencies and imports
-- Core functionality
-- Integration points
+## Source Analysis - COMPLETE CODE EXAMINATION
 
-**For Local Sources:**
-Using Read and Glob to understand:
-- File organization
-- Code patterns
-- Dependencies
-- Architecture
+I'll analyze EVERYTHING, not just docs:
 
-**For Descriptions:**
-I'll search for best practices and proven implementations
+**STEP 1: Find ALL Source Files**
+Using Glob to locate:
+- Common source directories (src/, lib/, app/, core/)
+- All code files regardless of language
+- Component/module directories
+- Service/API directories
+- Any custom project structure
+
+**STEP 2: Read ACTUAL Implementation**
+For EACH core file found:
+- Read COMPLETE file content (no limits)
+- Understand HOW it works, not just what docs say
+- Analyze actual functions, classes, algorithms
+- Map data flow and architecture
+
+**STEP 3: Deep Feature Analysis**
+- What does each component/function ACTUALLY do?
+- How do they interact with each other?
+- What's the real architecture (not what README claims)?
+- What patterns and techniques are used?
+
+**STEP 4: Only THEN Check Documentation**
+- package.json for dependencies
+- README for context
+- But REAL understanding comes from CODE
 
 ## Project Understanding
 
@@ -64,10 +81,10 @@ First, I'll analyze your project to understand:
 - Naming conventions
 - Technology stack
 - Code style preferences
-- **Installed packages** (package.json, requirements.txt, go.mod, etc.)
-- **Version compatibility** 
-- **Build configuration**
-- **Established best practices**
+- **COMPLETE package.json** (Read tool without limit - gets ALL dependencies)
+- **FULL lock files** (package-lock.json, yarn.lock - ENTIRE content)
+- **Build configuration** (webpack.config.js, tsconfig.json - COMPLETE files)
+- **ALL documentation** (README.md, CONTRIBUTING.md - EVERY line)
 
 ## Dependency & Compatibility Analysis
 
@@ -94,10 +111,10 @@ Critical checks before implementation:
 </think>
 
 I'll check your current dependencies and ensure compatibility:
-- Read package.json/lock files for exact versions
-- Identify if similar functionality already exists
-- Check for known vulnerabilities or deprecations
-- Suggest modern alternatives when appropriate
+- Read ENTIRE package.json/lock files (no line limits)
+- Analyze COMPLETE dependency tree
+- Check FULL documentation of existing packages
+- Read ALL config files completely (no truncation)
 
 ## Adaptation Strategy
 
@@ -136,21 +153,21 @@ I'll adapt the source code by:
 2. **Smart Adaptation**
    ```
    Example transformations:
-   - moment() → dateFns.format() (you have date-fns)
-   - $.ajax() → fetch() with your error handler
-   - class Component → function Component with hooks
-   - require() → ES6 imports matching your style
+   - Old date library → Your existing date solution
+   - Legacy HTTP calls → Your HTTP client
+   - Outdated patterns → Modern equivalents
+   - Old module system → Your module system
    ```
 
 3. **Quality Assurance**
-   - Match your TypeScript configs
-   - Follow your ESLint rules
+   - Match your project's type system (if any)
+   - Follow your linting rules
    - Use your test patterns
    - Apply your code formatting
 
 4. **Best Practices Application**
-   - Modern syntax (optional chaining, nullish coalescing)
-   - Proper error boundaries
+   - Language-appropriate modern syntax
+   - Proper error handling for your stack
    - Accessibility considerations
    - Performance optimizations
 
@@ -178,6 +195,13 @@ I'll fetch, analyze, and adapt the sorting example to your project.
 ```
 I'll intelligently merge features from multiple sources.
 
+**For Multiple Repositories:**
+- Analyze EACH repository's core functionality
+- Read main source files, not just README
+- Understand how each works internally
+- Find best parts of each to combine
+- Create unified implementation
+
 ### 3. Research and Implement
 ```bash
 /implement "infinite scroll with virtual list"
@@ -198,25 +222,26 @@ I'll help migrate from one library to another.
 
 ## What I Actually Do
 
-1. **Comprehensive Analysis**
-   - Read your package.json/requirements.txt/go.mod
-   - Check installed versions and lock files
-   - Identify existing utilities and helpers
-   - Understand your established patterns
+1. **CODE FIRST Analysis (Not Just Docs!)**
+   - Use Glob to find ALL source files
+   - Read ACTUAL implementation files
+   - Understand algorithms and logic
+   - See how features REALLY work
+   - THEN check package.json/docs
 
 2. **Intelligent Fetch**
-   - Use WebFetch for URLs with smart prompts
-   - Read local files with full context
-   - Extract not just code but understand intent
-   - Check official docs for current best practices
+   - Use WebFetch for URLs with prompt: "Read ENTIRE file content, ALL lines, no summarization"
+   - Read local files with Read tool WITHOUT limit parameter (reads entire file)
+   - Extract COMPLETE code, not summaries or snippets
+   - Analyze FULL documentation, package.json, README, etc.
 
 3. **Dependency Resolution**
    ```
-   Real examples:
-   - Source needs moment.js → You have date-fns → Use date-fns
-   - Source uses class components → You use hooks → Convert to hooks
-   - Source needs lodash.merge → You have native spread → Use native
-   - Source uses deprecated API → Find modern equivalent
+   Generic approach:
+   - Source needs library X → You have library Y → Use Y
+   - Source uses old patterns → Convert to your patterns
+   - Source needs utility Z → You have equivalent → Use yours
+   - Source uses deprecated features → Use modern alternatives
    ```
 
 4. **Quality Implementation**
@@ -248,3 +273,35 @@ I'll help migrate from one library to another.
 ```
 
 The key difference: I don't just adapt code - I ensure it fits perfectly with your existing setup, uses what you already have, and follows current best practices.
+
+## CRITICAL: Analyzing Multiple Cloned Repositories
+
+When you provide multiple cloned repos, I will:
+
+1. **Explore Each Repository's CODE**:
+   ```
+   repo1/
+   ├── src/          ← Read ALL source files
+   ├── components/   ← Understand EACH component
+   └── lib/          ← Analyze core logic
+   
+   repo2/
+   ├── src/          ← Read implementation
+   ├── api/          ← Understand endpoints
+   └── utils/        ← Check utilities
+   ```
+
+2. **Deep Dive into Functionality**:
+   - NOT just "repo1 has authentication, repo2 has UI"
+   - BUT: "repo1 implements token-based auth with automatic refresh"
+   - AND: "repo2 uses performance optimization for large lists"
+
+3. **Extract and Combine Best Parts**:
+   - Take auth logic from repo1
+   - Take UI components from repo2
+   - Merge data handling from repo3
+   - Create unified, optimized implementation
+
+4. **No Superficial Analysis**:
+   - ❌ "This repo seems to handle authentication"
+   - ✅ "This repo implements secure token-based authentication with automatic session management"
