@@ -4,7 +4,35 @@ I'll create a complete feature structure based on your project patterns.
 
 Arguments: `$ARGUMENTS` - feature name or component to scaffold
 
-First, let me analyze your project architecture:
+## Strategic Thinking Process
+
+Before scaffolding, I'll use structured thinking to ensure the best implementation:
+
+<think>
+Let me analyze the critical decisions for scaffolding:
+
+1. **Project Architecture Discovery**
+   - What patterns exist in the codebase?
+   - Is there a dominant architectural style (MVC, Component-based, Layered)?
+   - How are similar features currently organized?
+
+2. **Naming Conventions**
+   - File naming: camelCase, PascalCase, kebab-case, or snake_case?
+   - Directory structure: by feature, by type, or mixed?
+   - Are there prefixes/suffixes patterns (e.g., .service, .controller)?
+
+3. **Technology Stack Patterns**
+   - What testing framework patterns exist?
+   - How are dependencies typically imported?
+   - What build/bundling patterns are used?
+
+4. **Integration Approach**
+   - Where should this feature fit in the existing structure?
+   - What existing code might need to be modified?
+   - How will this feature interact with others?
+</think>
+
+Based on my analysis, I'll proceed to analyze your project architecture:
 - Existing code organization patterns using Glob and Read tools
 - File naming conventions and directory structures
 - Testing approaches and documentation patterns
