@@ -22,7 +22,6 @@ COMMANDS=(
     "fix-imports.md"
     "fix-todos.md"
     "format.md"
-    "human-mode.md"
     "implement.md"
     "make-it-pretty.md"
     "predict-issues.md"

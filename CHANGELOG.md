@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Extended Thinking Mode:**
+  - Added to `/refactor` for complex architectural refactoring analysis
+  - Added to `/security-scan` for sophisticated vulnerability detection
+  - Triggers on complex scenarios requiring deep analysis
+
+- **Minimal Command Orchestration:**
+  - `/implement` suggests `/test` and `/commit` after milestones
+  - `/refactor` suggests `/test` and `/commit` at logical checkpoints
+  - `/security-scan` suggests `/test` and `/commit` for critical fixes
+  - `/fix-todos` suggests `/test` and `/commit` after resolving critical TODOs
+  - Pragmatic integration without over-engineering
+
+### Removed
+- `/human-mode` command - Functionality was redundant with Claude's natural adaptability
+
 ## [2.5.2] - 2025-08-02
 
 ### Added

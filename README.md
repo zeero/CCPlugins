@@ -120,7 +120,6 @@ python uninstall.py
 /docs                  # Smart documentation management and updates
 /todos-to-issues       # Convert code TODOs to GitHub issues
 /undo                  # Safe rollback with git checkpoint restore
-/human-mode            # Switch to pragmatic, less verbose mode
 ```
 
 
