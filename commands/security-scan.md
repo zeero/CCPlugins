@@ -21,6 +21,27 @@ I'll maintain security remediation progress:
 
 ## Phase 1: Security Assessment
 
+### Extended Thinking for Security Analysis
+
+For complex security scenarios, I'll use extended thinking to identify sophisticated vulnerabilities:
+
+<think>
+When analyzing security:
+- Attack vectors that aren't immediately obvious
+- Chain vulnerabilities that individually seem harmless
+- Business logic flaws that enable exploitation
+- Timing attacks and race conditions
+- Supply chain vulnerabilities in dependencies
+- Architectural weaknesses that enable lateral movement
+</think>
+
+**Triggers for Extended Analysis:**
+- Authentication and authorization systems
+- Financial transaction processing
+- Cryptographic implementations
+- Multi-tenant architectures
+- API security boundaries
+
 **MANDATORY FIRST STEPS:**
 1. First, check for `security-scan` directory in project root
 2. Check for existing session files in `security-scan/` (NOT in parent directories or absolute paths)
@@ -155,12 +176,19 @@ Continuing remediation...
 - Add AI attribution
 - Log sensitive data
 
+## Command Integration
+
+When appropriate for critical security fixes:
+- `/test` - Verify functionality after security patches
+- `/commit` - Create security-focused commits with proper messages
+
 ## What I'll Actually Do
 
-1. **Scan thoroughly** - Find all vulnerabilities
-2. **Prioritize wisely** - Critical issues first
-3. **Fix safely** - Preserve functionality
-4. **Track completely** - Perfect continuity
-5. **Verify constantly** - Ensure security improved
+1. **Deep analysis** - Use extended thinking for complex threats
+2. **Scan thoroughly** - Find all vulnerabilities
+3. **Prioritize wisely** - Critical issues first
+4. **Fix safely** - Preserve functionality
+5. **Track completely** - Perfect continuity
+6. **Verify constantly** - Ensure security improved
 
 I'll maintain complete continuity between sessions, always resuming exactly where we left off with full remediation context.

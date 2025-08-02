@@ -154,6 +154,12 @@ Continuing resolution...
 - Add AI attribution
 - Implement without understanding context
 
+## Command Suggestions
+
+After resolving critical TODOs:
+- `/test` - To ensure fixes work correctly
+- `/commit` - To save TODO resolutions
+
 ## What I'll Actually Do
 
 1. **Scan comprehensively** - Find all TODOs with context

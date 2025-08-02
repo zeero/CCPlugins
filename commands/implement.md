@@ -155,4 +155,10 @@ When you return and run `/implement` or `/implement resume`:
 - Bypass session file creation
 - Begin coding before showing the plan
 
+## Command Suggestions
+
+After implementation milestones, I may suggest:
+- `/test` - To verify the implementation works correctly
+- `/commit` - To save progress at logical checkpoints
+
 I'll maintain perfect continuity across sessions, always picking up exactly where we left off with full context preservation.

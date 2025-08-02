@@ -34,6 +34,26 @@ Read $HOME/.claude/refactor/state.json
 
 ## Phase 1: Initial Setup & Analysis
 
+### Extended Thinking for Complex Refactoring
+
+For complex refactoring scenarios, I'll use extended thinking to develop comprehensive strategies:
+
+<think>
+When faced with complex architectural refactoring:
+- Multi-step transformation paths that preserve functionality
+- Risk mitigation strategies for each transformation
+- Dependency graph analysis and update ordering
+- Performance implications of different approaches
+- Backwards compatibility requirements
+- Testing strategies for validating each step
+</think>
+
+**Triggers for Extended Analysis:**
+- Large-scale architectural changes
+- Complex dependency untangling
+- Performance-critical refactoring
+- Legacy system modernization
+
 **MANDATORY FIRST STEPS FOR SESSION CHECK:**
 ```
 Step 1: Check for refactor directory in CURRENT directory
@@ -178,12 +198,18 @@ Continuing from checkpoint...
 - Break working functionality
 - Make changes without validation
 
+## Command Integration
+
+When appropriate, I may suggest using other commands:
+- `/test` - After major refactoring to verify functionality
+- `/commit` - At logical checkpoints in the refactoring process
+
 ## Execution Guarantee
 
 **My workflow ALWAYS follows this order:**
 
 1. **Setup session** - Check/create state files FIRST
-2. **Analyze completely** - Full codebase understanding
+2. **Deep analysis** - Use extended thinking for complex scenarios
 3. **Write plan** - Document all changes in `refactor_plan.md`
 4. **Get confirmation** - Show plan summary before starting
 5. **Execute incrementally** - Follow plan with checkpoints
