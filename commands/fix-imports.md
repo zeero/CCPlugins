@@ -22,9 +22,12 @@ I'll maintain import fixing progress:
 ## Phase 1: Import Analysis
 
 **MANDATORY FIRST STEPS:**
-1. First, check for `fix-imports` directory in project root
-2. Check for existing session files in `fix-imports/` (NOT in parent directories)
-3. If no session exists:
+1. Check if `fix-imports` directory exists in current working directory
+2. If directory exists, check for session files:
+   - Look for `fix-imports/state.json`
+   - Look for `fix-imports/plan.md`
+   - If found, resume from existing session
+3. If no directory or session exists:
    - Scan for all broken imports
    - Create fix plan
    - Initialize progress tracking

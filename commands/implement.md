@@ -17,11 +17,12 @@ I'll check for existing implementation sessions to continue seamlessly:
 ## Phase 1: Initial Setup & Analysis
 
 **MANDATORY FIRST STEPS:**
-1. First, check for `implement` directory in current working directory
-2. Check for existing session files:
-   - Look for `implement/state.json` in current directory
-   - Look for `implement/plan.md` in current directory
-3. If no session exists:
+1. Check if `implement` directory exists in current working directory
+2. If directory exists, check for session files:
+   - Look for `implement/state.json`
+   - Look for `implement/plan.md`
+   - If found, resume from existing session
+3. If no directory or session exists:
    - Create `implement/plan.md`
    - Initialize `implement/state.json`
 4. Complete full analysis BEFORE any implementation

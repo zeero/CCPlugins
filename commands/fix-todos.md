@@ -22,11 +22,12 @@ I'll maintain TODO resolution progress across sessions:
 ## Phase 1: Discovery & Analysis
 
 **MANDATORY FIRST STEPS:**
-1. First, ensure `fix-todos` directory exists in current working directory
-2. Check for existing session files:
-   - Look for `fix-todos/state.json` in current directory
-   - Look for `fix-todos/plan.md` in current directory
-3. If no session exists:
+1. Check if `fix-todos` directory exists in current working directory
+2. If directory exists, check for session files:
+   - Look for `fix-todos/state.json`
+   - Look for `fix-todos/plan.md`
+   - If found, resume from existing session
+3. If no directory or session exists:
    - Scan entire codebase for TODOs
    - Create categorized plan
    - Initialize progress tracking

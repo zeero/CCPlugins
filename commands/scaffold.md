@@ -22,9 +22,12 @@ I'll maintain scaffolding progress across sessions:
 ## Phase 1: Pattern Discovery
 
 **MANDATORY FIRST STEPS:**
-1. First, check for `scaffold` directory in project root
-2. Check for existing session files in `scaffold/` (NOT in parent directories or absolute paths)
-3. If no session exists:
+1. Check if `scaffold` directory exists in current working directory
+2. If directory exists, check for session files:
+   - Look for `scaffold/state.json`
+   - Look for `scaffold/plan.md`
+   - If found, resume from existing session
+3. If no directory or session exists:
    - Analyze project patterns
    - Create scaffolding plan
    - Initialize progress tracking

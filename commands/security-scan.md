@@ -43,9 +43,12 @@ When analyzing security:
 - API security boundaries
 
 **MANDATORY FIRST STEPS:**
-1. First, check for `security-scan` directory in project root
-2. Check for existing session files in `security-scan/` (NOT in parent directories or absolute paths)
-3. If no session exists:
+1. Check if `security-scan` directory exists in current working directory
+2. If directory exists, check for session files:
+   - Look for `security-scan/state.json`
+   - Look for `security-scan/plan.md`
+   - If found, resume from existing session
+3. If no directory or session exists:
    - Perform full security scan
    - Create vulnerability report
    - Initialize tracking
