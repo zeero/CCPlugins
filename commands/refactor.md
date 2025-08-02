@@ -12,31 +12,41 @@ First, let me check if there's an existing refactoring session:
 # Check for existing refactoring session
 REFACTOR_STATE="$HOME/.claude/refactor_state.json"
 REFACTOR_PLAN="$HOME/.claude/refactor_plan.md"
-
-if [ -f "$REFACTOR_STATE" ] || [ -f "$REFACTOR_PLAN" ]; then
-    echo "Existing refactoring session detected..."
-fi
 ```
+
+**MANDATORY FIRST STEP: Session Detection**
+
+I'll check for existing refactoring sessions:
+
+1. **Read** `$HOME/.claude/refactor_state.json` to check for active session
+2. **Read** `$HOME/.claude/refactor_plan.md` to check for execution plan
+
+If session exists:
+- Load previous state and continue from checkpoint
+- Show resume summary with progress
+- Continue from where left off
+
+If no session exists:
+- Create new session with current timestamp
+- **Write** initial `refactor_state.json` with session info
+- **Write** initial `refactor_plan.md` with execution plan
+- Begin fresh analysis
 
 **Command Usage Modes:**
 - `/refactor` - Auto-detect: resume existing session or start new refactoring
-- `/refactor resume` - Explicitly resume existing session
+- `/refactor resume` - Explicitly resume existing session  
 - `/refactor continue` - Same as resume (alternative syntax)
 - `/refactor status` - Show current session progress without continuing
 - `/refactor new [scope]` - Force start new session (archiving any existing)
 - `/refactor [files/dirs]` - Start focused refactoring on specific scope
 
-**Session Auto-Detection:**
-When you run `/refactor` without arguments, I'll:
-1. **Check for existing session**: Look for refactor_state.json or refactor_plan.md
-2. **Resume automatically**: If session exists, load state and continue
-3. **Start fresh**: If no session exists, begin new refactoring analysis
-
-**Explicit Resume Commands:**
-If you prefer explicit control:
-- `$ARGUMENTS` contains "resume" or "continue" → Resume existing session
-- `$ARGUMENTS` contains "status" → Show progress report without execution
-- `$ARGUMENTS` contains "new" → Start fresh session
+**Session State Management:**
+Before any refactoring work, I'll:
+1. Check `$ARGUMENTS` for session control commands
+2. Use **Read** tool to detect existing session files
+3. Either resume existing session or create new one
+4. Create/update state files using **Write** tool
+5. Only then proceed with actual refactoring work
 
 ## Strategic Thinking Process
 
