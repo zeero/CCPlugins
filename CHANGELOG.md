@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.5.2] - 2025-08-02
+
 ### Added
 - **Session Persistence for Complex Commands:**
   - `/implement`, `/refactor`, `/fix-todos`, `/scaffold`, `/security-scan`, `/fix-imports` now maintain state across Claude sessions
@@ -39,7 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Protects user ownership of all code changes
 
 ### Fixed
-- **Critical Path Resolution Fix (2025-08-02):**
+- **Critical Path Resolution Fix:**
   - Fixed Claude LS tool not recognizing hidden folders starting with dot (.)
   - Changed from hidden `.claude/` folder to visible command-specific folders
   - Each command now creates its own folder: `refactor/`, `implement/`, `fix-imports/`, `security-scan/`, `scaffold/`
@@ -242,7 +244,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Python-based installer
 - Shell script for Unix-like systems
 
-[Unreleased]: https://github.com/brennercruvinel/CCPlugins/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/brennercruvinel/CCPlugins/compare/v2.5.2...HEAD
+[2.5.2]: https://github.com/brennercruvinel/CCPlugins/compare/v2.5.1...v2.5.2
+[2.5.1]: https://github.com/brennercruvinel/CCPlugins/compare/v2.0.0...v2.5.1
 [2.0.0]: https://github.com/brennercruvinel/CCPlugins/compare/v1.6.0...v2.0.0
 [1.6.0]: https://github.com/brennercruvinel/CCPlugins/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/brennercruvinel/CCPlugins/releases/tag/v1.5.0
