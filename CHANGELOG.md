@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.4.2] - 2025-08-01
+
 ### Added
 - **New Commands:**
   - `/create-todos` - Intelligently creates contextual TODO comments in code based on recent operations
@@ -20,7 +22,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Protects user identity and maintains code ownership
 
 ### Enhanced
+- **`/contributing` Command:**
+  - Full context awareness for different development scenarios
+  - Mandatory pre-flight checks before GitHub operations
+  - Intelligent remote repository scanning for issue linking
+  - Professional standards enforcement (no emojis, concise)
+  - Automated issue creation and PR management
 - **`/test` Command:**
+  - Context awareness for different testing scenarios
+  - Smart test selection based on current work
+  - Session awareness with CLAUDE.md integration
   - Build verification before running tests
   - Console output and log monitoring
   - Auto-fix for common test failures
@@ -28,11 +39,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Advanced diagnostics with log analysis
 
 - **`/todos-to-issues` Command:**
+  - Mandatory quality checks before creating GitHub issues
   - Complete project context analysis
   - Reads all documentation (README, CONTRIBUTING, templates)
   - Adapts to repository type (fork, personal, organization)
   - Follows upstream guidelines for forks
   - Smart issue generation matching project style
+  
+- **`/commit` Command:**
+  - Pre-commit quality checks
+  - Build and test verification before committing
 
 ### Fixed
 - Removed specific build tool references from `/test` for better framework agnosticism
