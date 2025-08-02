@@ -36,6 +36,60 @@ Let me analyze what type of implementation this is:
 
 Based on what you've provided, I'll analyze and adapt the implementation.
 
+## Platform-Specific Import Strategies
+
+I recognize and handle ALL code sharing platforms intelligently:
+
+### Version Control Platforms
+When you provide repository URLs (github.com, gitlab.com, bitbucket.org, etc.):
+- **Full Repository**: Clone and analyze entire codebase structure
+- **Specific File**: Fetch raw content directly  
+- **Folder/Directory**: Map all files in that path
+- **Gist/Snippet**: Extract and adapt the code fragment
+- **Branch/Tag/Commit**: Get specific version of code
+
+### Interactive Code Platforms  
+For live coding environments (codepen.io, jsfiddle.net, codesandbox.io, etc.):
+- **Parse embed structure**: Extract HTML/CSS/code sections
+- **Handle dependencies**: Detect external libraries used
+- **Preserve functionality**: Maintain interactive behavior
+- **Clean extraction**: Remove platform-specific wrappers
+
+### Online IDEs & Notebooks
+From cloud development environments (replit.com, stackblitz.com, colab.research.google.com, etc.):
+- **Project structure**: Download full project tree
+- **Environment config**: Capture setup and dependencies
+- **Multi-file projects**: Preserve file relationships
+- **Notebook cells**: Extract code and documentation
+
+### Documentation & Tutorial Sites
+When implementing from learning resources:
+- **Code blocks**: Extract from tutorials and guides
+- **Interactive examples**: Pull from documentation
+- **Step-by-step guides**: Follow implementation sequence
+- **Community solutions**: Adapt from Q&A platforms
+
+### Package Registries
+For library/package sources from any registry:
+- **Source exploration**: Analyze package internals
+- **Example extraction**: Find usage patterns
+- **Version comparison**: Check compatibility
+- **Dependency mapping**: Find equivalents in your project
+
+### Local Sources
+For files on your machine:
+- **Single file**: Direct implementation
+- **Project folder**: Full analysis of structure
+- **Archived code**: Extract and modernize
+- **Legacy systems**: Update patterns to current standards
+
+### Mixed Sources Strategy
+When you provide multiple URLs/paths:
+1. Analyze each source's unique features
+2. Identify complementary functionality
+3. Merge intelligently without duplication
+4. Create unified, optimized implementation
+
 ## SPECIAL CASE: Implementation Plans in Markdown
 
 When you provide a .md file (like documentation.md), I understand this is an IMPLEMENTATION PLAN:
@@ -266,6 +320,42 @@ Provide a .md file with implementation plan/checklist and I'll:
 - Never duplicate completed work
 - Update progress as I go
 
+## Smart URL Pattern Recognition
+
+I automatically detect and handle various URL patterns:
+
+### Repository URLs
+```
+https://github.com/user/repo → Full repository analysis
+https://github.com/user/repo/tree/main/src → Specific folder
+https://github.com/user/repo/blob/main/filename → Single file
+https://gitlab.com/user/project/-/tree/main → GitLab structure
+https://bitbucket.org/user/repo/src → Bitbucket format
+```
+
+### Code Playground URLs
+```
+https://codepen.io/user/pen/abc123 → Extract pen code
+https://jsfiddle.net/user/abc123/ → Parse fiddle structure
+https://codesandbox.io/s/project-name → Download sandbox
+https://stackblitz.com/edit/project → Extract project files
+https://replit.com/@user/project → Fetch repl content
+```
+
+### Raw Content URLs
+```
+https://raw.githubusercontent.com/... → Direct file content
+https://gist.github.com/... → Gist content
+https://pastebin.com/... → Text content
+Any URL ending in code file extension → Direct fetch
+```
+
+### Special Handling
+- **Private repos**: I'll guide you to provide accessible content
+- **Authentication required**: Instructions for providing access
+- **Large repositories**: Smart partial cloning strategies
+- **Binary files**: Skip non-text content automatically
+
 ## What I Actually Do
 
 1. **EXHAUSTIVE Code Analysis**
@@ -302,14 +392,60 @@ Provide a .md file with implementation plan/checklist and I'll:
    - Is it using best practices from 2025?
    - Will it scale with your application?
 
-## Example Scenarios
+## Example Usage Patterns
+
+### Single Source Examples
+```bash
+# From version control
+/implement https://github.com/user/awesome-feature
+
+# From code playground  
+/implement https://codepen.io/designer/pen/abc123
+
+# From local folder
+/implement ./examples/feature-demo/
+
+# From gist
+/implement https://gist.github.com/expert/useful-snippet
+```
+
+### Multiple Sources Examples
+```bash
+# Combine best parts from multiple implementations
+/implement https://github.com/projectA https://gitlab.com/projectB
+
+# Mix local and remote sources
+/implement ./my-old-code https://github.com/modern-example
+
+# Blend different approaches
+/implement "auth system" https://github.com/secure-auth ./legacy-auth/
+```
+
+### Smart Detection Examples
+```bash
+# Auto-detects full repo clone needed
+/implement https://github.com/framework/complete-example
+
+# Auto-detects single file fetch
+/implement https://github.com/utils/repo/blob/main/utility-file
+
+# Auto-detects playground structure  
+/implement https://jsfiddle.net/expert/a1b2c3/
+
+# Auto-detects local project
+/implement ../neighbor-project/src/
+```
+
+## Intelligent Adaptation Process
 
 I'll handle various scenarios:
-- Sources with outdated patterns: Convert to modern approaches
-- Sources with security issues: Fix vulnerabilities
-- Sources that are bloated: Find lightweight alternatives
+- **Outdated patterns**: Automatically modernize to current standards
+- **Security issues**: Fix vulnerabilities during implementation
+- **Bloated code**: Extract only essential functionality
+- **Incompatible dependencies**: Map to your existing tools
+- **Different architectures**: Adapt to your project structure
 
-The key difference: I don't just adapt code - I ensure it fits perfectly with your existing setup, uses what you already have, and follows current best practices.
+The key difference: I don't just copy code - I ensure it fits perfectly with your existing setup, uses what you already have, and follows current best practices.
 
 ## Implementation Plan Analysis
 
