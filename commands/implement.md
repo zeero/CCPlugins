@@ -39,10 +39,10 @@ Based on what you've provided, I'll analyze and adapt the implementation:
 ## IMPORTANT: Complete File Reading
 
 I will ALWAYS read files completely:
-- **Read tool**: Used WITHOUT limit parameter = reads ENTIRE file
-- **WebFetch tool**: Explicitly instructed to read ALL content
-- **No summarization**: I get COMPLETE code, not snippets
-- **Full analysis**: Every import, every function, every line
+- Read tool: Used WITHOUT limit parameter - reads ENTIRE file
+- WebFetch tool: Instructed to read ALL content, no truncation
+- No summarization: Complete code, not snippets
+- Full analysis: Every line of every file
 
 ## Source Analysis - COMPLETE CODE EXAMINATION
 
@@ -58,7 +58,9 @@ Using Glob to locate:
 
 **STEP 2: Read ACTUAL Implementation**
 For EACH core file found:
-- Read COMPLETE file content (no limits)
+- Read with NO LIMIT PARAMETER (gets entire file)
+- NEVER use "limit: 100" or any other limit
+- Get ALL lines, even if file has 10,000 lines
 - Understand HOW it works, not just what docs say
 - Analyze actual functions, classes, algorithms
 - Map data flow and architecture
@@ -81,10 +83,10 @@ First, I'll analyze your project to understand:
 - Naming conventions
 - Technology stack
 - Code style preferences
-- **COMPLETE package.json** (Read tool without limit - gets ALL dependencies)
-- **FULL lock files** (package-lock.json, yarn.lock - ENTIRE content)
-- **Build configuration** (webpack.config.js, tsconfig.json - COMPLETE files)
-- **ALL documentation** (README.md, CONTRIBUTING.md - EVERY line)
+- **COMPLETE dependency files** (Read WITHOUT limit parameter)
+- **FULL lock files** (Read WITHOUT limit parameter)
+- **Build configuration** (Read WITHOUT limit parameter)
+- **ALL documentation** (Read WITHOUT limit parameter)
 
 ## Dependency & Compatibility Analysis
 
@@ -231,9 +233,9 @@ I'll help migrate from one library to another.
 
 2. **Intelligent Fetch**
    - Use WebFetch for URLs with prompt: "Read ENTIRE file content, ALL lines, no summarization"
-   - Read local files with Read tool WITHOUT limit parameter (reads entire file)
-   - Extract COMPLETE code, not summaries or snippets
-   - Analyze FULL documentation, package.json, README, etc.
+   - Read local files without limit parameter
+   - Extract complete code, not summaries or snippets
+   - Analyze full documentation and configuration files
 
 3. **Dependency Resolution**
    ```
@@ -281,14 +283,14 @@ When you provide multiple cloned repos, I will:
 1. **Explore Each Repository's CODE**:
    ```
    repo1/
-   ├── src/          ← Read ALL source files
-   ├── components/   ← Understand EACH component
-   └── lib/          ← Analyze core logic
+   ├── src/          Read ALL source files
+   ├── components/   Understand EACH component
+   └── lib/          Analyze core logic
    
    repo2/
-   ├── src/          ← Read implementation
-   ├── api/          ← Understand endpoints
-   └── utils/        ← Check utilities
+   ├── src/          Read implementation
+   ├── api/          Understand endpoints
+   └── utils/        Check utilities
    ```
 
 2. **Deep Dive into Functionality**:
@@ -303,5 +305,5 @@ When you provide multiple cloned repos, I will:
    - Create unified, optimized implementation
 
 4. **No Superficial Analysis**:
-   - ❌ "This repo seems to handle authentication"
-   - ✅ "This repo implements secure token-based authentication with automatic session management"
+   - Avoid: "This repo seems to handle authentication"
+   - Instead: "This repo implements secure token-based authentication with automatic session management"
