@@ -9,10 +9,10 @@ Arguments: `$ARGUMENTS` - feature name or component to scaffold
 I'll maintain scaffolding progress across sessions:
 
 **Session Files (in current project directory):**
-- `claude/scaffold_plan.md` - Scaffolding plan and component list
-- `claude/scaffold_state.json` - Created files and progress
+- `scaffold/plan.md` - Scaffolding plan and component list
+- `scaffold/state.json` - Created files and progress
 
-**IMPORTANT:** Session files are stored in a `claude` folder (without dot) in your current project root
+**IMPORTANT:** Session files are stored in a `scaffold` folder in your current project root
 
 **Auto-Detection:**
 - If session exists: Resume incomplete scaffolding
@@ -22,15 +22,15 @@ I'll maintain scaffolding progress across sessions:
 ## Phase 1: Pattern Discovery
 
 **MANDATORY FIRST STEPS:**
-1. First, ensure `.claude` directory exists in project root
-2. Check for existing session files in `./.claude/` (NOT in parent directories)
+1. First, check for `scaffold` directory in project root
+2. Check for existing session files in `scaffold/` (NOT in parent directories or absolute paths)
 3. If no session exists:
    - Analyze project patterns
    - Create scaffolding plan
    - Initialize progress tracking
 4. Show scaffolding preview before creating
 
-**Note:** Always look for session files in the current project's `.claude` folder, not `../../../.claude/`
+**Note:** Always look for session files in the current project's `scaffold/` folder, not `../../../scaffold/` or absolute paths
 
 I'll discover your project patterns:
 
@@ -58,7 +58,7 @@ Based on patterns, I'll create a scaffolding plan:
 - Configuration updates
 - Integration points
 
-I'll write this plan to `scaffold_plan.md` with:
+I'll write this plan to `scaffold/plan.md` with:
 - Each file to create
 - Template patterns to follow
 - Integration requirements

@@ -4,17 +4,17 @@ I'll help you restructure your code systematically - preserving functionality wh
 
 Arguments: `$ARGUMENTS` - files, directories, or refactoring scope
 
-**SESSION FILES LOCATION: Always use .claude/ in current directory, NEVER ../../../.claude/ or $HOME/.claude/**
+**SESSION FILES LOCATION: Always use refactor/ folder in current directory**
 
 ## Session Intelligence
 
 I'll maintain refactoring continuity across sessions:
 
-**Session Files (hidden folder in current project):**
-- `./.claude/refactor_plan.md` - Refactoring plan with progress tracking  
-- `./.claude/refactor_state.json` - Current state and completed actions
+**Session Files (in current project):**
+- `refactor/plan.md` - Refactoring plan with progress tracking  
+- `refactor/state.json` - Current state and completed actions
 
-**IMPORTANT:** The `.claude` folder is a HIDDEN folder (starts with dot) in your CURRENT PROJECT directory. Use `./.claude/` to access it.
+**IMPORTANT:** The `refactor` folder is created in your CURRENT PROJECT directory. Use `refactor/` to access it.
 
 **Auto-Detection:**
 - If session exists: Resume from last checkpoint
@@ -24,34 +24,34 @@ I'll maintain refactoring continuity across sessions:
 **EXAMPLE OF CORRECT PATH USAGE:**
 ```
 # CORRECT - looks in current project:
-Read ./.claude/refactor_state.json
-LS ./.claude
+Read refactor/state.json
+LS refactor
 
 # WRONG - these will fail:
-Read ../../../.claude/refactor_state.json
-Read $HOME/.claude/refactor_state.json
+Read ../../../refactor/state.json
+Read $HOME/.claude/refactor/state.json
 ```
 
 ## Phase 1: Initial Setup & Analysis
 
 **MANDATORY FIRST STEPS FOR SESSION CHECK:**
 ```
-Step 1: Check for .claude directory in CURRENT directory
-Command: LS .claude
+Step 1: Check for refactor directory in CURRENT directory
+Command: LS refactor
 
-Step 2: If .claude exists, read session files:
-Command: Read .claude/refactor_state.json
-Command: Read .claude/refactor_plan.md
+Step 2: If refactor exists, read session files:
+Command: Read refactor/state.json
+Command: Read refactor/plan.md
 
 DO NOT USE THESE WRONG PATHS:
-- ../../../.claude/  (WRONG - goes up directories)
-- $HOME/.claude/  (WRONG - home directory)
-- ~/.claude/  (WRONG - home directory)
+- ../../../refactor/  (WRONG - goes up directories)
+- $HOME/refactor/  (WRONG - home directory)
+- ~/refactor/  (WRONG - home directory)
 
-ONLY USE: .claude/ (current directory)
+ONLY USE: refactor/ (current directory)
 ```
 
-**CRITICAL:** The .claude folder is a hidden folder in the CURRENT WORKING DIRECTORY where user is running the command. NOT in home, NOT in parent directories.
+**CRITICAL:** The refactor folder is created in the CURRENT WORKING DIRECTORY where user is running the command. NOT in home, NOT in parent directories.
 
 I'll examine your codebase to identify improvement opportunities:
 
@@ -78,7 +78,7 @@ Based on analysis, I'll create a structured plan:
 - **Performance**: Algorithm optimizations, caching strategies
 
 **Plan Structure:**
-I'll create a detailed plan in `refactor_plan.md`:
+I'll create a detailed plan in `refactor/plan.md`:
 - Prioritized refactoring tasks
 - Risk assessment for each change
 - Checkpoints for validation

@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - **Session Persistence for Complex Commands:**
   - `/implement`, `/refactor`, `/fix-todos`, `/scaffold`, `/security-scan`, `/fix-imports` now maintain state across Claude sessions
-  - Session files stored in project `./.claude/` directory for isolation between projects
+  - Session files stored in command-specific folders for better organization
   - Auto-resume capabilities with progress tracking and statistics
   - Intelligent plan creation before execution to ensure consistency
 
@@ -39,8 +39,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Protects user ownership of all code changes
 
 ### Fixed
+- **Critical Path Resolution Fix (2025-08-02):**
+  - Fixed Claude LS tool not recognizing hidden folders starting with dot (.)
+  - Changed from hidden `.claude/` folder to visible command-specific folders
+  - Each command now creates its own folder: `refactor/`, `implement/`, `fix-imports/`, `security-scan/`, `scaffold/`
+  - Resolved issue where Claude would fail to find existing session files and create duplicate folders
+  - Commands now correctly resume sessions without path confusion
 - Session files now save in project directory instead of global Claude installation
-- Changed session directory from `.claude` to `claude` (no dot) to avoid path resolution issues
 - Fixed Claude interpreting relative paths incorrectly (was looking in parent directories)
 - Removed shell command dependencies for Windows compatibility
 - Corrected session persistence logic to always create plans first
