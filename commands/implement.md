@@ -143,41 +143,48 @@ When you run ANY of these: `/implement finish`, `/implement verify`, `/implement
 
 **I will AUTOMATICALLY:**
 
-1. **Requirements Verification**
-   - Re-read original requirements/source
-   - Map each requirement to implementation
-   - Identify any missing features
-   - Check edge cases coverage
+1. **Deep Original Source Analysis**
+   - Thoroughly analyze EVERY aspect of original code/requirements
+   - Study ALL implementation patterns and architectures
+   - Document COMPLETE functionality and business logic
+   - Map entire code structure and dependencies
+   - Create comprehensive analysis in `implement/source-analysis.md`
 
-2. **Comprehensive Testing**
+2. **Requirements Verification**
+   - Compare current implementation with original
+   - Map each original feature to new implementation
+   - Identify any missing features or behaviors
+   - Check edge cases from original code
+
+3. **Comprehensive Testing**
    - Write tests for ALL new code
    - Run existing test suite
    - Create integration tests
    - Test error scenarios
    - Verify performance requirements
 
-3. **Deep Code Analysis**
+4. **Deep Code Analysis**
    - Check for incomplete TODOs
    - Find hardcoded values to configure
    - Verify error handling completeness
    - Analyze security implications
    - Check accessibility requirements
 
-4. **Automatic Refinement**
+5. **Automatic Refinement**
    - Fix any failing tests
    - Complete partial implementations
    - Add missing error handling
    - Optimize performance bottlenecks
    - Improve code documentation
 
-5. **Integration Validation**
-   - Test with real data/scenarios
-   - Verify API contracts
-   - Check database migrations
-   - Validate UI/UX flows
-   - Ensure backward compatibility
+6. **Integration Analysis**
+   - Analyze integration points thoroughly
+   - Verify API contracts match original
+   - Check database schema compatibility
+   - Validate UI/UX flows match requirements
+   - Ensure backward compatibility maintained
 
-6. **Completeness Report**
+7. **Completeness Report**
    - Feature coverage: X/Y implemented
    - Test coverage percentage
    - Performance benchmarks

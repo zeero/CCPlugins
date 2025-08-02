@@ -292,10 +292,11 @@ When you run ANY of these: `/refactor finish`, `/refactor enhance`, `/refactor v
 
 **I will AUTOMATICALLY execute ALL these steps:**
 
-1. **Original Behavior Capture**
-   - Run original code with test inputs
-   - Save all function outputs, API responses, logs
-   - Create behavior snapshot in `refactor/original-behavior.json`
+1. **Deep Original Code Analysis**
+   - Analyze EVERY function, method and class in detail
+   - Document ALL behaviors, patterns and logic flows
+   - Map complete code structure and dependencies
+   - Create comprehensive understanding in `refactor/original-analysis.md`
 
 2. **Complete Migration**
    - Apply ALL remaining refactorings
@@ -303,11 +304,11 @@ When you run ANY of these: `/refactor finish`, `/refactor enhance`, `/refactor v
    - Update ALL imports and references
    - Clean up ALL orphaned code
 
-3. **Deep Behavior Comparison**
-   - Run SAME inputs on refactored code
-   - Compare outputs byte-by-byte
-   - Test ALL edge cases
-   - Verify error handling preserved
+3. **Deep Code-to-Code Comparison**
+   - Analyze refactored code line by line
+   - Verify EVERY behavior is preserved
+   - Check ALL logic paths match original
+   - Ensure error handling is identical
 
 4. **Comprehensive Analysis**
    - Line-by-line code comparison
