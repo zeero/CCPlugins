@@ -1,78 +1,165 @@
 # Intelligent Scaffolding
 
-I'll create a complete feature structure based on your project patterns.
+I'll create complete feature structures based on your project patterns, with full continuity across sessions.
 
 Arguments: `$ARGUMENTS` - feature name or component to scaffold
 
-## Strategic Thinking Process
+## Session Intelligence
 
-Before scaffolding, I'll use structured thinking to ensure the best implementation:
+I'll maintain scaffolding progress across sessions:
 
-<think>
-Let me analyze the critical decisions for scaffolding:
+**Session Files (in current project directory):**
+- `claude/scaffold_plan.md` - Scaffolding plan and component list
+- `claude/scaffold_state.json` - Created files and progress
 
-1. **Project Architecture Discovery**
-   - What patterns exist in the codebase?
-   - Is there a dominant architectural style (MVC, Component-based, Layered)?
-   - How are similar features currently organized?
+**IMPORTANT:** Session files are stored in a `claude` folder (without dot) in your current project root
 
-2. **Naming Conventions**
-   - File naming: camelCase, PascalCase, kebab-case, or snake_case?
-   - Directory structure: by feature, by type, or mixed?
-   - Are there prefixes/suffixes patterns (e.g., .service, .controller)?
+**Auto-Detection:**
+- If session exists: Resume incomplete scaffolding
+- If no session: Create new scaffolding plan
+- Commands: `resume`, `status`, `new`
 
-3. **Technology Stack Patterns**
-   - What testing framework patterns exist?
-   - How are dependencies typically imported?
-   - What build/bundling patterns are used?
+## Phase 1: Pattern Discovery
 
-4. **Integration Approach**
-   - Where should this feature fit in the existing structure?
-   - What existing code might need to be modified?
-   - How will this feature interact with others?
-</think>
+**MANDATORY FIRST STEPS:**
+1. First, ensure `.claude` directory exists in project root
+2. Check for existing session files in `./.claude/` (NOT in parent directories)
+3. If no session exists:
+   - Analyze project patterns
+   - Create scaffolding plan
+   - Initialize progress tracking
+4. Show scaffolding preview before creating
 
-Based on my analysis, I'll proceed to analyze your project architecture:
-- Existing code organization patterns using Glob and Read tools
-- File naming conventions and directory structures
-- Testing approaches and documentation patterns
-- Configuration and build patterns
+**Note:** Always look for session files in the current project's `.claude` folder, not `../../../.claude/`
 
-I'll scaffold the feature following your established patterns:
-- Generate all necessary files (logic, tests, documentation)
-- Create contextual tests based on your testing frameworks and patterns
-- Generate intelligent documentation following your docs structure
-- Apply consistent naming conventions from your codebase
-- Include appropriate boilerplate based on existing code
-- Maintain architectural consistency
+I'll discover your project patterns:
 
-When creating multiple components, I'll use a todo list to track progress systematically.
-
-I'll detect and follow your project's patterns for:
-- File organization and naming
-- Import/export structures
-- Testing frameworks and patterns
+**Pattern Analysis:**
+- File organization structure
+- Naming conventions
+- Testing patterns
+- Import/export styles
 - Documentation standards
-- Configuration approaches
 
-After scaffolding, I'll create a commit:
-```bash
-git add -A
-git commit -m "Scaffold: $ARGUMENTS feature structure"
+**Smart Detection:**
+- Find similar features already implemented
+- Identify architectural patterns
+- Detect testing frameworks
+- Understand build configuration
+
+## Phase 2: Scaffolding Planning
+
+Based on patterns, I'll create a scaffolding plan:
+
+**Component Structure:**
+- Main feature files
+- Test files
+- Documentation
+- Configuration updates
+- Integration points
+
+I'll write this plan to `scaffold_plan.md` with:
+- Each file to create
+- Template patterns to follow
+- Integration requirements
+- Creation order
+
+## Phase 3: Intelligent Generation
+
+I'll generate files matching your patterns:
+
+**Pattern Matching:**
+- Use your file naming style
+- Follow your directory structure
+- Match your code conventions
+- Apply your testing patterns
+
+**Content Generation:**
+- Boilerplate from existing code
+- Imports matching your style
+- Test structure from your patterns
+- Documentation in your format
+
+## Phase 4: Incremental Creation
+
+I'll create files systematically:
+
+**Execution Process:**
+1. Create directory structure
+2. Generate each component file
+3. Add appropriate tests
+4. Update integration points
+5. Track each creation in state
+
+**Progress Tracking:**
+- Mark each file created in plan
+- Update state with file paths
+- Create meaningful commits
+
+## Phase 5: Integration
+
+After scaffolding:
+- Update route configurations
+- Add to module exports
+- Update build configuration
+- Verify everything connects
+
+## Context Continuity
+
+**Session Resume:**
+When you return and run `/scaffold` or `/scaffold resume`:
+- Load existing plan and progress
+- Show what was already created
+- Continue from last component
+- Maintain pattern consistency
+
+**Progress Example:**
+```
+RESUMING SCAFFOLDING
+├── Feature: UserDashboard
+├── Created: 5 of 8 files
+├── Last: components/UserStats.tsx
+└── Next: tests/UserStats.test.tsx
+
+Continuing scaffolding...
 ```
 
-**Important**: I will NEVER:
-- Add "Co-authored-by" or any Claude signatures
-- Include "Generated with Claude Code" or similar messages
-- Modify git config or user credentials
-- Add any AI/assistant attribution to the commit
+## Practical Examples
 
-The scaffolded feature will be:
-- Immediately functional with basic implementation
-- Following your project's established conventions
-- Including appropriate tests and documentation
-- Ready for development without configuration
+**Start Scaffolding:**
+```
+/scaffold UserProfile          # Create user profile feature
+/scaffold "auth module"        # Create authentication module
+/scaffold PaymentService       # Create payment service
+```
 
-If no patterns are detected, I'll use modern best practices while asking for guidance on project-specific preferences.
+**Session Control:**
+```
+/scaffold resume    # Continue existing scaffolding
+/scaffold status    # Check what's been created
+/scaffold new       # Start fresh scaffolding
+```
 
-This creates complete, consistent features that integrate seamlessly with your existing codebase.
+## Safety Guarantees
+
+**Protection Measures:**
+- Preview before creation
+- Incremental file generation
+- Pattern validation
+- Integration verification
+
+**Important:** I will NEVER:
+- Overwrite existing files
+- Break existing imports
+- Add AI attribution
+- Create without following patterns
+
+## What I'll Actually Do
+
+1. **Analyze deeply** - Understand your patterns
+2. **Plan completely** - Map all components
+3. **Generate intelligently** - Match your style
+4. **Track precisely** - Perfect continuity
+5. **Integrate seamlessly** - Connect everything
+
+I'll maintain complete continuity between sessions, always resuming exactly where we left off with consistent pattern application.

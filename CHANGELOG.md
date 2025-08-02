@@ -7,6 +7,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Session Persistence for Complex Commands:**
+  - `/implement`, `/refactor`, `/fix-todos`, `/scaffold`, `/security-scan`, `/fix-imports` now maintain state across Claude sessions
+  - Session files stored in project `./.claude/` directory for isolation between projects
+  - Auto-resume capabilities with progress tracking and statistics
+  - Intelligent plan creation before execution to ensure consistency
+
+- **Cross-Platform Compatibility:**
+  - All commands now work on Windows, Linux, and macOS
+  - Replaced shell-specific commands with Claude native tools
+  - Path handling uses forward slashes for universal compatibility
+  - Removed dependencies on bash-specific features
+
+### Enhanced
+- **Command Improvements:**
+  - Reduced verbosity while maintaining clarity (73% reduction in `/implement`, 56% in `/refactor`)
+  - Added mandatory plan creation before execution in complex commands
+  - Improved error handling and recovery strategies
+  - Better integration between related commands
+
+- **Documentation:**
+  - Added continuous development notice highlighting active maintenance
+  - Enhanced architecture description with visual flow diagrams
+  - Added developer mood emojis to problem statements
+  - Improved high-level technical documentation
+
+- **Git Safety:**
+  - Added explicit AI attribution prevention to all git-related commands
+  - Ensures no "Co-authored-by" or AI signatures in commits
+  - Protects user ownership of all code changes
+
+### Fixed
+- Session files now save in project directory instead of global Claude installation
+- Changed session directory from `.claude` to `claude` (no dot) to avoid path resolution issues
+- Fixed Claude interpreting relative paths incorrectly (was looking in parent directories)
+- Removed shell command dependencies for Windows compatibility
+- Corrected session persistence logic to always create plans first
+
 ## [2.5.1] - 2025-08-02
 
 ### Added

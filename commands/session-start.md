@@ -19,4 +19,10 @@ Please tell me:
 
 I'll add this session context to your memory system using the `/memory` command functionality, ensuring our progress is tracked and can be resumed later. This integrates seamlessly with Claude Code CLI's native memory management rather than creating a separate system.
 
+**Important**: I will NEVER:
+- Add "Co-authored-by" or any Claude signatures
+- Include "Generated with Claude Code" or similar messages
+- Modify git config or user credentials
+- Add any AI/assistant attribution to the commit
+
 The session context will be preserved in the appropriate CLAUDE.md file for future reference and continuation.

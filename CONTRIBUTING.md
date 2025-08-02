@@ -86,4 +86,45 @@ Keep them simple:
 - Commands requiring external dependencies
 - Overly complex multi-step wizards
 
-Remember: Every command should make a developer's day a little easier (:
+## Issue Templates
+
+When creating issues, please use these templates:
+
+### Bug Report
+```
+**Command:** /command-name
+**Expected behavior:** What should happen
+**Actual behavior:** What actually happened
+**Steps to reproduce:**
+1. Run command with these arguments
+2. See error
+
+**Environment:**
+- OS: Windows/Linux/macOS
+- Claude Code version: X.X.X
+```
+
+### Feature Request
+```
+**Problem:** What repetitive task are you doing?
+**Solution:** How would the command help?
+**Time saved:** Estimate minutes saved per use
+**Example usage:** /proposed-command argument
+```
+
+## Community Standards
+
+1. **Professional Communication** - Clear, concise, technical
+2. **No Emojis in Code** - Keep commands clean and professional
+3. **Respect Time** - Quick reviews, fast merges for good contributions
+4. **Test Before Submit** - Ensure your command works on major platforms
+
+## Continuous Improvement
+
+CCPlugins is actively maintained. We:
+- Test commands thoroughly before release
+- Refine based on real usage patterns
+- Fix issues as they're discovered
+- Welcome community feedback
+
+Remember: Every command should make a developer's day a little easier.

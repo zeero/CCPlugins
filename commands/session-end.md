@@ -32,4 +32,10 @@ I'll update the appropriate CLAUDE.md file with:
 - Blockers or dependencies identified
 - Technical debt considerations
 
+**Important**: I will NEVER:
+- Add "Co-authored-by" or any Claude signatures
+- Include "Generated with Claude Code" or similar messages
+- Modify git config or user credentials
+- Add any AI/assistant attribution to the commit
+
 I'll preserve this summary in your memory system, ensuring continuity for future sessions and seamless handoffs to team members. This integrates with Claude Code CLI's native memory management for persistent context.

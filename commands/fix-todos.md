@@ -1,112 +1,165 @@
 # Fix TODOs
 
-I'll find and intelligently fix TODO comments in your codebase with contextual understanding.
+I'll systematically find and resolve TODO comments in your codebase with intelligent understanding and continuity across sessions.
 
-## Strategic Thinking Process
+Arguments: `$ARGUMENTS` - files, directories, or specific TODO patterns to fix
 
-<think>
-Before implementing any TODO, I must analyze:
+## Session Intelligence
 
-1. **TODO Context Understanding**
-   - What is the TODO actually asking for?
-   - Why was it left as a TODO (complexity, time, uncertainty)?
-   - What's the surrounding code trying to accomplish?
-   - Are there similar implementations elsewhere I can reference?
+I'll maintain TODO resolution progress across sessions:
 
-2. **Implementation Options**
-   - What are the possible ways to implement this?
-   - Which approach best fits the existing architecture?
-   - What are the trade-offs of each approach?
-   - Which solution is most maintainable?
+**Session Files (in current project directory):**
+- `claude/fix_todos_plan.md` - All TODOs found and resolution status
+- `claude/fix_todos_state.json` - Current progress and decisions
 
-3. **Risk Assessment**
-   - Could this fix break existing functionality?
-   - Are there hidden dependencies?
-   - Will this change require updates elsewhere?
-   - Do I need additional error handling?
+**IMPORTANT:** Session files are stored in a `claude` folder (without dot) in your current project root
 
-4. **Quality Criteria**
-   - Does my solution follow project patterns?
-   - Is it tested or testable?
-   - Will it handle edge cases?
-   - Is the code self-documenting?
-</think>
+**Auto-Detection:**
+- If session exists: Resume from last TODO
+- If no session: Scan and create new plan
+- Commands: `resume`, `status`, `new`
 
-Based on this thinking framework, I'll proceed with:
+## Phase 1: Discovery & Analysis
 
-**Phase 1: Discovery & Analysis**
-Using native tools to find and understand TODOs:
-- **Grep** to locate all TODO/FIXME/HACK markers
-- **Read** to analyze surrounding code context
-- **Glob** to understand project structure
-- **Grep** to find related implementations
+**MANDATORY FIRST STEPS:**
+1. First, ensure `claude` directory exists in current working directory
+2. Check for existing session files:
+   - Look for `claude/fix_todos_state.json` in current directory
+   - Look for `claude/fix_todos_plan.md` in current directory
+3. If no session exists:
+   - Scan entire codebase for TODOs
+   - Create categorized plan
+   - Initialize progress tracking
+4. Show TODO summary before starting
 
-I'll categorize TODOs by type:
-- **Bug fixes** - Missing error handling, null checks
-- **Features** - Unimplemented functionality
-- **Refactoring** - Code improvements needed
-- **Performance** - Optimization opportunities
-- **Security** - Validation or sanitization needed
+I'll find and categorize all TODOs:
 
-**Phase 2: Context Understanding**
-For each TODO, I'll:
-1. Read the entire file to understand purpose
-2. Analyze function/class containing the TODO
-3. Search for similar patterns already implemented
-4. Check tests to understand expected behavior
-5. Review related files for integration points
+**TODO Detection:**
+- TODO, FIXME, HACK, XXX markers
+- Different priority levels
+- Context and complexity assessment
+- Related code understanding
 
-**Phase 3: Smart Resolution**
-I'll resolve TODOs based on patterns and best practices:
+**Smart Categorization:**
+- **Quick fixes**: Simple validations, null checks
+- **Features**: Missing functionality
+- **Refactoring**: Code improvements
+- **Security**: Safety and validation needs
+- **Performance**: Optimization opportunities
 
-**Resolution approach:**
-I'll analyze your project's patterns and implement fixes that match your codebase style:
-- For error handling TODOs: Add appropriate try/catch or error boundaries
-- For validation TODOs: Implement input checking based on your validation patterns
-- For performance TODOs: Apply optimization techniques suitable for your stack
-- For security TODOs: Add sanitization and permission checks following your security model
+## Phase 2: Resolution Planning
 
-**Phase 4: Implementation Strategy**
-- **Simple TODOs** (null checks, validation): Fix immediately
-- **Complex TODOs** (new features): Implement with tests
-- **Architecture TODOs**: Analyze impact before changing
-- **Performance TODOs**: Measure before optimizing
-- **Unclear TODOs**: Show options and ask for guidance
+Based on analysis, I'll create a resolution plan:
 
-When I find multiple TODOs, I'll create a todo list to resolve them systematically.
+**Priority Order:**
+1. Security-critical TODOs
+2. Bug-related TODOs
+3. Simple improvements
+4. Feature additions
+5. Performance optimizations
 
-**Resolution patterns I'll apply:**
-- Error handling: try/catch, error boundaries, fallbacks
-- Validation: Input sanitization, type checking, bounds
-- Performance: Caching, memoization, lazy loading
-- Security: Escape inputs, validate permissions, sanitize outputs
-- Refactoring: Extract methods, reduce complexity, improve naming
+I'll write this plan to `fix_todos_plan.md` with:
+- Each TODO location and content
+- Proposed resolution approach
+- Risk assessment
+- Implementation order
 
-**Phase 5: Verification**
+## Phase 3: Intelligent Resolution
+
+I'll fix TODOs matching your code patterns:
+
+**Pattern Detection:**
+- Find similar implementations in your code
+- Match your error handling style
+- Use your validation patterns
+- Follow your naming conventions
+
+**Resolution Strategies:**
+- Error handling → Your try/catch patterns
+- Validation → Your input checking style
+- Performance → Your optimization approach
+- Security → Your safety patterns
+
+## Phase 4: Incremental Implementation
+
+I'll resolve TODOs systematically:
+
+**Execution Process:**
+1. Create git checkpoint
+2. Fix TODO with contextual understanding
+3. Verify functionality preserved
+4. Update plan with completion
+5. Move to next TODO
+
+**Progress Tracking:**
+- Mark each TODO as resolved in plan
+- Update state file with decisions
+- Create meaningful commits
+
+## Phase 5: Verification
+
 After each resolution:
-- Ensure code still works correctly
-- Check for test coverage
-- Verify no new issues introduced
-- Update related documentation if needed
+- Run relevant tests
+- Check for regressions
+- Validate integration points
+- Ensure code quality
 
-**Safety measures:**
-```bash
-git add -A
-git commit -m "Pre-TODO-fix checkpoint" || echo "No changes to commit"
+## Context Continuity
+
+**Session Resume:**
+When you return and run `/fix-todos` or `/fix-todos resume`:
+- Load existing plan and progress
+- Show completion statistics
+- Continue from last TODO
+- Maintain all resolution decisions
+
+**Progress Example:**
+```
+RESUMING TODO FIXES
+├── Total TODOs: 47
+├── Resolved: 23 (49%)
+├── Current: src/api/auth.js:42
+└── Next: src/utils/validation.js:15
+
+Continuing resolution...
 ```
 
-**Important**: I will NEVER:
-- Remove TODOs without implementing solutions
-- Make changes that break existing functionality
-- Add "Resolved by Claude" or AI attribution
-- Add "Co-authored-by" or any Claude signatures
-- Include "Generated with Claude Code" or similar messages
-- Modify git config or user credentials
-- Implement security-sensitive code without review
+## Practical Examples
 
-**Integration with other commands:**
-- Complex resolutions → `/test` to verify
-- New implementations → `/review` for quality check
-- Remaining TODOs → `/create-todos` with better context
+**Start Fixing:**
+```
+/fix-todos                    # Fix all TODOs
+/fix-todos src/              # Focus on directory
+/fix-todos "security"        # Fix security TODOs
+```
 
-This transforms technical debt into clean, working code systematically.
+**Session Control:**
+```
+/fix-todos resume    # Continue existing session
+/fix-todos status    # Check progress
+/fix-todos new       # Start fresh
+```
+
+## Safety Guarantees
+
+**Protection Measures:**
+- Git checkpoint before changes
+- Incremental commits
+- Functionality verification
+- No TODO removal without implementation
+
+**Important:** I will NEVER:
+- Remove TODOs without fixing them
+- Break existing functionality
+- Add AI attribution
+- Implement without understanding context
+
+## What I'll Actually Do
+
+1. **Scan comprehensively** - Find all TODOs with context
+2. **Plan strategically** - Order by priority and risk
+3. **Resolve intelligently** - Match your patterns
+4. **Track meticulously** - Perfect session continuity
+5. **Verify constantly** - Ensure quality maintained
+
+I'll maintain complete continuity between sessions, always resuming exactly where we left off with full context of previous resolutions.

@@ -160,5 +160,9 @@ Based on the detected context, I'll choose the optimal approach:
 - Remove failing tests without fixing
 - Reduce test coverage
 - Compromise test integrity
+- Add "Co-authored-by" or any Claude signatures
+- Include "Generated with Claude Code" or similar messages
+- Modify git config or user credentials
+- Add any AI/assistant attribution to the commit
 
 This ensures your tests truly validate your code while maximizing development speed.

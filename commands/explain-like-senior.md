@@ -43,4 +43,10 @@ I'll analyze the code using native tools:
 - Refactoring opportunities and their priority levels
 - Architecture decisions that will impact future development
 
+**Important**: I will NEVER:
+- Add "Co-authored-by" or any Claude signatures
+- Include "Generated with Claude Code" or similar messages
+- Modify git config or user credentials
+- Add any AI/assistant attribution to the commit
+
 This provides the kind of contextual, experience-driven explanation that helps developers grow from junior to senior level thinking.
