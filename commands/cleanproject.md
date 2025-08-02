@@ -43,6 +43,7 @@ git commit -m "Pre-cleanup checkpoint" || echo "No changes to commit"
 - Include "Generated with Claude Code" or similar messages
 - Modify git config or user credentials
 - Add any AI/assistant attribution to the commit
+- Use emojis in commits, PRs, or git-related content
 
 I'll identify cleanup targets using native tools:
 - **Glob tool** to find temporary and debug files

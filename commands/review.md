@@ -39,5 +39,6 @@ After review, I'll ask: "Create GitHub issues for critical findings?"
 - Include "Generated with Claude Code" in any output
 - Modify git config or repository settings
 - Add any AI/assistant signatures or watermarks
+- Use emojis in commits, PRs, issues, or git-related content
 
 This focuses on real problems that impact your application's reliability and maintainability.

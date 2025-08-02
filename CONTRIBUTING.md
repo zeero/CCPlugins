@@ -36,6 +36,8 @@ Found a bug or have an enhancement? Great! Please:
 - Describe the current vs desired behavior
 - Include examples if relevant
 - Keep changes focused and minimal
+- Consider adding validation phases for complex commands
+- Use extended thinking for sophisticated analysis scenarios
 
 ### 3. Bug Reports
 Open an issue with:
@@ -73,6 +75,31 @@ Keep them simple:
 - [ ] Handles common edge cases
 - [ ] Clear, actionable output
 - [ ] Under 100 lines
+- [ ] Includes validation phase for complex commands
+- [ ] No emojis in git-related output
+
+## Advanced Command Features
+
+For complex commands, consider implementing:
+
+### Validation Phases
+Commands like `/refactor` and `/implement` should include validation:
+```
+/refactor validate  # Check completeness, find loose ends
+/implement validate # Verify integration completeness
+```
+
+### Extended Thinking
+Use `<think>` blocks for sophisticated analysis in:
+- Complex architectural refactoring
+- Security vulnerability detection
+- Multi-step problem solving
+
+### Command Integration
+Minimal, pragmatic suggestions for natural workflow:
+- Suggest `/test` after major changes
+- Suggest `/commit` at logical checkpoints
+- Avoid over-engineering command chains
 
 ## What We're Looking For
 
@@ -80,11 +107,14 @@ Keep them simple:
 - Commands that automate tedious tasks
 - Cross-platform compatibility improvements  
 - Real-world workflow optimizations
+- Validation phases for complex operations
+- Pragmatic command integration
 
 **No:**
 - Framework-specific tools (unless very popular)
 - Commands requiring external dependencies
 - Overly complex multi-step wizards
+- Over-engineered command orchestration
 
 ## Issue Templates
 
@@ -115,9 +145,10 @@ When creating issues, please use these templates:
 ## Community Standards
 
 1. **Professional Communication** - Clear, concise, technical
-2. **No Emojis in Code** - Keep commands clean and professional
+2. **No Emojis in Code** - Keep commands, commits, PRs, and issues clean and professional
 3. **Respect Time** - Quick reviews, fast merges for good contributions
 4. **Test Before Submit** - Ensure your command works on major platforms
+5. **Clean Architecture** - Follow clean code principles, no over-engineering
 
 ## Continuous Improvement
 

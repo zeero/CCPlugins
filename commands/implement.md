@@ -52,7 +52,37 @@ Based on my analysis, I'll create an implementation plan:
 - Design integration approach
 - Break work into testable chunks
 
-I'll write this plan to `implement/plan.md` with clear checkpoints for continuity across sessions.
+I'll write this plan to `implement/plan.md`:
+
+```markdown
+# Implementation Plan - [timestamp]
+
+## Source Analysis
+- **Source Type**: [URL/Local/Description]
+- **Core Features**: [identified features to implement]
+- **Dependencies**: [required libraries/frameworks]
+- **Complexity**: [estimated effort]
+
+## Target Integration
+- **Integration Points**: [where it connects]
+- **Affected Files**: [files to modify/create]
+- **Pattern Matching**: [how to adapt to project style]
+
+## Implementation Tasks
+[Prioritized checklist with progress tracking]
+
+## Validation Checklist
+- [ ] All features implemented
+- [ ] Tests written and passing
+- [ ] No broken functionality
+- [ ] Documentation updated
+- [ ] Integration points verified
+- [ ] Performance acceptable
+
+## Risk Mitigation
+- **Potential Issues**: [identified risks]
+- **Rollback Strategy**: [git checkpoints]
+```
 
 ## Phase 3: Intelligent Adaptation
 
@@ -137,6 +167,7 @@ When you return and run `/implement` or `/implement resume`:
 /implement              # Auto-detects and resumes
 /implement resume       # Explicit resume
 /implement status       # Check progress
+/implement validate     # Validate integration completeness
 ```
 
 ## Execution Guarantee
@@ -148,12 +179,53 @@ When you return and run `/implement` or `/implement resume`:
 3. **Write plan** - Full implementation plan in `implement/plan.md`
 4. **Show plan** - Present summary before implementing
 5. **Execute systematically** - Follow plan with updates
+6. **Validate integration** - Run validation when requested
 
 **I will NEVER:**
 - Start implementing without a written plan
 - Skip source or project analysis
 - Bypass session file creation
 - Begin coding before showing the plan
+- Use emojis in commits, PRs, or git-related content
+
+## Phase 6: Implementation Validation
+
+When you run `/implement validate` after implementation:
+
+**Integration Analysis:**
+1. **Coverage Check** - Verify all planned features implemented
+2. **Integration Points** - Validate all connections work
+3. **Test Coverage** - Ensure new code is tested
+4. **TODO Scan** - Find any leftover TODOs
+5. **Documentation** - Check if docs reflect changes
+
+**Validation Report:**
+```
+IMPLEMENTATION VALIDATION
+├── Features Implemented: 12/12 (100%)
+├── Integration Points: 8/10 (2 pending)
+├── Test Coverage: 87%
+├── Build Status: Passing
+└── Documentation: Needs update
+
+PENDING ITEMS:
+- API endpoint /users/profile not connected
+- WebSocket integration incomplete
+- Missing tests for error scenarios
+- README needs feature documentation
+
+ENHANCEMENT OPPORTUNITIES:
+1. Add error boundary for new components
+2. Implement caching for API calls
+3. Add performance monitoring
+4. Create usage examples
+```
+
+**Validation Actions:**
+- Complete missing integrations
+- Generate comprehensive test suite
+- Update all affected documentation
+- Create migration guide if breaking changes
 
 ## Command Suggestions
 
