@@ -9,10 +9,10 @@ Arguments: `$ARGUMENTS` - specific paths or import patterns to fix
 I'll maintain import fixing progress:
 
 **Session Files (in current project directory):**
-- `claude/fix_imports_plan.md` - All broken imports and fixes
-- `claude/fix_imports_state.json` - Resolution progress
+- `fix-imports/plan.md` - All broken imports and fixes
+- `fix-imports/state.json` - Resolution progress
 
-**IMPORTANT:** Session files are stored in a `claude` folder (without dot) in your current project root
+**IMPORTANT:** Session files are stored in a `fix-imports` folder in your current project root
 
 **Auto-Detection:**
 - If session exists: Resume from last import
@@ -22,15 +22,15 @@ I'll maintain import fixing progress:
 ## Phase 1: Import Analysis
 
 **MANDATORY FIRST STEPS:**
-1. First, ensure `.claude` directory exists in project root
-2. Check for existing session files in `./.claude/` (NOT in parent directories)
+1. First, check for `fix-imports` directory in project root
+2. Check for existing session files in `fix-imports/` (NOT in parent directories)
 3. If no session exists:
    - Scan for all broken imports
    - Create fix plan
    - Initialize progress tracking
 4. Show import issues summary
 
-**Note:** Always look for session files in the current project's `.claude` folder, not `../../../.claude/`
+**Note:** Always look for session files in the current project's `fix-imports/` folder, not `../../../fix-imports/`
 
 I'll detect broken imports:
 
@@ -58,7 +58,7 @@ Based on analysis, I'll create resolution plan:
 4. Path recalculation
 5. Import removal if needed
 
-I'll write this plan to `fix_imports_plan.md` with:
+I'll write this plan to `fix-imports/plan.md` with:
 - Each broken import location
 - Possible resolutions
 - Confidence level

@@ -9,10 +9,10 @@ Arguments: `$ARGUMENTS` - specific paths or security focus areas
 I'll maintain security remediation progress:
 
 **Session Files (in current project directory):**
-- `claude/security_scan_plan.md` - All vulnerabilities and fixes
-- `claude/security_scan_state.json` - Remediation progress
+- `security-scan/plan.md` - All vulnerabilities and fixes
+- `security-scan/state.json` - Remediation progress
 
-**IMPORTANT:** Session files are stored in a `claude` folder (without dot) in your current project root
+**IMPORTANT:** Session files are stored in a `security-scan` folder in your current project root
 
 **Auto-Detection:**
 - If session exists: Show fixed vs pending vulnerabilities
@@ -22,15 +22,15 @@ I'll maintain security remediation progress:
 ## Phase 1: Security Assessment
 
 **MANDATORY FIRST STEPS:**
-1. First, ensure `.claude` directory exists in project root
-2. Check for existing session files in `./.claude/` (NOT in parent directories)
+1. First, check for `security-scan` directory in project root
+2. Check for existing session files in `security-scan/` (NOT in parent directories or absolute paths)
 3. If no session exists:
    - Perform full security scan
    - Create vulnerability report
    - Initialize tracking
 4. Show risk summary before remediation
 
-**Note:** Always look for session files in the current project's `.claude` folder, not `../../../.claude/`
+**Note:** Always look for session files in the current project's `security-scan/` folder, not `../../../security-scan/` or absolute paths
 
 I'll analyze security across dimensions:
 
@@ -58,7 +58,7 @@ Based on findings, I'll create remediation plan:
 4. Configuration hardening
 5. Code pattern improvements
 
-I'll write this plan to `security_scan_plan.md` with:
+I'll write this plan to `security-scan/plan.md` with:
 - Each vulnerability details
 - Risk assessment
 - Remediation approach

@@ -9,24 +9,24 @@ Arguments: `$ARGUMENTS` - URLs, paths, or descriptions of what to implement
 I'll check for existing implementation sessions to continue seamlessly:
 
 **Session Files (in current project directory):**
-- `claude/implement_plan.md` - Current implementation plan and progress
-- `claude/implement_state.json` - Session state and checkpoints
+- `implement/plan.md` - Current implementation plan and progress
+- `implement/state.json` - Session state and checkpoints
 
-**IMPORTANT:** Session files are stored in a `claude` folder (without dot) in your current project root, NOT in home directory or parent folders. If a session exists, I'll resume from the exact checkpoint. Otherwise, I'll create a new implementation plan and track progress throughout.
+**IMPORTANT:** Session files are stored in a `implement` folder in your current project root, NOT in home directory or parent folders. If a session exists, I'll resume from the exact checkpoint. Otherwise, I'll create a new implementation plan and track progress throughout.
 
 ## Phase 1: Initial Setup & Analysis
 
 **MANDATORY FIRST STEPS:**
-1. First, ensure `claude` directory exists in current working directory
+1. First, check for `implement` directory in current working directory
 2. Check for existing session files:
-   - Look for `claude/implement_state.json` in current directory
-   - Look for `claude/implement_plan.md` in current directory
+   - Look for `implement/state.json` in current directory
+   - Look for `implement/plan.md` in current directory
 3. If no session exists:
-   - Create `claude/implement_plan.md`
-   - Initialize `claude/implement_state.json`
+   - Create `implement/plan.md`
+   - Initialize `implement/state.json`
 4. Complete full analysis BEFORE any implementation
 
-**Critical:** Use `claude` (no dot) folder in current directory. Do NOT use `.claude`, `$HOME/.claude`, or any parent directory paths
+**Critical:** Use `implement` folder in current directory. Do NOT use `$HOME/implement` or any parent directory paths
 
 I'll examine what you've provided and your project structure:
 
@@ -52,7 +52,7 @@ Based on my analysis, I'll create an implementation plan:
 - Design integration approach
 - Break work into testable chunks
 
-I'll write this plan to `implement_plan.md` with clear checkpoints for continuity across sessions.
+I'll write this plan to `implement/plan.md` with clear checkpoints for continuity across sessions.
 
 ## Phase 3: Intelligent Adaptation
 
@@ -89,8 +89,8 @@ I'll implement features incrementally:
 5. Validate everything works correctly
 
 **Progress Tracking:**
-- Update `implement_plan.md` as I complete each item
-- Mark checkpoints in `implement_state.json`
+- Update `implement/plan.md` as I complete each item
+- Mark checkpoints in `implement/state.json`
 - Create meaningful git commits at logical points
 
 ## Phase 5: Quality Assurance
@@ -145,7 +145,7 @@ When you return and run `/implement` or `/implement resume`:
 
 1. **Setup session** - Create/load state files FIRST
 2. **Analyze source & target** - Complete understanding
-3. **Write plan** - Full implementation plan in `implement_plan.md`
+3. **Write plan** - Full implementation plan in `implement/plan.md`
 4. **Show plan** - Present summary before implementing
 5. **Execute systematically** - Follow plan with updates
 

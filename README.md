@@ -198,11 +198,26 @@ When you type a command:
 **🔄 Session Continuity**
 Commands like `/implement` and `/refactor` maintain state across Claude sessions:
 ```
-claude/                     # Note: No dot prefix, stored in project root
-├── implement_plan.md      # Current implementation progress
-├── implement_state.json   # Session state and decisions
-├── refactor_plan.md       # Refactoring roadmap
-└── refactor_state.json    # Completed transformations
+# Each command creates its own folder in project root:
+refactor/                  # Created by /refactor command
+├── plan.md               # Refactoring roadmap
+└── state.json            # Completed transformations
+
+implement/                 # Created by /implement command
+├── plan.md               # Implementation progress
+└── state.json            # Session state and decisions
+
+fix-imports/              # Created by /fix-imports command
+├── plan.md               # Import fixes plan
+└── state.json            # Resolution progress
+
+security-scan/            # Created by /security-scan command
+├── plan.md               # Vulnerabilities and fixes
+└── state.json            # Remediation progress
+
+scaffold/                 # Created by /scaffold command
+├── plan.md               # Scaffolding plan
+└── state.json            # Created files tracking
 ```
 
 **🤖 Multi-Agent Architecture**
