@@ -38,7 +38,8 @@ def main():
         "test.md",
         "todos-to-issues.md",
         "undo.md",
-        "understand.md"
+        "understand.md",
+        "refactor.md"
     ]
     
     commands_dir = Path.home() / ".claude" / "commands"

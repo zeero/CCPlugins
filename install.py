@@ -65,8 +65,8 @@ def main():
     print("\nUsage:")
     print("  1. Open Claude Code CLI")
     print("  2. Type / to see available commands")
-    print("  3. Use /cleanproject, /commit, etc.")
-    print("\nTip: These commands will save you 2-3 hours per week!")
+    print("  3. Use /cleanproject, /commit, /refactor, etc.")
+    print("\nTip: These commands will save you 6-8 hours per week!")
 
 if __name__ == "__main__":
     try:

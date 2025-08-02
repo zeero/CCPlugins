@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.5.1] - 2025-08-02
+
+### Added
+- **New Command:**
+  - `/refactor` - Intelligent code restructuring engine with cross-session continuity
+    - Strategic thinking process for safe refactoring decisions
+    - Session state management for large refactoring operations
+    - Auto-detection and resume capabilities across context windows
+    - Support for multiple refactoring modes (conservative, balanced, architectural, migration)
+    - Comprehensive rollback and recovery options
+    - Integration with existing CCPlugins workflow
+
+### Enhanced
+- **Documentation:**
+  - Updated README with `/refactor` command and new workflow examples
+  - Added refactoring metrics to performance table
+  - Updated total time savings calculation
+
 ## [2.5.0] - 2025-08-02
 
 ### Added

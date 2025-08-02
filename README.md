@@ -16,7 +16,7 @@
 
 # Automate the `Boring Stuff`
 ![GitHub Repo stars](https://img.shields.io/github/stars/brennercruvinel/CCPlugins?style=social)
-[![Version](https://img.shields.io/badge/version-2.4.1-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
+[![Version](https://img.shields.io/badge/version-2.5.1-blue.svg)](https://github.com/brennercruvinel/CCPlugins)
 [![Claude Code CLI](https://img.shields.io/badge/for-Claude%20Code%20CLI-purple.svg)](https://docs.anthropic.com/en/docs/claude-code)
 [![Tested on](https://img.shields.io/badge/tested%20on-Opus%204%20%26%20Sonnet%204-orange.svg)](https://claude.ai)
 [![Also works with](https://img.shields.io/badge/also%20works%20with-Kimi%20K2-1783ff.svg)](https://github.com/MoonshotAI/Kimi-K2)
@@ -33,7 +33,7 @@ Request a simple refactor → Receive a dissertation on clean code
 "Please add a button" → Complete UI framework rewrite  
 Every conversation → "Act like a senior engineer who doesn't overengineer"
 
-CCPlugins is a curated set of 24 professional commands that extend Claude Code CLI with enterprise-grade development workflows. These commands leverage Claude's contextual understanding while providing structured, predictable outcomes optimized for Opus 4 and Sonnet 4 models.
+CCPlugins is a curated set of 25 professional commands that extend Claude Code CLI with enterprise-grade development workflows. These commands leverage Claude's contextual understanding while providing structured, predictable outcomes optimized for Opus 4 and Sonnet 4 models.
 
 ## Quick Links
 
@@ -74,7 +74,7 @@ python uninstall.py
 ```
 
 ## Commands
-24 professional commands optimized for Claude Code CLI's native capabilities.
+25 professional commands optimized for Claude Code CLI's native capabilities.
 
 ### Development Workflow
 
@@ -85,6 +85,7 @@ python uninstall.py
 /scaffold feature-name           # Generate complete features from patterns
 /test                            # Run tests with intelligent failure analysis
 /implement url/path/feature      # Import and adapt code from any source (GitHub, CodePen, local)
+/refactor                        # Intelligent code restructuring with cross-session continuity
 ```
 
 ### Code Quality & Security

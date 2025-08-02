@@ -33,6 +33,7 @@ COMMANDS=(
     "todos-to-issues.md"
     "undo.md"
     "understand.md"
+    "refactor.md"
 )
 
 # Check for existing commands
