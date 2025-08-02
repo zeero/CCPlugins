@@ -33,7 +33,7 @@ Request a simple refactor → Receive a dissertation on clean code
 "Please add a button" → Complete UI framework rewrite  
 Every conversation → "Act like a senior engineer who doesn't overengineer"
 
-CCPlugins is a curated set of 19 professional commands that extend Claude Code CLI with enterprise-grade development workflows. These commands leverage Claude's contextual understanding while providing structured, predictable outcomes optimized for Opus 4 and Sonnet 4 models.
+CCPlugins is a curated set of 24 professional commands that extend Claude Code CLI with enterprise-grade development workflows. These commands leverage Claude's contextual understanding while providing structured, predictable outcomes optimized for Opus 4 and Sonnet 4 models.
 
 ## Quick Links
 
@@ -74,7 +74,7 @@ python uninstall.py
 ```
 
 ## Commands
-23 professional commands optimized for Claude Code CLI's native capabilities.
+24 professional commands optimized for Claude Code CLI's native capabilities.
 
 ### Development Workflow
 
@@ -84,6 +84,7 @@ python uninstall.py
 /format                # Auto-detect and apply project formatter
 /scaffold feature-name # Generate complete features from patterns
 /test                  # Run tests with intelligent failure analysis
+/implement url/path    # Import and adapt code from any source (GitHub, CodePen, local)
 ```
 
 ### Code Quality & Security
@@ -210,8 +211,9 @@ Custom commands appear with a `(user)` tag in Claude Code CLI to distinguish the
 | Code review | 20-30 min | 2-4 min | ~20 min |
 | Issue prediction | 60+ min | 5-10 min | ~50 min |
 | TODO resolution | 30-45 min | 3-5 min | ~35 min |
+| Code adaptation | 40-60 min | 3-5 min | ~45 min |
 
-**Total: 3-4 hours saved per week with professional-grade analysis**
+**Total: 4-5 hours saved per week with professional-grade analysis**
 
 ## Requirements
 

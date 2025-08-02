@@ -2,6 +2,38 @@
 
 I'll find and intelligently fix TODO comments in your codebase with contextual understanding.
 
+## Strategic Thinking Process
+
+<think>
+Before implementing any TODO, I must analyze:
+
+1. **TODO Context Understanding**
+   - What is the TODO actually asking for?
+   - Why was it left as a TODO (complexity, time, uncertainty)?
+   - What's the surrounding code trying to accomplish?
+   - Are there similar implementations elsewhere I can reference?
+
+2. **Implementation Options**
+   - What are the possible ways to implement this?
+   - Which approach best fits the existing architecture?
+   - What are the trade-offs of each approach?
+   - Which solution is most maintainable?
+
+3. **Risk Assessment**
+   - Could this fix break existing functionality?
+   - Are there hidden dependencies?
+   - Will this change require updates elsewhere?
+   - Do I need additional error handling?
+
+4. **Quality Criteria**
+   - Does my solution follow project patterns?
+   - Is it tested or testable?
+   - Will it handle edge cases?
+   - Is the code self-documenting?
+</think>
+
+Based on this thinking framework, I'll proceed with:
+
 **Phase 1: Discovery & Analysis**
 Using native tools to find and understand TODOs:
 - **Grep** to locate all TODO/FIXME/HACK markers

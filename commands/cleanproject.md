@@ -2,7 +2,37 @@
 
 I'll help clean up development artifacts while preserving your working code.
 
-First, I'll create a git checkpoint for safety:
+## Strategic Thinking Process
+
+<think>
+Before cleaning, I need to carefully consider:
+
+1. **Artifact Identification**
+   - What patterns indicate temporary/debug files?
+   - Which files might look temporary but are actually important?
+   - Are there project-specific conventions for temp files?
+   - What about generated files that should be kept?
+
+2. **Safety Analysis**
+   - Which deletions are definitely safe?
+   - Which require more careful inspection?
+   - Are there active processes using these files?
+   - Could removing these break the development environment?
+
+3. **Common Pitfalls**
+   - .env files might look like artifacts but contain config
+   - .cache directories might be needed for performance
+   - Some .tmp files might be active session data
+   - Debug logs might contain important error information
+
+4. **Cleanup Strategy**
+   - Start with obvious artifacts (*.log, *.tmp, *~)
+   - Check file age - older files are usually safer to remove
+   - Verify with git status what's tracked vs untracked
+   - Group similar files for batch decision making
+</think>
+
+Based on this analysis, I'll create a git checkpoint for safety:
 ```bash
 git add -A
 git commit -m "Pre-cleanup checkpoint" || echo "No changes to commit"
