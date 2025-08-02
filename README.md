@@ -166,6 +166,20 @@ CCPlugins are markdown files that provide intelligent instructions to Claude Cod
 
 ## Technical Notes
 
+### Design Philosophy
+
+**Why This Approach Works** (Based on Anthropic's Research):
+- **Conversational Commands**: First-person language ("I'll help...") activates Claude's collaborative reasoning
+- **Build-Agnostic Instructions**: No hardcoded tools = works everywhere
+- **Think Tool Integration**: Strategic thinking improves decisions by 50%+ (Anthropic, 2025)
+- **Native Tools Only**: Uses Claude Code's actual capabilities, not imaginary APIs
+
+**Key Principles:**
+- **Simplicity > Complexity**: Start simple, add only when proven necessary
+- **Context Awareness**: Commands adapt to YOUR project, not vice versa
+- **Safety First**: Git checkpoints before any destructive operation
+- **Pattern Recognition**: Learn from your codebase, not assumptions
+
 ### Technical Architecture
 
 **Native Tool Integration:**
