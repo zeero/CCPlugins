@@ -4,6 +4,8 @@ I'll help you restructure your code systematically - preserving functionality wh
 
 Arguments: `$ARGUMENTS` - files, directories, or refactoring scope
 
+**SESSION FILES LOCATION: Always use .claude/ in current directory, NEVER ../../../.claude/ or $HOME/.claude/**
+
 ## Session Intelligence
 
 I'll maintain refactoring continuity across sessions:
@@ -32,22 +34,24 @@ Read $HOME/.claude/refactor_state.json
 
 ## Phase 1: Initial Setup & Analysis
 
-**MANDATORY FIRST STEPS:**
-1. Check if `.claude` directory exists in CURRENT PROJECT (use LS tool on `./.claude`)
-2. To find session files, use these EXACT commands:
-   - Use Read tool: `./.claude/refactor_state.json`
-   - Use Read tool: `./.claude/refactor_plan.md`
-   - DO NOT use paths like `../../../.claude/` or `$HOME/.claude/`
-3. If `.claude` doesn't exist, create it IN THE CURRENT PROJECT:
-   - Create directory `.claude` in current working directory
-   - Then create session files inside it
-4. Perform complete analysis BEFORE any changes
+**MANDATORY FIRST STEPS FOR SESSION CHECK:**
+```
+Step 1: Check for .claude directory in CURRENT directory
+Command: LS .claude
 
-**CRITICAL PATH INSTRUCTIONS:**
-- The `.claude` folder is IN THE PROJECT ROOT where the user is working
-- Use `./.claude/` to access it (dot slash dot claude)
-- NEVER go up directories with `../`
-- NEVER use home directory `$HOME/.claude/`
+Step 2: If .claude exists, read session files:
+Command: Read .claude/refactor_state.json
+Command: Read .claude/refactor_plan.md
+
+DO NOT USE THESE WRONG PATHS:
+- ../../../.claude/  (WRONG - goes up directories)
+- $HOME/.claude/  (WRONG - home directory)
+- ~/.claude/  (WRONG - home directory)
+
+ONLY USE: .claude/ (current directory)
+```
+
+**CRITICAL:** The .claude folder is a hidden folder in the CURRENT WORKING DIRECTORY where user is running the command. NOT in home, NOT in parent directories.
 
 I'll examine your codebase to identify improvement opportunities:
 
