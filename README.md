@@ -35,7 +35,7 @@ Professional commands for Claude Code CLI that save 2-3 hours per week on repeti
 
 🚧 **Active Development Notice**: CCPlugins is continuously evolving based on real-world usage. We thoroughly test each command and refine them as we discover gaps and opportunities. This ensures you're always getting battle-tested, production-ready tools that solve actual developer problems.
 
-CCPlugins is a curated set of 25 professional commands that extend Claude Code CLI with enterprise-grade development workflows. These commands leverage Claude's contextual understanding while providing structured, predictable outcomes optimized for Opus 4 and Sonnet 4 models.
+CCPlugins is a curated set of 24 professional commands that extend Claude Code CLI with enterprise-grade development workflows. These commands leverage Claude's contextual understanding while providing structured, predictable outcomes optimized for Opus 4 and Sonnet 4 models.
 
 ## Quick Links
 
@@ -76,7 +76,7 @@ python uninstall.py
 ```
 
 ## Commands
-25 professional commands optimized for Claude Code CLI's native capabilities.
+24 professional commands optimized for Claude Code CLI's native capabilities with enhanced validation and refinement phases.
 
 ### 🚀 Development Workflow
 
@@ -86,15 +86,15 @@ python uninstall.py
 /format                          # Auto-detect and apply project formatter
 /scaffold feature-name           # Generate complete features from patterns
 /test                            # Run tests with intelligent failure analysis
-/implement url/path/feature      # Import and adapt code from any source (GitHub, CodePen, local)
-/refactor                        # Intelligent code restructuring with cross-session continuity
+/implement url/path/feature      # Import and adapt code from any source with validation phase
+/refactor                        # Intelligent code restructuring with validation & de-para mapping
 ```
 
 ### 🛡️ Code Quality & Security
 
 ```bash
 /review                # Multi-agent analysis (security, performance, quality, architecture)
-/security-scan         # Contextual vulnerability analysis with dependency health
+/security-scan         # Vulnerability analysis with extended thinking & remediation tracking
 /predict-issues        # Proactive problem detection with timeline estimates
 /remove-comments       # Clean obvious comments, preserve valuable docs
 /fix-imports           # Repair broken imports after refactoring
@@ -122,6 +122,26 @@ python uninstall.py
 /undo                  # Safe rollback with git checkpoint restore
 ```
 
+
+## Enhanced Features
+
+### 🔍 Validation & Refinement
+Complex commands now include validation phases to ensure completeness:
+```bash
+/refactor validate   # Find remaining old patterns, verify 100% migration
+/implement validate  # Check integration completeness, find loose ends
+```
+
+### 🧠 Extended Thinking
+Advanced analysis for complex scenarios:
+- **Refactoring**: Deep architectural analysis for large-scale changes
+- **Security**: Sophisticated vulnerability detection with chain analysis
+
+### 🔗 Pragmatic Command Integration
+Natural workflow suggestions without over-engineering:
+- Suggests `/test` after major changes
+- Recommends `/commit` at logical checkpoints
+- Maintains user control, no automatic execution
 
 ## Real World Example
 

@@ -99,10 +99,34 @@ Based on analysis, I'll create a structured plan:
 
 **Plan Structure:**
 I'll create a detailed plan in `refactor/plan.md`:
-- Prioritized refactoring tasks
-- Risk assessment for each change
-- Checkpoints for validation
-- Rollback points if needed
+
+```markdown
+# Refactor Plan - [timestamp]
+
+## Initial State Analysis
+- **Current Architecture**: [description of existing patterns]
+- **Problem Areas**: [specific issues found]
+- **Dependencies**: [external/internal dependencies]
+- **Test Coverage**: [current coverage %]
+
+## Refactoring Tasks
+[Prioritized list with risk levels]
+
+## Validation Checklist
+- [ ] All old patterns removed
+- [ ] No broken imports
+- [ ] All tests passing
+- [ ] Build successful
+- [ ] Type checking clean
+- [ ] No orphaned code
+- [ ] Documentation updated
+
+## De-Para Mapping
+| Before | After | Status |
+|--------|-------|--------|
+| OldService.method() | NewService.method() | Pending |
+| /api/v1/* | /api/v2/* | Pending |
+```
 
 ## Phase 3: Incremental Execution
 
@@ -182,7 +206,45 @@ Continuing from checkpoint...
 /refactor resume    # Continue existing session
 /refactor status    # Check progress without continuing
 /refactor new       # Start fresh (archives existing)
+/refactor validate  # Validate completeness and find loose ends
 ```
+
+## Phase 6: Validation & Refinement
+
+When you run `/refactor validate` after completing refactoring:
+
+**Deep Validation Analysis:**
+1. **Coverage Check** - Find all remaining old patterns
+2. **Import Verification** - Detect broken or orphaned imports
+3. **Build & Test** - Run full build and test suite
+4. **Type Checking** - Verify type safety if applicable
+5. **Dead Code Detection** - Identify removable legacy code
+
+**De-Para Mapping:**
+```
+MIGRATION STATUS REPORT
+├── Patterns Migrated: 45/48 (94%)
+├── Files Updated: 67/70
+├── Tests Status: 3 failing
+└── Build Status: Passing
+
+PENDING MIGRATIONS:
+- src/legacy/UserHelper.js → Still using old pattern
+- api/v1/routes.js → Mixed patterns detected
+- tests/old-api.test.js → Needs update
+
+SUGGESTED REFINEMENTS:
+1. Remove 12 orphaned files
+2. Consolidate duplicate utilities
+3. Update 3 missed import paths
+4. Optimize bundle size (-15KB possible)
+```
+
+**Validation Actions:**
+- Generate comprehensive de-para documentation
+- Create migration guide for team
+- Fix remaining issues automatically
+- Ensure 100% pattern consistency
 
 ## Safety Guarantees
 
@@ -197,6 +259,7 @@ Continuing from checkpoint...
 - Modify git configuration
 - Break working functionality
 - Make changes without validation
+- Use emojis in commits, PRs, or git-related content
 
 ## Command Integration
 
@@ -210,9 +273,10 @@ When appropriate, I may suggest using other commands:
 
 1. **Setup session** - Check/create state files FIRST
 2. **Deep analysis** - Use extended thinking for complex scenarios
-3. **Write plan** - Document all changes in `refactor_plan.md`
+3. **Write plan** - Document all changes in `refactor/plan.md`
 4. **Get confirmation** - Show plan summary before starting
 5. **Execute incrementally** - Follow plan with checkpoints
+6. **Validate completeness** - Run validation phase when requested
 
 **I will NEVER:**
 - Start refactoring without a written plan

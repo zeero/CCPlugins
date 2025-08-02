@@ -146,5 +146,6 @@ I'll handle rate limits and show you a summary of all created issues.
 - Include "Generated with Claude Code" in issue descriptions
 - Modify repository settings or permissions
 - Add any AI/assistant signatures or watermarks
+- Use emojis in issues, PRs, or git-related content
 
 This helps convert your development notes into trackable work items.
