@@ -36,6 +36,7 @@ COMMANDS=(
     "todos-to-issues.md"
     "undo.md"
     "understand.md"
+    "refactor.md"
 )
 
 # Count installed commands
