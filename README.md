@@ -79,12 +79,12 @@ python uninstall.py
 ### Development Workflow
 
 ```bash
-/cleanproject          # Remove debug artifacts with git safety
-/commit                # Smart conventional commits with analysis
-/format                # Auto-detect and apply project formatter
-/scaffold feature-name # Generate complete features from patterns
-/test                  # Run tests with intelligent failure analysis
-/implement url/path    # Import and adapt code from any source (GitHub, CodePen, local)
+/cleanproject                    # Remove debug artifacts with git safety
+/commit                          # Smart conventional commits with analysis
+/format                          # Auto-detect and apply project formatter
+/scaffold feature-name           # Generate complete features from patterns
+/test                            # Run tests with intelligent failure analysis
+/implement url/path/feature      # Import and adapt code from any source (GitHub, CodePen, local)
 ```
 
 ### Code Quality & Security
