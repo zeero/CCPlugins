@@ -9,10 +9,10 @@ Arguments: `$ARGUMENTS` - files, directories, or specific TODO patterns to fix
 I'll maintain TODO resolution progress across sessions:
 
 **Session Files (in current project directory):**
-- `claude/fix_todos_plan.md` - All TODOs found and resolution status
-- `claude/fix_todos_state.json` - Current progress and decisions
+- `fix-todos/plan.md` - All TODOs found and resolution status
+- `fix-todos/state.json` - Current progress and decisions
 
-**IMPORTANT:** Session files are stored in a `claude` folder (without dot) in your current project root
+**IMPORTANT:** Session files are stored in a `fix-todos` folder in your current project directory
 
 **Auto-Detection:**
 - If session exists: Resume from last TODO
@@ -22,10 +22,10 @@ I'll maintain TODO resolution progress across sessions:
 ## Phase 1: Discovery & Analysis
 
 **MANDATORY FIRST STEPS:**
-1. First, ensure `claude` directory exists in current working directory
+1. First, ensure `fix-todos` directory exists in current working directory
 2. Check for existing session files:
-   - Look for `claude/fix_todos_state.json` in current directory
-   - Look for `claude/fix_todos_plan.md` in current directory
+   - Look for `fix-todos/state.json` in current directory
+   - Look for `fix-todos/plan.md` in current directory
 3. If no session exists:
    - Scan entire codebase for TODOs
    - Create categorized plan
@@ -58,7 +58,7 @@ Based on analysis, I'll create a resolution plan:
 4. Feature additions
 5. Performance optimizations
 
-I'll write this plan to `fix_todos_plan.md` with:
+I'll write this plan to `fix-todos/plan.md` with:
 - Each TODO location and content
 - Proposed resolution approach
 - Risk assessment

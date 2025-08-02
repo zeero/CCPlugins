@@ -12,7 +12,7 @@ I'll check for available recovery methods:
 - Identify safe restore points
 
 **2. Project Backups**
-- Look for `.claude/backups/` in your project
+- Look for `undo/backups/` in your project
 - Check for operation-specific backups
 - Verify backup integrity
 
