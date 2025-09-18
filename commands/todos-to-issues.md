@@ -1,151 +1,151 @@
-# TODOs to GitHub Issues
+# TODOをGitHubイシューに
 
-I'll scan your codebase for TODO comments and create professional GitHub issues following your project's standards.
+コードベースをスキャンしてTODOコメントを見つけ、プロジェクトの標準に従ってプロフェッショナルなGitHubイシューを作成します。
 
-First, let me analyze your complete project context:
+まず、完全なプロジェクトコンテキストを分析させてください：
 
-**Documentation Analysis:**
-- **Read** README.md for project overview and conventions
-- **Read** CONTRIBUTING.md for contribution guidelines
-- **Read** CODE_OF_CONDUCT.md for community standards
-- **Read** .github/ISSUE_TEMPLATE/* for issue formats
-- **Read** .github/PULL_REQUEST_TEMPLATE.md for PR standards
-- **Read** docs/ folder for technical documentation
+**ドキュメンテーション分析:**
+- プロジェクトの概要と規約について**README.mdを読む**
+- 貢献ガイドラインについて**CONTRIBUTING.mdを読む**
+- コミュニティ標準について**CODE_OF_CONDUCT.mdを読む**
+- イシューフォーマットについて**.github/ISSUE_TEMPLATE/*を読む**
+- PR標準について**.github/PULL_REQUEST_TEMPLATE.mdを読む**
+- 技術文書について**docs/フォルダを読む**
 
-**Project Context:**
-- Repository type (fork, personal, organization)
-- Main language and framework conventions
-- Testing requirements and CI/CD setup
-- Branch strategy and release process
-- Team workflow and communication style
+**プロジェクトコンテキスト:**
+- リポジトリタイプ（フォーク、個人、組織）
+- 主な言語とフレームワークの規約
+- テスト要件とCI/CD設定
+- ブランチ戦略とリリースプロセス
+- チームのワークフローとコミュニケーションスタイル
 
-**For Forks - Remote Analysis:**
+**フォークの場合 - リモート分析:**
 ```bash
-# Get upstream repository info
+# アップストリームリポジトリ情報を取得
 git remote -v | grep upstream
-# Fetch latest upstream guidelines
+# 最新のアップストリームガイドラインを取得
 git fetch upstream main:upstream-main 2>/dev/null || true
 ```
 
-I'll read upstream's CONTRIBUTING.md and issue templates to ensure compatibility.
+アップストリームのCONTRIBUTING.mdとイシューテンプレートを読んで互換性を確保します。
 
-Then verify GitHub setup:
+次にGitHubの設定を確認します：
 
 ```bash
-# Check if we're in a git repository with GitHub remote
+# GitHubリモートを持つgitリポジトリにいるか確認
 if ! git remote -v | grep -q github.com; then
-    echo "Error: No GitHub remote found"
-    echo "This command requires a GitHub repository"
+    echo "エラー: GitHubリモートが見つかりません"
+    echo "このコマンドにはGitHubリポジトリが必要です"
     exit 1
 fi
 
-# Check for gh CLI
+# gh CLIの確認
 if ! command -v gh &> /dev/null; then
-    echo "Error: GitHub CLI (gh) not found"
-    echo "Install from: https://cli.github.com"
+    echo "エラー: GitHub CLI (gh)が見つかりません"
+    echo "インストール元: https://cli.github.com"
     exit 1
 fi
 
-# Verify authentication
+# 認証の確認
 if ! gh auth status &>/dev/null; then
-    echo "Error: Not authenticated with GitHub"
-    echo "Run: gh auth login"
+    echo "エラー: GitHubで認証されていません"
+    echo "実行: gh auth login"
     exit 1
 fi
 ```
 
-Now I'll scan for TODO patterns and analyze their context:
+次にTODOパターンをスキャンし、そのコンテキストを分析します：
 
-Using native tools for comprehensive analysis:
-- **Grep tool** to find TODO/FIXME/HACK patterns
-- **Read tool** to understand code context
-- **Glob tool** to check project structure
+包括的な分析のためにネイティブツールを使用します：
+- **Grepツール**でTODO/FIXME/HACKパターンを検索
+- **Readツール**でコードのコンテキストを理解
+- **Globツール**でプロジェクト構造を確認
 
-**MANDATORY Pre-Checks:**
-Before creating ANY GitHub issues, I MUST:
-1. Run build command - Must pass
-2. Run all tests - Must be green
-3. Run linter - No errors allowed
-4. Verify code compiles without warnings
+**必須の事前チェック:**
+GitHubイシューを作成する前に、必ず以下を実行します：
+1. ビルドコマンドを実行 - パスする必要があります
+2. すべてのテストを実行 - グリーンである必要があります
+3. リンターを実行 - エラーは許可されません
+4. コードが警告なしでコンパイルされることを確認
 
-If ANY check fails → I'll STOP and help fix it first!
+いずれかのチェックが失敗した場合 → 停止して最初に修正を手伝います！
 
-I'll intelligently analyze each TODO:
-1. Understand the technical context and implementation
-2. Determine priority based on impact and location
-3. Group related TODOs for better organization
-4. Create professional issue titles and descriptions
+各TODOをインテリジェントに分析します：
+1. 技術的なコンテキストと実装を理解する
+2. 影響と場所に基づいて優先順位を決定する
+3. より良い整理のために関連するTODOをグループ化する
+4. プロフェッショナルなイシューのタイトルと説明を作成する
 
-**For fork repositories:**
-- Follow upstream contribution guidelines
-- Use their issue templates and conventions
-- Reference relevant upstream issues
-- Maintain compatibility with main project
+**フォークリポジトリの場合:**
+- アップストリームの貢献ガイドラインに従う
+- 彼らのイシューテンプレートと規約を使用する
+- 関連するアップストリームのイシューを参照する
+- メインプロジェクトとの互換性を維持する
 
-**For team/org repositories:**
-- Apply company coding standards
-- Use established labels and milestones
-- Follow team workflow practices
-- Link to relevant documentation
+**チーム/組織リポジトリの場合:**
+- 会社のコーディング標準を適用する
+- 確立されたラベルとマイルストーンを使用する
+- チームのワークフローの実践に従う
+- 関連するドキュメントにリンクする
 
-**Issue creation strategy:**
-- Titles matching project's naming conventions
-- Descriptions following discovered templates
-- Labels from existing project taxonomy
-- Milestone alignment with project roadmap
-- Language style matching documentation tone
+**イシュー作成戦略:**
+- プロジェクトの命名規則に一致するタイトル
+- 発見されたテンプレートに従う説明
+- 既存のプロジェクトの分類法からのラベル
+- プロジェクトのロードマップに合わせたマイルストーン
+- ドキュメントのトーンに合わせた言語スタイル
 
-**Smart Issue Type Detection:**
-I'll analyze each TODO to determine the correct issue type:
+**スマートなイシュータイプ検出:**
+各TODOを分析して、正しいイシュータイプを決定します：
 
-**Bug Issues** (bug label):
-- TODO/FIXME about errors, crashes, incorrect behavior
-- Keywords: fix, bug, broken, error, crash, wrong, incorrect
-- Will include: steps to reproduce, expected vs actual behavior
+**バグイシュー**（bugラベル）：
+- エラー、クラッシュ、不正な動作に関するTODO/FIXME
+- キーワード：fix, bug, broken, error, crash, wrong, incorrect
+- 含まれる内容：再現手順、期待される動作と実際の動作
 
-**Feature Requests** (enhancement label):
-- TODO about new functionality or improvements
-- Keywords: add, implement, create, new, feature, support
-- Will include: use case, benefits, implementation approach
+**機能リクエスト**（enhancementラベル）：
+- 新機能や改善に関するTODO
+- キーワード：add, implement, create, new, feature, support
+- 含まれる内容：ユースケース、利点、実装アプローチ
 
-**Documentation** (documentation label):
-- TODO about missing or outdated docs
-- Keywords: document, docs, README, explain, describe
-- Will include: what needs documenting, why it's important
+**ドキュメンテーション**（documentationラベル）：
+- 不足している、または古いドキュメントに関するTODO
+- キーワード：document, docs, README, explain, describe
+- 含まれる内容：文書化が必要なもの、それが重要な理由
 
-**Performance** (performance label):
-- TODO about optimization, speed, memory
-- Keywords: optimize, slow, performance, cache, improve
-- Will include: current metrics, expected improvement
+**パフォーマンス**（performanceラベル）：
+- 最適化、速度、メモリに関するTODO
+- キーワード：optimize, slow, performance, cache, improve
+- 含まれる内容：現在のメトリクス、期待される改善
 
-**Security** (security label):
-- TODO about vulnerabilities, validation, auth
-- Keywords: security, validate, sanitize, auth, permission
-- Will include: risk level, potential impact
+**セキュリティ**（securityラベル）：
+- 脆弱性、検証、認証に関するTODO
+- キーワード：security, validate, sanitize, auth, permission
+- 含まれる内容：リスクレベル、潜在的な影響
 
-**Technical Debt** (tech-debt label):
-- TODO about refactoring, cleanup, architecture
-- Keywords: refactor, cleanup, reorganize, technical debt
-- Will include: current issues, proposed solution
+**技術的負債**（tech-debtラベル）：
+- リファクタリング、クリーンアップ、アーキテクチャに関するTODO
+- キーワード：refactor, cleanup, reorganize, technical debt
+- 含まれる内容：現在の問題、提案された解決策
 
-**Chore/Maintenance** (chore label):
-- TODO about updates, dependencies, tooling
-- Keywords: update, upgrade, migrate, deprecate
-- Will include: what needs updating, timeline
+**雑務/メンテナンス**（choreラベル）：
+- 更新、依存関係、ツールに関するTODO
+- キーワード：update, upgrade, migrate, deprecate
+- 含まれる内容：更新が必要なもの、タイムライン
 
-I'll also:
-- Group related TODOs into single issues when appropriate
-- Set priority based on keywords (CRITICAL, HIGH, TODO, NOTE)
-- Link to exact code location
-- Use project's existing labels if different
+また、以下のことも行います：
+- 適切な場合、関連するTODOを単一のイシューにグループ化する
+- キーワード（CRITICAL, HIGH, TODO, NOTE）に基づいて優先順位を設定する
+- 正確なコードの場所にリンクする
+- 異なる場合はプロジェクトの既存のラベルを使用する
 
-I'll handle rate limits and show you a summary of all created issues.
+レート制限を処理し、作成されたすべてのイシューの要約を表示します。
 
-**Important**: I will NEVER:
-- Add "Created by Claude" or any AI attribution to issues
-- Include "Generated with Claude Code" in issue descriptions
-- Modify repository settings or permissions
-- Add any AI/assistant signatures or watermarks
-- Use emojis in issues, PRs, or git-related content
+**重要**: 私は決して以下のことは行いません：
+- イシューに"Created by Claude"やAIの帰属を追加する
+- イシューの説明に"Generated with Claude Code"を含める
+- リポジトリの設定や権限を変更する
+- AI/アシスタントの署名や透かしを追加する
+- イシュー、PR、またはgit関連のコンテンツで絵文字を使用する
 
-This helps convert your development notes into trackable work items.
+これにより、開発ノートを追跡可能な作業項目に変換できます。

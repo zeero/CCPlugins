@@ -1,219 +1,219 @@
-# Documentation Manager
+# ドキュメンテーションマネージャー
 
-I'll intelligently manage your project documentation by analyzing what actually happened and updating ALL relevant docs accordingly.
+実際に行われたことを分析し、関連するすべてのドキュメントをそれに応じてインテリジェントに管理します。
 
-**My approach:**
-1. **Analyze our entire conversation** - Understand the full scope of changes
-2. **Read ALL documentation files** - README, CHANGELOG, docs/*, guides, everything
-3. **Identify what changed** - Features, architecture, bugs, performance, security, etc
-4. **Update EVERYTHING affected** - Not just one file, but all relevant documentation
-5. **Maintain consistency** - Ensure all docs tell the same story
+**私のアプローチ:**
+1. **会話全体を分析する** - 変更の全範囲を理解する
+2. **すべてのドキュメンテーションファイルを読む** - README、CHANGELOG、docs/*、ガイド、すべて
+3. **何が変更されたかを特定する** - 機能、アーキテクチャ、バグ、パフォーマンス、セキュリティなど
+4. **影響を受けるすべてを更新する** - 1つのファイルだけでなく、関連するすべてのドキュメント
+5. **一貫性を維持する** - すべてのドキュメントが同じ内容を伝えるようにする
 
-**I won't make assumptions** - I'll look at what ACTUALLY changed and update accordingly.
-If you refactored the entire architecture, I'll update architecture docs, README, migration guides, API docs, and anything else affected.
+**思い込みはしません** - 実際に変更された内容を見て、それに応じて更新します。
+アーキテクチャ全体をリファクタリングした場合、アーキテクチャドキュメント、README、移行ガイド、APIドキュメント、その他影響を受けるすべてのものを更新します。
 
-## Mode 1: Documentation Overview (Default)
+## モード1：ドキュメンテーション概要（デフォルト）
 
-When you run `/docs` without context, I'll:
-- **Glob** all markdown files (README, CHANGELOG, docs/*)
-- **Read** each documentation file
-- **Analyze** documentation coverage
-- **Present** organized summary
+コンテキストなしで`/docs`を実行すると、以下のことを行います：
+- すべてのマークダウンファイルを**Glob**する（README、CHANGELOG、docs/*）
+- 各ドキュメンテーションファイルを**読む**
+- ドキュメンテーションのカバレッジを**分析する**
+- 整理された要約を**提示する**
 
-Output format:
+出力形式：
 ```
-DOCUMENTATION OVERVIEW
-├── README.md - [status: current/outdated]
-├── CHANGELOG.md - [last updated: date]
-├── CONTRIBUTING.md - [completeness: 85%]
+ドキュメンテーション概要
+├── README.md - [ステータス: 最新/古い]
+├── CHANGELOG.md - [最終更新日: 日付]
+├── CONTRIBUTING.md - [完全性: 85%]
 ├── docs/
-│   ├── API.md - [status]
-│   └── architecture.md - [status]
-└── Total coverage: X%
+│   ├── API.md - [ステータス]
+│   └── architecture.md - [ステータス]
+└── 合計カバレッジ: X%
 
-KEY FINDINGS
-- Missing: Setup instructions
-- Outdated: API endpoints (3 new ones)
-- Incomplete: Testing guide
+主な検出事項
+- 不足: セットアップ手順
+- 古い: APIエンドポイント（3つの新しいもの）
+- 不完全: テストガイド
 ```
 
-## Mode 2: Smart Update
+## モード2：スマートアップデート
 
-When you run `/docs update` or after implementations, I'll:
+`/docs update`を実行したとき、または実装後に、以下のことを行います：
 
-1. **Run `/understand`** to analyze current codebase
-2. **Compare** code reality vs documentation
-3. **Identify** what needs updating:
-   - New features not documented
-   - Changed APIs or interfaces
-   - Removed features still in docs
-   - New configuration options
-   - Updated dependencies
+1. **`/understand`を実行**して現在のコードベースを分析する
+2. コードの現実とドキュメンテーションを**比較する**
+3. 更新が必要なものを**特定する**：
+   - 文書化されていない新機能
+   - 変更されたAPIまたはインターフェース
+   - ドキュメントにまだ残っている削除された機能
+   - 新しい設定オプション
+   - 更新された依存関係
 
-4. **Update systematically:**
-   - README.md with new features/changes
-   - CHANGELOG.md with version entries
-   - API docs with new endpoints
-   - Configuration docs with new options
-   - Migration guides if breaking changes
+4. **体系的に更新する:**
+   - 新機能/変更を伴うREADME.md
+   - バージョンエントリを伴うCHANGELOG.md
+   - 新しいエンドポイントを伴うAPIドキュメント
+   - 新しいオプションを伴う設定ドキュメント
+   - 破壊的変更がある場合の移行ガイド
 
-## Mode 3: Session Documentation
+## モード3：セッションドキュメンテーション
 
-When run after a long coding session, I'll:
-- **Analyze conversation history**
-- **List all changes made**
-- **Group by feature/fix/enhancement**
-- **Update appropriate docs**
+長時間のコーディングセッションの後に実行すると、以下のことを行います：
+- **会話履歴を分析する**
+- **行われたすべての変更をリストアップする**
+- **機能/修正/拡張ごとにグループ化する**
+- **適切なドキュメントを更新する**
 
-Updates will follow your project's documentation style and conventions, organizing changes by type (Added, Fixed, Changed, etc.) in the appropriate sections.
+更新は、プロジェクトのドキュメンテーションスタイルと規約に従い、変更をタイプ（追加、修正、変更など）ごとに適切なセクションに整理します。
 
-## Mode 4: Context-Aware Updates
+## モード4：コンテキストに応じた更新
 
-Based on what happened in session:
-- **After new feature**: Update README features, add to CHANGELOG
-- **After bug fixes**: Document in CHANGELOG, update troubleshooting
-- **After refactoring**: Update architecture docs, migration guide
-- **After security fixes**: Update security policy, CHANGELOG
-- **After performance improvements**: Update benchmarks, CHANGELOG
+セッションで何が起こったかに基づいて：
+- **新機能の後**: READMEの機能を更新し、CHANGELOGに追加
+- **バグ修正の後**: CHANGELOGに文書化し、トラブルシューティングを更新
+- **リファクタリングの後**: アーキテクチャドキュメント、移行ガイドを更新
+- **セキュリティ修正の後**: セキュリティポリシー、CHANGELOGを更新
+- **パフォーマンス改善の後**: ベンチマーク、CHANGELOGを更新
 
-## Smart Documentation Rules
+## スマートドキュメンテーションルール
 
-1. **Preserve custom content** - Never overwrite manual additions
-2. **Match existing style** - Follow current doc formatting
-3. **Semantic sections** - Add to correct sections
-4. **Version awareness** - Respect semver in CHANGELOG
-5. **Link updates** - Fix broken internal links
+1. **カスタムコンテンツを保持する** - 手動での追加を上書きしない
+2. **既存のスタイルに合わせる** - 現在のドキュメントのフォーマットに従う
+3. **意味のあるセクション** - 正しいセクションに追加する
+4. **バージョン認識** - CHANGELOGでセマンティックバージョニングを尊重する
+5. **リンクの更新** - 壊れた内部リンクを修正する
 
-## Integration with Commands
+## コマンドとの統合
 
-Works seamlessly with:
-- `/understand` - Get current architecture first
-- `/contributing` - Update contribution guidelines
-- `/test` - Document test coverage changes
-- `/scaffold` - Add new component docs
-- `/security-scan` - Update security documentation
+以下とシームレスに連携します：
+- `/understand` - まず現在のアーキテクチャを取得する
+- `/contributing` - 貢献ガイドラインを更新する
+- `/test` - テストカバレッジの変更を文書化する
+- `/scaffold` - 新しいコンポーネントのドキュメントを追加する
+- `/security-scan` - セキュリティドキュメントを更新する
 
-## Documentation Rules
+## ドキュメンテーションルール
 
-**ALWAYS:**
-- Read existing docs completely before any update
-- Find the exact section that needs updating
-- Update in-place, never duplicate
-- Preserve custom content and formatting
-- Only create new docs if absolutely essential (README missing, etc)
+**常に:**
+- 更新前に既存のドキュメントを完全に読む
+- 更新が必要な正確なセクションを見つける
+- その場で更新し、決して複製しない
+- カスタムコンテンツとフォーマットを保持する
+- 絶対に必要な場合（READMEがないなど）にのみ新しいドキュメントを作成する
 
-**Preserve sections:**
+**セクションの保持:**
 ```markdown
 <!-- CUSTOM:START -->
-User's manual content preserved
+ユーザーのマニュアルコンテンツは保持されます
 <!-- CUSTOM:END -->
 ```
 
-**Smart CHANGELOG:**
-- Groups changes by type
-- Suggests version bump (major/minor/patch)
-- Links to relevant PRs/issues
-- Maintains chronological order
+**スマートCHANGELOG:**
+- 変更をタイプ別にグループ化する
+- バージョンアップを提案する（メジャー/マイナー/パッチ）
+- 関連するPR/イシューにリンクする
+- 時系列順を維持する
 
-**Important**: I will NEVER:
-- Delete existing documentation
-- Overwrite custom sections
-- Change documentation style drastically
-- Add AI attribution markers
-- Create unnecessary documentation
+**重要**: 私は決して以下のことは行いません：
+- 既存のドキュメントを削除する
+- カスタムセクションを上書きする
+- ドキュメンテーションのスタイルを大幅に変更する
+- AIの帰属マーカーを追加する
+- 不要なドキュメントを作成する
 
-After analysis, I'll ask: "How should I proceed?"
-- Update all outdated docs
-- Focus on specific files
-- Create missing documentation
-- Generate migration guide
-- Skip certain sections
+分析後、「どのように進めますか？」と尋ねます：
+- すべての古いドキュメントを更新する
+- 特定のファイルに焦点を当てる
+- 不足しているドキュメントを作成する
+- 移行ガイドを生成する
+- 特定のセクションをスキップする
 
-## Additional Scenarios & Integrations
+## 追加のシナリオと統合
 
-### When to Use /docs
+### /docsを使用するタイミング
 
-Simply run `/docs` after any significant work:
-- After `/understand` - Ensure docs match code reality
-- After `/fix-todos` or bug fixes - Update all affected documentation
-- After `/scaffold` or new features - Document what was added
-- After `/security-scan` or `/review` - Document findings and decisions
-- After major refactoring - Update architecture, migration guides, everything
+重要な作業の後に単に`/docs`を実行します：
+- `/understand`の後 - ドキュメントがコードの現実と一致することを確認する
+- `/fix-todos`またはバグ修正の後 - 影響を受けるすべてのドキュメントを更新する
+- `/scaffold`または新機能の後 - 追加されたものを文書化する
+- `/security-scan`または`/review`の後 - 検出結果と決定を文書化する
+- 大規模なリファクタリングの後 - アーキテクチャ、移行ガイド、すべてを更新する
 
-**I'll figure out what needs updating based on what actually happened, not rigid rules.**
+**厳格なルールではなく、実際に何が起こったかに基づいて、何が更新が必要かを判断します。**
 
-### Documentation Types
-I can manage:
-- **API Documentation** - Endpoints, parameters, responses
-- **Database Schema** - Tables, relationships, migrations
-- **Configuration** - Environment variables, settings
-- **Deployment** - Setup, requirements, procedures
-- **Troubleshooting** - Common issues and solutions
-- **Performance** - Benchmarks, optimization guides
-- **Security** - Policies, best practices, incident response
+### ドキュメンテーションの種類
+以下を管理できます：
+- **APIドキュメンテーション** - エンドポイント、パラメータ、レスポンス
+- **データベーススキーマ** - テーブル、リレーションシップ、マイグレーション
+- **設定** - 環境変数、設定
+- **デプロイ** - セットアップ、要件、手順
+- **トラブルシューティング** - 一般的な問題と解決策
+- **パフォーマンス** - ベンチマーク、最適化ガイド
+- **セキュリティ** - ポリシー、ベストプラクティス、インシデント対応
 
-### Smart Features
-- **Version Detection** - Auto-increment version numbers
-- **Breaking Change Alert** - Warn when docs need migration guide
-- **Cross-Reference** - Update links between docs
-- **Example Generation** - Create usage examples from tests
-- **Diagram Updates** - Update architecture diagrams (text-based)
-- **Dependency Tracking** - Document external service requirements
+### スマート機能
+- **バージョン検出** - バージョン番号を自動インクリメントする
+- **破壊的変更アラート** - ドキュメントに移行ガイドが必要な場合に警告する
+- **相互参照** - ドキュメント間のリンクを更新する
+- **例の生成** - テストから使用例を作成する
+- **図の更新** - アーキテクチャ図を更新する（テキストベース）
+- **依存関係の追跡** - 外部サービスの要件を文書化する
 
-### Team Collaboration
-- **PR Documentation** - Generate docs for pull requests
-- **Release Notes** - Create from CHANGELOG for releases
-- **Onboarding Docs** - Generate from project analysis
-- **Handoff Documentation** - Create when changing teams
-- **Knowledge Transfer** - Document before leaving project
+### チームコラボレーション
+- **PRドキュメンテーション** - プルリクエスト用のドキュメントを生成する
+- **リリースノート** - リリース用にCHANGELOGから作成する
+- **オンボーディングドキュメント** - プロジェクト分析から生成する
+- **引き継ぎドキュメンテーション** - チームを変更するときに作成する
+- **知識移転** - プロジェクトを離れる前に文書化する
 
-### Quality Checks
-- **Doc Coverage** - Report undocumented features
-- **Freshness Check** - Flag stale documentation
-- **Consistency** - Ensure uniform style across docs
-- **Completeness** - Verify all sections present
-- **Accuracy** - Compare docs vs actual implementation
+### 品質チェック
+- **ドキュメントカバレッジ** - 文書化されていない機能を報告する
+- **鮮度チェック** - 古いドキュメントにフラグを立てる
+- **一貫性** - ドキュメント全体で統一されたスタイルを確保する
+- **完全性** - すべてのセクションが存在することを確認する
+- **正確性** - ドキュメントと実際の実装を比較する
 
-### Smart Command Combinations
+### スマートなコマンドの組み合わせ
 
-**After analyzing code:**
+**コードを分析した後:**
 ```bash
 /understand && /docs
-# Analyzes entire codebase, then updates docs to match reality
+# コードベース全体を分析し、現実に合わせてドキュメントを更新します
 ```
 
-**After fixing technical debt:**
+**技術的負債を修正した後:**
 ```bash
 /fix-todos && /test && /docs
-# Fixes TODOs, verifies everything works, documents changes
+# TODOを修正し、すべてが機能することを確認し、変更を文書化します
 ```
 
-**After major refactoring:**
+**大規模なリファクタリングの後:**
 ```bash
 /fix-imports && /format && /docs
-# Fixes imports, formats code, updates architecture docs
+# インポートを修正し、コードをフォーマットし、アーキテクチャドキュメントを更新します
 ```
 
-**Before creating PR:**
+**PRを作成する前:**
 ```bash
 /review && /docs
-# Reviews code, then ensures docs reflect any issues found
+# コードをレビューし、見つかった問題がドキュメントに反映されていることを確認します
 ```
 
-**After adding features:**
+**機能を追加した後:**
 ```bash
 /scaffold component && /test && /docs
-# Creates component, tests it, documents the new API
+# コンポーネントを作成し、テストし、新しいAPIを文書化します
 ```
 
-### Simple Usage
+### 簡単な使い方
 
-Just run `/docs` and I'll figure out what you need:
-- Fresh project? I'll show what docs exist
-- Just coded? I'll update the relevant docs
-- Long session? I'll document everything
-- Just fixed bugs? I'll update CHANGELOG
+単に`/docs`を実行すれば、何が必要かを判断します：
+- 新しいプロジェクトですか？ 存在するドキュメントを表示します
+- コーディングしたばかりですか？ 関連するドキュメントを更新します
+- 長いセッションでしたか？ すべてを文書化します
+- バグを修正したばかりですか？ CHANGELOGを更新します
 
-No need to remember arguments - I understand context!
+引数を覚える必要はありません - コンテキストを理解します！
 
-This keeps your documentation as current as your code while supporting your entire development lifecycle.
+これにより、開発ライフサイクル全体をサポートしながら、ドキュメントをコードと同じくらい最新の状態に保ちます。

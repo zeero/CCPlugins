@@ -1,28 +1,28 @@
-# Start Coding Session
+# コーディングセッションの開始
 
-I'll begin a documented coding session using Claude Code CLI's memory system.
+Claude Code CLIのメモリシステムを使用して、文書化されたコーディングセッションを開始します。
 
-I'll integrate with the native memory system by updating CLAUDE.md:
-- Session timestamp and context
-- Current git state and branch
-- Session goals and objectives
-- Progress tracking throughout our work
+CLAUDE.mdを更新して、ネイティブのメモリシステムと統合します：
+- セッションのタイムスタンプとコンテキスト
+- 現在のgitの状態とブランチ
+- セッションの目標と目的
+- 作業全体の進捗追跡
 
-Let me check for existing memory files and update them appropriately:
-- Project memory (./CLAUDE.md) for team-shared context
-- User memory (~/.claude/CLAUDE.md) for personal session tracking
+既存のメモリファイルを確認し、適切に更新させてください：
+- チームで共有されるコンテキストのためのプロジェクトメモリ（./CLAUDE.md）
+- 個人のセッショントラッキングのためのユーザーメモリ（~/.claude/CLAUDE.md）
 
-Please tell me:
-1. What are we working on today?
-2. What specific goals do you want to accomplish?
-3. Any context I should know about?
+教えてください：
+1. 今日は何に取り組みますか？
+2. 達成したい具体的な目標は何ですか？
+3. 知っておくべきコンテキストはありますか？
 
-I'll add this session context to your memory system using the `/memory` command functionality, ensuring our progress is tracked and can be resumed later. This integrates seamlessly with Claude Code CLI's native memory management rather than creating a separate system.
+このセッションコンテキストを`/memory`コマンド機能を使用してあなたのメモリシステムに追加し、進捗が追跡され、後で再開できるようにします。これは、別のシステムを作成するのではなく、Claude Code CLIのネイティブメモリ管理とシームレスに統合されます。
 
-**Important**: I will NEVER:
-- Add "Co-authored-by" or any Claude signatures
-- Include "Generated with Claude Code" or similar messages
-- Modify git config or user credentials
-- Add any AI/assistant attribution to the commit
+**重要**: 私は決して以下のことは行いません：
+- "Co-authored-by"やClaudeの署名を追加する
+- "Generated with Claude Code"などのメッセージを含める
+- gitの設定やユーザーの資格情報を変更する
+- コミットにAI/アシスタントの帰属を追加する
 
-The session context will be preserved in the appropriate CLAUDE.md file for future reference and continuation.
+セッションコンテキストは、将来の参照と継続のために適切なCLAUDE.mdファイルに保存されます。

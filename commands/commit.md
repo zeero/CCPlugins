@@ -1,77 +1,77 @@
-# Smart Git Commit
+# スマートなGitコミット
 
-I'll analyze your changes and create a meaningful commit message.
+変更を分析し、意味のあるコミットメッセージを作成します。
 
-**Pre-Commit Quality Checks:**
-Before committing, I'll verify:
-- Build passes (if build command exists)
-- Tests pass (if test command exists)
-- Linter passes (if lint command exists)
-- No obvious errors in changed files
+**コミット前の品質チェック:**
+コミットする前に、以下を確認します：
+- ビルドが成功するか（ビルドコマンドが存在する場合）
+- テストが成功するか（テストコマンドが存在する場合）
+- リンターが成功するか（リントコマンドが存在する場合）
+- 変更されたファイルに明らかなエラーがないか
 
-First, let me check if this is a git repository and what's changed:
+まず、これがgitリポジトリであるか、何が変更されたかを確認します：
 
 ```bash
-# Verify we're in a git repository
+# gitリポジトリであることを確認
 if ! git rev-parse --git-dir > /dev/null 2>&1; then
-    echo "Error: Not a git repository"
-    echo "This command requires git version control"
+    echo "エラー: gitリポジトリではありません"
+    echo "このコマンドにはgitバージョン管理が必要です"
     exit 1
 fi
 
-# Check if we have changes to commit
+# コミットする変更があるか確認
 if ! git diff --cached --quiet || ! git diff --quiet; then
-    echo "Changes detected:"
+    echo "変更が検出されました:"
     git status --short
 else
-    echo "No changes to commit"
+    echo "コミットする変更がありません"
     exit 0
 fi
 
-# Show detailed changes
+# 詳細な変更を表示
 git diff --cached --stat
 git diff --stat
 ```
 
-Now I'll analyze the changes to determine:
-1. What files were modified
-2. The nature of changes (feature, fix, refactor, etc.)
-3. The scope/component affected
+次に、変更を分析して以下を判断します：
+1. どのファイルが変更されたか
+2. 変更の性質（機能、修正、リファクタリングなど）
+3. 影響を受けるスコープ/コンポーネント
 
-If the analysis or commit encounters errors:
-- I'll explain what went wrong
-- Suggest how to resolve it
-- Ensure no partial commits occur
+分析またはコミットでエラーが発生した場合：
+- 何が問題だったかを説明します
+- 解決方法を提案します
+- 部分的なコミットが発生しないようにします
 
 ```bash
-# If nothing is staged, I'll stage modified files (not untracked)
+# 何もステージングされていない場合、変更されたファイルをステージングします（追跡されていないファイルは除く）
 if git diff --cached --quiet; then
-    echo "No files staged. Staging modified files..."
+    echo "ステージングされたファイルはありません。変更されたファイルをステージングします..."
     git add -u
 fi
 
-# Show what will be committed
+# コミットされる内容を表示
 git diff --cached --name-status
 ```
 
-Based on the analysis, I'll create a conventional commit message:
+分析に基づいて、Conventional Commitsの規約に従ったコミットメッセージを作成します：
 - **Type**: feat|fix|docs|style|refactor|test|chore
-- **Scope**: component or area affected (optional)
-- **Subject**: clear description in present tense
-- **Body**: why the change was made (if needed)
+- **Scope**: 影響を受けるコンポーネントまたはエリア（オプション）
+- **Subject**: 現在形での明確な説明
+- **Body**: なぜその変更が行われたかの説明（必要な場合）
 
 ```bash
-# I'll create the commit with the analyzed message
-# Example: git commit -m "fix(auth): resolve login timeout issue"
+# 分析されたメッセージでコミットを作成します
+# 例: git commit -m "fix(auth): ログインのタイムアウト問題を解決"
 ```
 
-The commit message will be concise, meaningful, and follow your project's conventions if I can detect them from recent commits.
+コミットメッセージは簡潔で意味のあるものにし、最近のコミットから検出できればプロジェクトの規約に従います。
 
-**Important**: I will NEVER:
-- Add "Co-authored-by" or any Claude signatures
-- Include "Generated with Claude Code" or similar messages
-- Modify git config or user credentials
-- Add any AI/assistant attribution to the commit
-- Use emojis in commits, PRs, or git-related content
+**重要**: 私は決して以下のことは行いません：
+- "Co-authored-by"やClaudeの署名を追加する
+- "Generated with Claude Code"などのメッセージを含める
+- gitの設定やユーザーの資格情報を変更する
+- コミットにAI/アシスタントの帰属を追加する
+- コミット、PR、またはgit関連のコンテンツで絵文字を使用する
 
-The commit will use only your existing git user configuration, maintaining full ownership and authenticity of your commits.
+コミットは既存のgitユーザー設定のみを使用し、コミットの完全な所有権と信頼性を維持します。

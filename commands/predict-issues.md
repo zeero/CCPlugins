@@ -1,79 +1,79 @@
-# Predictive Code Analysis  
+# 予測的コード分析
 
-I'll analyze your codebase to predict potential problems before they impact your project.
+プロジェクトに影響を与える前に、潜在的な問題を予測するためにコードベースを分析します。
 
-## Strategic Thinking Process
+## 戦略的思考プロセス
 
 <think>
-To make accurate predictions, I need to consider:
+正確な予測を行うためには、以下を考慮する必要があります：
 
-1. **Pattern Recognition**
-   - Which code patterns commonly lead to problems?
-   - Are there growing complexity hotspots?
-   - Do I see anti-patterns that will cause issues at scale?
-   - Are there ticking time bombs (hardcoded values, assumptions)?
+1. **パターン認識**
+   - どのコードパターンが一般的に問題を引き起こしますか？
+   - 複雑さが増大しているホットスポットはありますか？
+   - スケール時に問題を引き起こすアンチパターンは見られますか？
+   - 時限爆弾（ハードコードされた値、仮定）はありますか？
 
-2. **Risk Assessment Framework**
-   - Likelihood: How probable is this issue to occur?
-   - Impact: How severe would the consequences be?
-   - Timeline: When might this become a problem?
-   - Effort: How hard would it be to fix now vs later?
+2. **リスク評価フレームワーク**
+   - 可能性：この問題が発生する確率はどのくらいですか？
+   - 影響：結果はどの程度深刻ですか？
+   - タイムライン：いつこれが問題になる可能性がありますか？
+   - 労力：今修正するのと後で修正するのとでは、どちらが難しいですか？
 
-3. **Common Problem Categories**
-   - Performance: O(n²) algorithms, memory leaks, inefficient queries
-   - Maintainability: High complexity, poor naming, tight coupling
-   - Security: Input validation gaps, exposed secrets, weak auth
-   - Scalability: Hardcoded limits, single points of failure
+3. **一般的な問題カテゴリ**
+   - パフォーマンス：O(n²)アルゴリズム、メモリリーク、非効率なクエリ
+   - 保守性：高い複雑さ、不適切な命名、密結合
+   - セキュリティ：入力検証のギャップ、露出したシークレット、弱い認証
+   - スケーラビリティ：ハードコードされた制限、単一障害点
 
-4. **Prediction Strategy**
-   - Start with highest risk areas (critical path code)
-   - Look for patterns that break at 10x, 100x scale
-   - Check for technical debt accumulation
-   - Identify brittleness in integration points
+4. **予測戦略**
+   - 最もリスクの高い領域（クリティカルパスのコード）から始める
+   - 10倍、100倍のスケールで壊れるパターンを探す
+   - 技術的負債の蓄積を確認する
+   - 統合ポイントの脆弱性を特定する
 </think>
 
-Based on this analysis framework, I'll use native tools for comprehensive analysis:
-- **Grep tool** to search for problematic patterns
-- **Glob tool** to analyze file structures and growth
-- **Read tool** to examine complex functions and hotspots
+この分析フレームワークに基づいて、包括的な分析のためにネイティブツールを使用します：
+- **Grepツール**で問題のあるパターンを検索する
+- **Globツール**でファイル構造と成長を分析する
+- **Readツール**で複雑な関数とホットスポットを調査する
 
-I'll examine:
-- Code complexity trends and potential hotspots
-- Performance bottleneck patterns forming
-- Maintenance difficulty indicators
-- Architecture stress points and scaling issues
-- Error handling gaps
+以下を調査します：
+- コードの複雑さの傾向と潜在的なホットスポット
+- 形成されつつあるパフォーマンスのボトルネックパターン
+- 保守性の困難さの指標
+- アーキテクチャのストレスポイントとスケーリングの問題
+- エラー処理のギャップ
 
-For each prediction, I'll:
-- Show specific code locations with file references
-- Explain why it's likely to cause future issues
-- Estimate potential timeline and impact
-- Suggest preventive measures with priority levels
+各予測について、以下のことを行います：
+- ファイル参照付きの特定のコードの場所を示す
+- なぜそれが将来の問題を引き起こす可能性が高いかを説明する
+- 潜在的なタイムラインと影響を推定する
+- 優先度レベル付きの予防策を提案する
 
-When I find multiple issues, I'll create a todo list for systematic review and prioritization.
+複数の問題が見つかった場合、体系的なレビューと優先順位付けのためにtodoリストを作成します。
 
-Analysis areas:
-- Functions approaching complexity thresholds
-- Files with high change frequency (potential hotspots)
-- Dependencies with known issues or update requirements
-- Performance patterns that don't scale
-- Code duplication leading to maintenance issues
+分析領域：
+- 複雑さのしきい値に近づいている関数
+- 変更頻度の高いファイル（潜在的なホットスポット）
+- 既知の問題または更新要件を持つ依存関係
+- スケールしないパフォーマンスパターン
+- 保守性の問題につながるコードの重複
 
-After analysis, I'll ask: "How would you like to track these predictions?"
-- Create todos: I'll add items to track resolution progress
-- Create GitHub issues: I'll generate properly formatted issues with details
-- Summary only: I'll provide actionable report without task creation
+分析後、「これらの予測をどのように追跡しますか？」と尋ねます：
+- todoを作成する：解決の進捗を追跡するための項目を追加します
+- GitHubイシューを作成する：詳細を含む適切にフォーマットされたイシューを生成します
+- 要約のみ：タスク作成なしで実行可能なレポートを提供します
 
-**Important**: I will NEVER:
-- Add "Created by Claude" or any AI attribution to issues
-- Include "Generated with Claude Code" in descriptions
-- Modify repository settings or permissions
-- Add any AI/assistant signatures or watermarks
+**重要**: 私は決して以下のことは行いません：
+- イシューに"Created by Claude"やAIの帰属を追加する
+- 説明に"Generated with Claude Code"を含める
+- リポジトリの設定や権限を変更する
+- AI/アシスタントの署名や透かしを追加する
 
-Predictions will include:
-- Risk level assessment (Critical/High/Medium/Low)
-- Estimated timeline for potential issues
-- Specific remediation recommendations
-- Impact assessment on project goals
+予測には以下が含まれます：
+- リスクレベル評価（クリティカル/高/中/低）
+- 潜在的な問題の推定タイムライン
+- 具体的な修正の推奨事項
+- プロジェクト目標への影響評価
 
-This helps prevent problems before they impact your project, saving time and maintaining code quality proactively.
+これにより、問題がプロジェクトに影響を与える前に防ぎ、時間を節約し、コードの品質を積極的に維持するのに役立ちます。

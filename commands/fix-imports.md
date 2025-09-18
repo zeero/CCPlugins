@@ -1,168 +1,168 @@
-# Fix Broken Imports
+# 壊れたインポートの修正
 
-I'll systematically fix import statements broken by file moves or renames, with full continuity across sessions.
+ファイルの移動やリネームによって壊れたインポート文を、セッションをまたいで完全に継続性を持って体系的に修正します。
 
-Arguments: `$ARGUMENTS` - specific paths or import patterns to fix
+引数: `$ARGUMENTS` - 修正する特定のパスまたはインポートパターン
 
-## Session Intelligence
+## セッションインテリジェンス
 
-I'll maintain import fixing progress:
+インポート修正の進捗を維持します：
 
-**Session Files (in current project directory):**
-- `fix-imports/plan.md` - All broken imports and fixes
-- `fix-imports/state.json` - Resolution progress
+**セッションファイル（現在のプロジェクトディレクトリ内）:**
+- `fix-imports/plan.md` - すべての壊れたインポートと修正
+- `fix-imports/state.json` - 解決の進捗
 
-**IMPORTANT:** Session files are stored in a `fix-imports` folder in your current project root
+**重要:** セッションファイルは、現在のプロジェクトルートの`fix-imports`フォルダに保存されます
 
-**Auto-Detection:**
-- If session exists: Resume from last import
-- If no session: Scan for broken imports
-- Commands: `resume`, `status`, `new`
+**自動検出:**
+- セッションが存在する場合：最後のインポートから再開
+- セッションがない場合：壊れたインポートをスキャン
+- コマンド：`resume`、`status`、`new`
 
-## Phase 1: Import Analysis
+## フェーズ1：インポート分析
 
-**MANDATORY FIRST STEPS:**
-1. Check if `fix-imports` directory exists in current working directory
-2. If directory exists, check for session files:
-   - Look for `fix-imports/state.json`
-   - Look for `fix-imports/plan.md`
-   - If found, resume from existing session
-3. If no directory or session exists:
-   - Scan for all broken imports
-   - Create fix plan
-   - Initialize progress tracking
-4. Show import issues summary
+**必須の最初のステップ:**
+1. 現在の作業ディレクトリに`fix-imports`ディレクトリが存在するか確認
+2. ディレクトリが存在する場合、セッションファイルを確認：
+   - `fix-imports/state.json`を探す
+   - `fix-imports/plan.md`を探す
+   - 見つかった場合、既存のセッションから再開
+3. ディレクトリまたはセッションが存在しない場合：
+   - すべての壊れたインポートをスキャン
+   - 修正計画を作成
+   - 進捗追跡を初期化
+4. インポート問題の要約を表示
 
-**Note:** Always look for session files in the current project's `fix-imports/` folder, not `../../../fix-imports/`
+**注意:** 常に現在のプロジェクトの`fix-imports/`フォルダでセッションファイルを探し、`../../../fix-imports/`ではありません
 
-I'll detect broken imports:
+壊れたインポートを検出します：
 
-**Import Patterns:**
-- File not found errors
-- Module resolution failures
-- Moved or renamed files
-- Deleted dependencies
-- Circular references
+**インポートパターン:**
+- ファイルが見つからないエラー
+- モジュール解決の失敗
+- 移動またはリネームされたファイル
+- 削除された依存関係
+- 循環参照
 
-**Smart Detection:**
-- Language-agnostic scanning
-- Path alias understanding
-- Barrel export recognition
-- External vs internal imports
+**スマート検出:**
+- 言語に依存しないスキャン
+- パスエイリアスの理解
+- バレルエクスポートの認識
+- 外部対内部インポート
 
-## Phase 2: Resolution Planning
+## フェーズ2：解決計画
 
-Based on analysis, I'll create resolution plan:
+分析に基づいて、解決計画を作成します：
 
-**Resolution Strategy:**
-1. Exact filename matches
-2. Similar name suggestions
-3. Export symbol search
-4. Path recalculation
-5. Import removal if needed
+**解決戦略:**
+1. 正確なファイル名の一致
+2. 類似した名前の提案
+3. エクスポートシンボルの検索
+4. パスの再計算
+5. 必要に応じてインポートの削除
 
-I'll write this plan to `fix-imports/plan.md` with:
-- Each broken import location
-- Possible resolutions
-- Confidence level
-- Fix approach
+この計画を`fix-imports/plan.md`に書き込みます：
+- 各壊れたインポートの場所
+- 可能な解決策
+- 信頼度レベル
+- 修正アプローチ
 
-## Phase 3: Intelligent Fixing
+## フェーズ3：インテリジェントな修正
 
-I'll fix imports matching your patterns:
+あなたのパターンに一致するインポートを修正します：
 
-**Resolution Patterns:**
-- Update relative paths correctly
-- Maintain path alias usage
-- Preserve import grouping
-- Follow sorting conventions
+**解決パターン:**
+- 相対パスを正しく更新
+- パスエイリアスの使用を維持
+- インポートのグルーピングを保持
+- ソート規則に従う
 
-**Ambiguity Handling:**
-- Show multiple matches
-- Provide context for choice
-- Never guess when uncertain
-- Track decisions for consistency
+**曖昧さの処理:**
+- 複数の一致を表示
+- 選択のためのコンテキストを提供
+- 不確実な場合は決して推測しない
+- 一貫性のために決定を追跡
 
-## Phase 4: Incremental Fixing
+## フェーズ4：段階的な修正
 
-I'll fix imports systematically:
+体系的にインポートを修正します：
 
-**Execution Process:**
-1. Create git checkpoint
-2. Fix import with verification
-3. Check for new breaks
-4. Update plan progress
-5. Move to next import
+**実行プロセス:**
+1. gitチェックポイントを作成
+2. 検証付きでインポートを修正
+3. 新しい破損がないか確認
+4. 計画の進捗を更新
+5. 次のインポートに移動
 
-**Progress Tracking:**
-- Mark each fix in plan
-- Record resolution choices
-- Create meaningful commits
+**進捗追跡:**
+- 計画内の各修正をマーク
+- 解決の選択を記録
+- 意味のあるコミットを作成
 
-## Phase 5: Verification
+## フェーズ5：検証
 
-After fixing imports:
-- Syntax validation
-- No new broken imports
-- Circular dependency check
-- Build verification if possible
+インポートを修正した後：
+- 構文の検証
+- 新しい壊れたインポートがないこと
+- 循環依存のチェック
+- 可能であればビルドの検証
 
-## Context Continuity
+## コンテキストの継続性
 
-**Session Resume:**
-When you return and run `/fix-imports` or `/fix-imports resume`:
-- Load broken imports list
-- Show fixing statistics
-- Continue from last import
-- Apply same resolution patterns
+**セッションの再開:**
+あなたが戻ってきて`/fix-imports`または`/fix-imports resume`を実行すると：
+- 壊れたインポートのリストをロード
+- 修正統計を表示
+- 最後のインポートから続行
+- 同じ解決パターンを適用
 
-**Progress Example:**
+**進捗の例:**
 ```
-RESUMING IMPORT FIXES
-├── Total Broken: 34
-├── Fixed: 21 (62%)
-├── Current: src/utils/helpers.js
-└── Next: src/components/Header.tsx
+インポート修正を再開中
+├── 壊れた合計：34
+├── 修正済み：21 (62%)
+├── 現在：src/utils/helpers.js
+└── 次へ：src/components/Header.tsx
 
-Continuing fixes...
-```
-
-## Practical Examples
-
-**Start Fixing:**
-```
-/fix-imports                  # Fix all broken imports
-/fix-imports src/            # Focus on directory
-/fix-imports "components"    # Fix component imports
+修正を続行中...
 ```
 
-**Session Control:**
+## 実用的な例
+
+**修正の開始:**
 ```
-/fix-imports resume    # Continue fixing
-/fix-imports status    # Check progress
-/fix-imports new       # Fresh scan
+/fix-imports                  # すべての壊れたインポートを修正
+/fix-imports src/            # ディレクトリに焦点を当てる
+/fix-imports "components"    # コンポーネントのインポートを修正
 ```
 
-## Safety Guarantees
+**セッション制御:**
+```
+/fix-imports resume    # 修正を続行
+/fix-imports status    # 進捗を確認
+/fix-imports new       # 新規スキャン
+```
 
-**Protection Measures:**
-- Git checkpoint before fixes
-- Incremental changes
-- Verification after each fix
-- Clear decision audit
+## 安全性の保証
 
-**Important:** I will NEVER:
-- Guess ambiguous imports
-- Break working imports
-- Add AI attribution
-- Create circular dependencies
+**保護措置:**
+- 修正前のgitチェックポイント
+- 段階的な変更
+- 各修正後の検証
+- 明確な決定監査
 
-## What I'll Actually Do
+**重要:** 私は決して以下のことは行いません：
+- 曖昧なインポートを推測する
+- 動作しているインポートを壊す
+- AIの帰属を追加する
+- 循環依存を作成する
 
-1. **Scan completely** - Find all broken imports
-2. **Analyze smartly** - Understand move patterns
-3. **Fix accurately** - Correct paths precisely
-4. **Track thoroughly** - Perfect continuity
-5. **Verify always** - Ensure imports work
+## 私が実際に何をするか
 
-I'll maintain complete continuity between sessions, always resuming exactly where we left off with consistent resolution patterns.
+1. **完全にスキャン** - すべての壊れたインポートを見つける
+2. **スマートに分析** - 移動パターンを理解する
+3. **正確に修正** - パスを正確に修正する
+4. **徹底的に追跡** - 完全な継続性
+5. **常に検証** - インポートが機能することを確認する
+
+セッション間で完全な継続性を維持し、常に一貫した解決パターンで中断したところから正確に再開します。

@@ -1,71 +1,71 @@
-# Clean Project
+# プロジェクトのクリーンアップ
 
-I'll help clean up development artifacts while preserving your working code.
+作業中のコードを保持しながら、開発アーティファクトのクリーンアップをお手伝いします。
 
-## Strategic Thinking Process
+## 戦略的思考プロセス
 
 <think>
-Before cleaning, I need to carefully consider:
+クリーンアップの前に、慎重に検討する必要があります：
 
-1. **Artifact Identification**
-   - What patterns indicate temporary/debug files?
-   - Which files might look temporary but are actually important?
-   - Are there project-specific conventions for temp files?
-   - What about generated files that should be kept?
+1. **アーティファクトの特定**
+   - どのようなパターンが一時ファイルやデバッグファイルを示しますか？
+   - どのファイルが一時的に見えても実際には重要ですか？
+   - 一時ファイルに関するプロジェクト固有の規約はありますか？
+   - 保持すべき生成ファイルについてはどうですか？
 
-2. **Safety Analysis**
-   - Which deletions are definitely safe?
-   - Which require more careful inspection?
-   - Are there active processes using these files?
-   - Could removing these break the development environment?
+2. **安全性分析**
+   - どの削除が間違いなく安全ですか？
+   - より慎重な検査が必要なのはどれですか？
+   - これらのファイルを使用しているアクティブなプロセスはありますか？
+   - これらを削除すると開発環境が壊れる可能性はありますか？
 
-3. **Common Pitfalls**
-   - .env files might look like artifacts but contain config
-   - .cache directories might be needed for performance
-   - Some .tmp files might be active session data
-   - Debug logs might contain important error information
+3. **よくある落とし穴**
+   - .envファイルはアーティファクトのように見えるかもしれませんが、設定が含まれています
+   - .cacheディレクトリはパフォーマンスのために必要かもしれません
+   - 一部の.tmpファイルはアクティブなセッションデータかもしれません
+   - デバッグログには重要なエラー情報が含まれている可能性があります
 
-4. **Cleanup Strategy**
-   - Start with obvious artifacts (*.log, *.tmp, *~)
-   - Check file age - older files are usually safer to remove
-   - Verify with git status what's tracked vs untracked
-   - Group similar files for batch decision making
+4. **クリーンアップ戦略**
+   - 明らかなアーティファクト（*.log、*.tmp、*〜）から始めます
+   - ファイルの古さを確認します - 古いファイルは通常、削除しても安全です
+   - git statusで追跡されているものと追跡されていないものを確認します
+   - 同様のファイルをグループ化して一括で意思決定を行います
 </think>
 
-Based on this analysis, I'll create a git checkpoint for safety:
+この分析に基づいて、安全のためにgitチェックポイントを作成します：
 ```bash
 git add -A
 git commit -m "Pre-cleanup checkpoint" || echo "No changes to commit"
 ```
 
-**Important**: I will NEVER:
-- Add "Co-authored-by" or any Claude signatures
-- Include "Generated with Claude Code" or similar messages
-- Modify git config or user credentials
-- Add any AI/assistant attribution to the commit
-- Use emojis in commits, PRs, or git-related content
+**重要**: 私は決して以下のことは行いません：
+- "Co-authored-by"やClaudeの署名を追加する
+- "Generated with Claude Code"などのメッセージを含める
+- gitの設定やユーザーの資格情報を変更する
+- コミットにAI/アシスタントの帰属を追加する
+- コミット、PR、またはgit関連のコンテンツで絵文字を使用する
 
-I'll identify cleanup targets using native tools:
-- **Glob tool** to find temporary and debug files
-- **Grep tool** to detect debug statements in code
-- **Read tool** to verify file contents before removal
+ネイティブツールを使用してクリーンアップ対象を特定します：
+- **Globツール**で一時ファイルとデバッグファイルを検索
+- **Grepツール**でコード内のデバッグステートメントを検出
+- **Readツール**で削除前にファイルの内容を確認
 
-Critical directories are automatically protected:
-- .claude directory (commands and configurations)
-- .git directory (version control)
-- node_modules, vendor (dependency directories)
-- Essential configuration files
+重要なディレクトリは自動的に保護されます：
+- .claudeディレクトリ（コマンドと設定）
+- .gitディレクトリ（バージョン管理）
+- node_modules、vendor（依存関係ディレクトリ）
+- 不可欠な設定ファイル
 
-When I find multiple items to clean, I'll create a todo list to process them systematically.
+クリーンアップする項目が複数見つかった場合は、体系的に処理するためにtodoリストを作成します。
 
-I'll show you what will be removed and why before taking action:
-- Debug/log files and temporary artifacts
-- Failed implementation attempts
-- Development-only files
-- Debug statements in code
+実行前に、何が削除されるのか、その理由を示します：
+- デバッグ/ログファイルと一時的なアーティファクト
+- 失敗した実装の試み
+- 開発専用ファイル
+- コード内のデバッグステートメント
 
-After cleanup, I'll verify project integrity and report what was cleaned.
+クリーンアップ後、プロジェクトの整合性を確認し、クリーンアップされた内容を報告します。
 
-If any issues occur, I can restore from the git checkpoint created at the start.
+問題が発生した場合は、最初に作成したgitチェックポイントから復元できます。
 
-This keeps only clean, working code while maintaining complete safety.
+これにより、完全な安全性を維持しながら、クリーンで動作するコードのみが残ります。

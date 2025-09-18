@@ -1,378 +1,378 @@
-# Intelligent Refactoring Engine
+# インテリジェントリファクタリングエンジン
 
-I'll help you restructure your code systematically - preserving functionality while improving structure, readability, and maintainability.
+構造、可読性、保守性を向上させながら機能を維持し、体系的にコードを再構築するのを手伝います。
 
-Arguments: `$ARGUMENTS` - files, directories, or refactoring scope
+引数: `$ARGUMENTS` - ファイル、ディレクトリ、またはリファクタリングの範囲
 
-**KEY FEATURE: Built-in validation and refinement after EVERY change ensures nothing breaks and no code is left behind. The AI will automatically fix its own mistakes during the refactoring process.**
+**主な特徴：すべての変更後に組み込まれた検証と改良により、何も壊れず、コードが取り残されないことを保証します。AIはリファクタリングプロセス中に自身のミスを自動的に修正します。**
 
-**SESSION FILES LOCATION: Always use refactor/ folder in current directory**
+**セッションファイルの場所：常に現在のディレクトリのrefactor/フォルダを使用してください**
 
-## Session Intelligence
+## セッションインテリジェンス
 
-I'll maintain refactoring continuity across sessions:
+セッションをまたいでリファクタリングの継続性を維持します：
 
-**Session Files (in current project):**
-- `refactor/plan.md` - Refactoring plan with progress tracking  
-- `refactor/state.json` - Current state and completed actions
+**セッションファイル（現在のプロジェクト内）:**
+- `refactor/plan.md` - 進捗追跡付きのリファクタリング計画
+- `refactor/state.json` - 現在の状態と完了したアクション
 
-**IMPORTANT:** The `refactor` folder is created in your CURRENT PROJECT directory. Use `refactor/` to access it.
+**重要:** `refactor`フォルダは現在のプロジェクトディレクトリに作成されます。アクセスするには`refactor/`を使用してください。
 
-**Auto-Detection:**
-- If session exists: Resume from last checkpoint
-- If no session: Create new refactoring plan
-- Commands: `resume`, `continue`, `status`, `new`
+**自動検出:**
+- セッションが存在する場合：最後のチェックポイントから再開
+- セッションがない場合：新しいリファクタリング計画を作成
+- コマンド：`resume`、`continue`、`status`、`new`
 
-**EXAMPLE OF CORRECT PATH USAGE:**
+**正しいパスの使用例：**
 ```
-# CORRECT - looks in current project:
+# 正しい - 現在のプロジェクトを検索：
 Read refactor/state.json
 LS refactor
 
-# WRONG - these will fail:
+# 間違い - これらは失敗します：
 Read ../../../refactor/state.json
 Read $HOME/.claude/refactor/state.json
 ```
 
-## Phase 1: Initial Setup & Analysis
+## フェーズ1：初期設定と分析
 
-### Extended Thinking for Complex Refactoring
+### 複雑なリファクタリングのための拡張思考
 
-For complex refactoring scenarios, I'll use extended thinking to develop comprehensive strategies:
+複雑なリファクタリングシナリオでは、包括的な戦略を開発するために拡張思考を使用します：
 
 <think>
-When faced with complex architectural refactoring:
-- Multi-step transformation paths that preserve functionality
-- Risk mitigation strategies for each transformation
-- Dependency graph analysis and update ordering
-- Performance implications of different approaches
-- Backwards compatibility requirements
-- Testing strategies for validating each step
+複雑なアーキテクチャのリファクタリングに直面した場合：
+- 機能を維持する複数ステップの変換パス
+- 各変換のリスク軽減戦略
+- 依存関係グラフの分析と更新順序
+- 異なるアプローチのパフォーマンスへの影響
+- 下位互換性の要件
+- 各ステップを検証するためのテスト戦略
 </think>
 
-**Triggers for Extended Analysis:**
-- Large-scale architectural changes
-- Complex dependency untangling
-- Performance-critical refactoring
-- Legacy system modernization
+**拡張分析のトリガー:**
+- 大規模なアーキテクチャの変更
+- 複雑な依存関係の解消
+- パフォーマンスが重要なリファクタリング
+- レガシーシステムの近代化
 
-**MANDATORY FIRST STEPS FOR SESSION CHECK:**
+**セッションチェックのための必須の最初のステップ:**
 ```
-Step 1: Check for refactor directory in CURRENT directory
-Command: LS refactor
+ステップ1：現在のディレクトリでrefactorディレクトリを確認
+コマンド：LS refactor
 
-Step 2: If refactor exists, read session files:
-Command: Read refactor/state.json
-Command: Read refactor/plan.md
+ステップ2：refactorが存在する場合、セッションファイルを読み込む：
+コマンド：Read refactor/state.json
+コマンド：Read refactor/plan.md
 
-DO NOT USE THESE WRONG PATHS:
-- ../../../refactor/  (WRONG - goes up directories)
-- $HOME/refactor/  (WRONG - home directory)
-- ~/refactor/  (WRONG - home directory)
+これらの間違ったパスは使用しないでください：
+- ../../../refactor/  （間違い - ディレクトリを上がる）
+- $HOME/refactor/  （間違い - ホームディレクトリ）
+- ~/refactor/  （間違い - ホームディレクトリ）
 
-ONLY USE: refactor/ (current directory)
+refactor/（現在のディレクトリ）のみを使用してください
 ```
 
-**CRITICAL:** The refactor folder is created in the CURRENT WORKING DIRECTORY where user is running the command. NOT in home, NOT in parent directories.
+**重要:** refactorフォルダは、ユーザーがコマンドを実行している現在の作業ディレクトリに作成されます。ホームディレクトリや親ディレクトリではありません。
 
-I'll examine your codebase to identify improvement opportunities:
+コードベースを調査して改善の機会を特定します：
 
-**Analysis Focus:**
-- Code complexity hotspots using **Grep** patterns
-- Duplication detection across files
-- Architecture inconsistencies
-- Test coverage for safe refactoring
-- Performance bottlenecks
+**分析の焦点:**
+- **Grep**パターンを使用したコードの複雑さのホットスポット
+- ファイル間の重複検出
+- アーキテクチャの不整合
+- 安全なリファクタリングのためのテストカバレッジ
+- パフォーマンスのボトルネック
 
-**Smart Scoping:**
-- If specific files provided: Focused analysis
-- If directory provided: Recursive analysis
-- If no arguments: Strategic project-wide scan
+**スマートなスコープ設定:**
+- 特定のファイルが提供された場合：焦点を絞った分析
+- ディレクトリが提供された場合：再帰的な分析
+- 引数がない場合：戦略的なプロジェクト全体のスキャン
 
-## Phase 2: Refactoring Planning
+## フェーズ2：リファクタリング計画
 
-Based on analysis, I'll create a structured plan:
+分析に基づいて、構造化された計画を作成します：
 
-**Refactoring Categories:**
-- **Quick Wins**: Variable renames, method extractions
-- **Structural**: Pattern applications, dependency improvements
-- **Architectural**: Major reorganizations, module boundaries
-- **Performance**: Algorithm optimizations, caching strategies
+**リファクタリングカテゴリ:**
+- **迅速な勝利**: 変数の名前変更、メソッドの抽出
+- **構造的**: パターンの適用、依存関係の改善
+- **アーキテクチャ**: 主要な再編成、モジュールの境界
+- **パフォーマンス**: アルゴリズムの最適化、キャッシング戦略
 
-**Plan Structure:**
-I'll create a detailed plan in `refactor/plan.md`:
+**計画の構造:**
+`refactor/plan.md`に詳細な計画を作成します：
 
 ```markdown
-# Refactor Plan - [timestamp]
+# リファクタリング計画 - [タイムスタンプ]
 
-## Initial State Analysis
-- **Current Architecture**: [description of existing patterns]
-- **Problem Areas**: [specific issues found]
-- **Dependencies**: [external/internal dependencies]
-- **Test Coverage**: [current coverage %]
+## 初期状態分析
+- **現在のアーキテクチャ**: [既存のパターンの説明]
+- **問題領域**: [見つかった特定の問題]
+- **依存関係**: [外部/内部の依存関係]
+- **テストカバレッジ**: [現在のカバレッジ%]
 
-## Refactoring Tasks
-[Prioritized list with risk levels]
+## リファクタリングタスク
+[リスクレベル付きの優先順位付けされたリスト]
 
-## Validation Checklist
-- [ ] All old patterns removed
-- [ ] No broken imports
-- [ ] All tests passing
-- [ ] Build successful
-- [ ] Type checking clean
-- [ ] No orphaned code
-- [ ] Documentation updated
+## 検証チェックリスト
+- [ ] すべての古いパターンが削除された
+- [ ] 壊れたインポートがない
+- [ ] すべてのテストがパスしている
+- [ ] ビルドが成功した
+- [ ] 型チェックがクリーンである
+- [ ] 孤立したコードがない
+- [ ] ドキュメントが更新された
 
-## De-Para Mapping
-| Before | After | Status |
-|--------|-------|--------|
-| OldService.method() | NewService.method() | Pending |
-| /api/v1/* | /api/v2/* | Pending |
+## De-Paraマッピング
+| 以前 | 以後 | ステータス |
+|---|---|---|
+| OldService.method() | NewService.method() | 保留中 |
+| /api/v1/* | /api/v2/* | 保留中 |
 ```
 
-## Phase 3: Incremental Execution
+## フェーズ3：段階的な実行
 
-I'll apply refactorings systematically:
+体系的にリファクタリングを適用します：
 
-**Execution Order:**
-1. Create git checkpoint for safety
-2. Apply low-risk improvements first
-3. Validate after each change
-4. Progress to higher-impact refactorings
-5. Update plan with completion status
+**実行順序:**
+1. 安全のためにgitチェックポイントを作成
+2. 最初に低リスクの改善を適用
+3. 各変更後に検証
+4. より影響の大きいリファクタリングに進む
+5. 完了ステータスで計画を更新
 
-**Continuous Validation & Refinement:**
-After EVERY refactoring change:
-1. **Immediate Testing:**
-   - Run unit tests for modified files
-   - Execute integration tests if applicable
-   - Verify no test regressions
+**継続的な検証と改良:**
+すべてのリファクタリング変更後：
+1. **即時テスト:**
+   - 変更されたファイルの単体テストを実行
+   - 該当する場合は統合テストを実行
+   - テストのリグレッションがないことを確認
    
-2. **Deep Comparison:**
-   - Compare function outputs before/after
-   - Validate API contracts maintained
-   - Check for missing edge cases
-   - Verify error handling preserved
+2. **詳細な比較:**
+   - 変更前後の関数の出力を比較
+   - APIコントラクトが維持されていることを検証
+   - 見逃されたエッジケースをチェック
+   - エラー処理が維持されていることを確認
    
-3. **Automated Fixes:**
-   - Update broken imports automatically
-   - Fix reference errors
-   - Adjust type definitions
-   - Resolve linting issues
+3. **自動修正:**
+   - 壊れたインポートを自動的に更新
+   - 参照エラーを修正
+   - 型定義を調整
+   - リンティングの問題を解決
    
-4. **Quality Gates:**
-   - STOP if tests fail - fix immediately
-   - STOP if behavior changes - investigate
-   - STOP if performance degrades - optimize
-   - Only proceed when 100% validated
+4. **品質ゲート:**
+   - テストが失敗した場合は停止 - すぐに修正
+   - 動作が変更された場合は停止 - 調査
+   - パフォーマンスが低下した場合は停止 - 最適化
+   - 100%検証された場合にのみ続行
 
-5. **Continuous Refinement:**
-   - Re-scan for missed patterns
-   - Update all related files
-   - Clean up orphaned code
-   - Document breaking changes
+5. **継続的な改良:**
+   - 見逃されたパターンを再スキャン
+   - すべての関連ファイルを更新
+   - 孤立したコードをクリーンアップ
+   - 破壊的変更を文書化
 
-## Phase 4: Pattern Application
+## フェーズ4：パターンの適用
 
-I'll apply consistent patterns throughout:
+一貫したパターンを全体に適用します：
 
-**Pattern Recognition:**
-- Identify existing patterns in your code
-- Detect anti-patterns to eliminate
-- Apply design patterns where beneficial
-- Maintain architectural consistency
+**パターン認識:**
+- コード内の既存のパターンを特定
+- 排除すべきアンチパターンを検出
+- 有益な場合にデザインパターンを適用
+- アーキテクチャの一貫性を維持
 
-**Code Improvements:**
-- Extract duplicated code into utilities
-- Simplify complex functions
-- Improve naming for clarity
-- Reduce coupling between modules
+**コードの改善:**
+- 重複したコードをユーティリティに抽出
+- 複雑な関数を単純化
+- 明確さのために命名を改善
+- モジュール間の結合を減らす
 
-## Phase 5: Quality Metrics
+## フェーズ5：品質メトリクス
 
-I'll track refactoring impact:
+リファクタリングの影響を追跡します：
 
-**Measurable Improvements:**
-- Complexity reduction percentages
-- Duplication elimination count
-- Test coverage maintenance
-- Performance benchmarks
-- Code readability scores
+**測定可能な改善:**
+- 複雑さの削減率
+- 重複排除数
+- テストカバレッジの維持
+- パフォーマンスベンチマーク
+- コードの可読性スコア
 
-## Context Continuity
+## コンテキストの継続性
 
-**Session Management:**
-When you return and run `/refactor` or `/refactor resume`:
-- I'll load existing plan and state
-- Display progress summary
-- Continue from last checkpoint
-- Maintain all refactoring decisions
+**セッション管理:**
+あなたが戻ってきて`/refactor`または`/refactor resume`を実行すると：
+- 既存の計画と状態をロードします
+- 進捗の要約を表示します
+- 最後のチェックポイントから続行します
+- すべてのリファクタリングの決定を維持します
 
-**Progress Example:**
+**進捗の例:**
 ```
-RESUMING REFACTORING SESSION
-├── Session: refactor_2025_08_02_1430
-├── Progress: 12 of 20 tasks complete
-├── Last Action: Extract UserService methods
-└── Next: Simplify PaymentProcessor logic
+リファクタリングセッションを再開中
+├── セッション: refactor_2025_08_02_1430
+├── 進捗: 20タスク中12タスク完了
+├── 最後のアクション: UserServiceメソッドの抽出
+└── 次へ: PaymentProcessorロジックの単純化
 
-Continuing from checkpoint...
-```
-
-## Practical Examples
-
-**Start Refactoring:**
-```
-/refactor                    # Analyze entire project
-/refactor src/components/    # Focus on specific directory
-/refactor UserService.ts     # Target single file
+チェックポイントから続行中...
 ```
 
-**Session Control:**
-```
-/refactor resume    # Continue existing session
-/refactor status    # Check progress without continuing
-/refactor new       # Start fresh (archives existing)
-/refactor validate  # Validate completeness and find loose ends
-```
+## 実用的な例
 
-**Deep Validation & Enhancement Commands:**
+**リファクタリングの開始:**
 ```
-/refactor finish    # Complete with full validation & behavior comparison
-/refactor enhance   # Deep analysis comparing original vs refactored
-/refactor verify    # Run original code, capture behavior, compare with new
-/refactor complete  # Ensure 100% migration with behavior preservation
+/refactor                    # プロジェクト全体を分析
+/refactor src/components/    # 特定のディレクトリに焦点を当てる
+/refactor UserService.ts     # 単一ファイルをターゲットにする
 ```
 
-## Phase 6: Automatic Final Validation & Refinement
-
-**AUTOMATIC EXECUTION:** This phase runs automatically after all refactorings are complete. You can also trigger it manually with `/refactor validate`.
-
-**Final Validation Process:**
-
-**Deep Validation Analysis:**
-1. **Coverage Check** - Find all remaining old patterns
-2. **Import Verification** - Detect broken or orphaned imports
-3. **Build & Test** - Run full build and test suite
-4. **Type Checking** - Verify type safety if applicable
-5. **Dead Code Detection** - Identify removable legacy code
-
-**De-Para Mapping:**
+**セッション制御:**
 ```
-MIGRATION STATUS REPORT
-├── Patterns Migrated: 45/48 (94%)
-├── Files Updated: 67/70
-├── Tests Status: 3 failing
-└── Build Status: Passing
-
-PENDING MIGRATIONS:
-- src/legacy/UserHelper.js → Still using old pattern
-- api/v1/routes.js → Mixed patterns detected
-- tests/old-api.test.js → Needs update
-
-SUGGESTED REFINEMENTS:
-1. Remove 12 orphaned files
-2. Consolidate duplicate utilities
-3. Update 3 missed import paths
-4. Optimize bundle size (-15KB possible)
+/refactor resume    # 既存のセッションを続行
+/refactor status    # 続行せずに進捗を確認
+/refactor new       # 新規開始（既存のものをアーカイブ）
+/refactor validate  # 完全性を検証し、未処理の部分を見つける
 ```
 
-**Validation Actions:**
-- Generate comprehensive de-para documentation
-- Create migration guide for team
-- Fix remaining issues automatically
-- Ensure 100% pattern consistency
+**詳細な検証と拡張コマンド:**
+```
+/refactor finish    # 完全な検証と動作比較で完了
+/refactor enhance   # オリジナルとリファクタリング後を詳細に比較分析
+/refactor verify    # オリジナルコードを実行し、動作をキャプチャし、新しいものと比較
+/refactor complete  # 動作の維持を伴う100%の移行を保証
+```
 
-## Deep Validation Commands (All-in-One Process)
+## フェーズ6：自動最終検証と改良
 
-**ALL these commands (`finish`, `enhance`, `verify`, `complete`) execute the SAME comprehensive validation process:**
+**自動実行:** このフェーズは、すべてのリファクタリングが完了した後に自動的に実行されます。`/refactor validate`で手動でトリガーすることもできます。
 
-### Complete Validation & Enhancement Process
-When you run ANY of these: `/refactor finish`, `/refactor enhance`, `/refactor verify`, or `/refactor complete`
+**最終検証プロセス:**
 
-**I will AUTOMATICALLY execute ALL these steps:**
+**詳細な検証分析:**
+1. **カバレッジチェック** - 残っているすべての古いパターンを見つける
+2. **インポート検証** - 壊れたまたは孤立したインポートを検出
+3. **ビルドとテスト** - 完全なビルドとテストスイートを実行
+4. **型チェック** - 該当する場合は型安全性を検証
+5. **デッドコード検出** - 削除可能なレガシーコードを特定
 
-1. **Deep Original Code Analysis**
-   - Analyze EVERY function, method and class in detail
-   - Document ALL behaviors, patterns and logic flows
-   - Map complete code structure and dependencies
-   - Create comprehensive understanding in `refactor/original-analysis.md`
+**De-Paraマッピング:**
+```
+移行ステータスレポート
+├── 移行されたパターン：48分の45（94%）
+├── 更新されたファイル：70分の67
+├── テストステータス：3つ失敗
+└── ビルドステータス：成功
 
-2. **Complete Migration**
-   - Apply ALL remaining refactorings
-   - Find and fix ALL instances of old patterns
-   - Update ALL imports and references
-   - Clean up ALL orphaned code
+保留中の移行：
+- src/legacy/UserHelper.js → まだ古いパターンを使用
+- api/v1/routes.js → 混合パターンが検出されました
+- tests/old-api.test.js → 更新が必要
 
-3. **Deep Code-to-Code Comparison**
-   - Analyze refactored code line by line
-   - Verify EVERY behavior is preserved
-   - Check ALL logic paths match original
-   - Ensure error handling is identical
+提案された改良：
+1. 12個の孤立したファイルを削除
+2. 重複したユーティリティを統合
+3. 3つの見逃されたインポートパスを更新
+4. バンドルサイズを最適化（-15KB可能）
+```
 
-4. **Comprehensive Analysis**
-   - Line-by-line code comparison
-   - Complexity metrics (before/after)
-   - Performance benchmarks
-   - Memory usage analysis
-   - Test coverage verification
+**検証アクション:**
+- 包括的なde-paraドキュメントを生成
+- チーム向けの移行ガイドを作成
+- 残りの問題を自動的に修正
+- 100%のパターンの一貫性を確保
 
-5. **Automatic Fixes**
-   - Fix ANY behavioral discrepancies
-   - Update broken references
-   - Resolve type issues
-   - Correct import paths
+## 詳細な検証コマンド（オールインワンプロセス）
 
-6. **Final Validation**
-   - Run full test suite
-   - Execute integration tests
-   - Verify build passes
-   - Ensure 100% behavior preservation
+**これらのコマンド（`finish`、`enhance`、`verify`、`complete`）はすべて、同じ包括的な検証プロセスを実行します：**
 
-7. **Complete Report**
-   - De-para mapping of ALL changes
-   - Migration guide for team
-   - Risk assessment
-   - Rollback instructions if needed
+### 完全な検証と拡張プロセス
+これらのいずれかを実行すると：`/refactor finish`、`/refactor enhance`、`/refactor verify`、または`/refactor complete`
 
-**The result:** 100% guarantee that NOTHING was broken, NOTHING was left behind, and the application behaves EXACTLY the same as before refactoring.
+**自動的にこれらのステップをすべて実行します：**
 
-## Safety Guarantees
+1. **詳細なオリジナルコード分析**
+   - すべての関数、メソッド、クラスを詳細に分析
+   - すべての動作、パターン、ロジックフローを文書化
+   - 完全なコード構造と依存関係をマッピング
+   - `refactor/original-analysis.md`に包括的な理解を作成
 
-**Protection Measures:**
-- Git checkpoints before changes
-- Incremental commits at logical points
-- Test validation after each step
-- Clear rollback strategy
+2. **完全な移行**
+   - 残りのすべてのリファクタリングを適用
+   - 古いパターンのすべてのインスタンスを見つけて修正
+   - すべてのインポートと参照を更新
+   - すべての孤立したコードをクリーンアップ
 
-**Important:** I will NEVER:
-- Add AI attribution or signatures
-- Modify git configuration
-- Break working functionality
-- Make changes without validation
-- Use emojis in commits, PRs, or git-related content
+3. **詳細なコード間比較**
+   - リファクタリングされたコードを一行ずつ分析
+   - すべての動作が維持されていることを検証
+   - すべてのロジックパスがオリジナルと一致することを確認
+   - エラー処理が同一であることを確認
 
-## Command Integration
+4. **包括的な分析**
+   - 一行ずつのコード比較
+   - 複雑さのメトリクス（変更前/後）
+   - パフォーマンスベンチマーク
+   - メモリ使用量分析
+   - テストカバレッジの検証
 
-When appropriate, I may suggest using other commands:
-- `/test` - After major refactoring to verify functionality
-- `/commit` - At logical checkpoints in the refactoring process
+5. **自動修正**
+   - 動作の不一致を修正
+   - 壊れた参照を更新
+   - 型の問題を解決
+   - インポートパスを修正
 
-## Execution Guarantee
+6. **最終検証**
+   - 完全なテストスイートを実行
+   - 統合テストを実行
+   - ビルドがパスすることを確認
+   - 100%の動作維持を保証
 
-**My workflow ALWAYS follows this order:**
+7. **完全なレポート**
+   - すべての変更のde-paraマッピング
+   - チーム向けの移行ガイド
+   - リスク評価
+   - 必要に応じてロールバック手順
 
-1. **Setup session** - Check/create state files FIRST
-2. **Deep analysis** - Use extended thinking for complex scenarios
-3. **Write plan** - Document all changes in `refactor/plan.md`
-4. **Get confirmation** - Show plan summary before starting
-5. **Execute incrementally** - Follow plan with checkpoints
-6. **Validate completeness** - Run validation phase when requested
+**結果:** 何も壊れておらず、何も取り残されておらず、アプリケーションがリファクタリング前とまったく同じように動作することを100%保証します。
 
-**I will NEVER:**
-- Start refactoring without a written plan
-- Make changes before complete analysis
-- Skip session file creation
-- Proceed without showing the plan first
+## 安全性の保証
 
-I'll ensure perfect continuity between sessions, always resuming exactly where we left off with full context and decision history.
+**保護措置:**
+- 変更前のgitチェックポイント
+- 論理的なポイントでの段階的なコミット
+- 各ステップ後のテスト検証
+- 明確なロールバック戦略
+
+**重要:** 私は決して以下のことは行いません：
+- AIの帰属や署名を追加する
+- gitの設定を変更する
+- 動作している機能を壊す
+- 検証なしで変更を加える
+- コミット、PR、またはgit関連のコンテンツで絵文字を使用する
+
+## コマンド統合
+
+適切な場合、他のコマンドの使用を提案することがあります：
+- `/test` - 大規模なリファクタリング後に機能を検証するため
+- `/commit` - リファクタリングプロセスの論理的なチェックポイントで
+
+## 実行の保証
+
+**私のワークフローは常にこの順序に従います：**
+
+1. **セッションの設定** - 最初に状態ファイルを確認/作成
+2. **詳細な分析** - 複雑なシナリオには拡張思考を使用
+3. **計画の作成** - すべての変更を`refactor/plan.md`に文書化
+4. **確認を得る** - 開始前に計画の要約を示す
+5. **段階的に実行** - チェックポイント付きで計画に従う
+6. **完全性を検証** - 要求されたときに検証フェーズを実行
+
+**私は決して以下のことは行いません：**
+- 書かれた計画なしにリファクタリングを開始する
+- 完全な分析前に変更を加える
+- セッションファイルの作成をスキップする
+- 最初に計画を示さずに進める
+
+セッション間で完全な継続性を確保し、常に完全なコンテキストと決定履歴を持って中断したところから正確に再開します。

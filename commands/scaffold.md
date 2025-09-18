@@ -1,168 +1,168 @@
-# Intelligent Scaffolding
+# インテリジェントなスキャフォールディング
 
-I'll create complete feature structures based on your project patterns, with full continuity across sessions.
+セッションをまたいで完全に継続性を保ちながら、プロジェクトのパターンに基づいて完全な機能構造を作成します。
 
-Arguments: `$ARGUMENTS` - feature name or component to scaffold
+引数: `$ARGUMENTS` - スキャフォールディングする機能名またはコンポーネント
 
-## Session Intelligence
+## セッションインテリジェンス
 
-I'll maintain scaffolding progress across sessions:
+セッションをまたいでスキャフォールディングの進捗を維持します：
 
-**Session Files (in current project directory):**
-- `scaffold/plan.md` - Scaffolding plan and component list
-- `scaffold/state.json` - Created files and progress
+**セッションファイル（現在のプロジェクトディレクトリ内）:**
+- `scaffold/plan.md` - スキャフォールディング計画とコンポーネントリスト
+- `scaffold/state.json` - 作成されたファイルと進捗
 
-**IMPORTANT:** Session files are stored in a `scaffold` folder in your current project root
+**重要:** セッションファイルは、現在のプロジェクトルートの`scaffold`フォルダに保存されます
 
-**Auto-Detection:**
-- If session exists: Resume incomplete scaffolding
-- If no session: Create new scaffolding plan
-- Commands: `resume`, `status`, `new`
+**自動検出:**
+- セッションが存在する場合：未完了のスキャフォールディングを再開
+- セッションがない場合：新しいスキャフォールディング計画を作成
+- コマンド：`resume`、`status`、`new`
 
-## Phase 1: Pattern Discovery
+## フェーズ1：パターン検出
 
-**MANDATORY FIRST STEPS:**
-1. Check if `scaffold` directory exists in current working directory
-2. If directory exists, check for session files:
-   - Look for `scaffold/state.json`
-   - Look for `scaffold/plan.md`
-   - If found, resume from existing session
-3. If no directory or session exists:
-   - Analyze project patterns
-   - Create scaffolding plan
-   - Initialize progress tracking
-4. Show scaffolding preview before creating
+**必須の最初のステップ:**
+1. 現在の作業ディレクトリに`scaffold`ディレクトリが存在するか確認
+2. ディレクトリが存在する場合、セッションファイルを確認：
+   - `scaffold/state.json`を探す
+   - `scaffold/plan.md`を探す
+   - 見つかった場合、既存のセッションから再開
+3. ディレクトリまたはセッションが存在しない場合：
+   - プロジェクトパターンを分析
+   - スキャフォールディング計画を作成
+   - 進捗追跡を初期化
+4. 作成前にスキャフォールディングのプレビューを表示
 
-**Note:** Always look for session files in the current project's `scaffold/` folder, not `../../../scaffold/` or absolute paths
+**注意:** 常に現在のプロジェクトの`scaffold/`フォルダでセッションファイルを探し、`../../../scaffold/`や絶対パスではありません
 
-I'll discover your project patterns:
+プロジェクトのパターンを検出します：
 
-**Pattern Analysis:**
-- File organization structure
-- Naming conventions
-- Testing patterns
-- Import/export styles
-- Documentation standards
+**パターン分析:**
+- ファイルの整理構造
+- 命名規則
+- テストパターン
+- インポート/エクスポートスタイル
+- ドキュメンテーション標準
 
-**Smart Detection:**
-- Find similar features already implemented
-- Identify architectural patterns
-- Detect testing frameworks
-- Understand build configuration
+**スマート検出:**
+- すでに実装されている類似の機能を見つける
+- アーキテクチャパターンを特定する
+- テストフレームワークを検出する
+- ビルド設定を理解する
 
-## Phase 2: Scaffolding Planning
+## フェーズ2：スキャフォールディング計画
 
-Based on patterns, I'll create a scaffolding plan:
+パターンに基づいて、スキャフォールディング計画を作成します：
 
-**Component Structure:**
-- Main feature files
-- Test files
-- Documentation
-- Configuration updates
-- Integration points
+**コンポーネント構造:**
+- 主な機能ファイル
+- テストファイル
+- ドキュメンテーション
+- 設定の更新
+- 統合ポイント
 
-I'll write this plan to `scaffold/plan.md` with:
-- Each file to create
-- Template patterns to follow
-- Integration requirements
-- Creation order
+この計画を`scaffold/plan.md`に書き込みます：
+- 作成する各ファイル
+- 従うべきテンプレートパターン
+- 統合要件
+- 作成順序
 
-## Phase 3: Intelligent Generation
+## フェーズ3：インテリジェントな生成
 
-I'll generate files matching your patterns:
+あなたのパターンに一致するファイルを生成します：
 
-**Pattern Matching:**
-- Use your file naming style
-- Follow your directory structure
-- Match your code conventions
-- Apply your testing patterns
+**パターンマッチング:**
+- ファイルの命名スタイルを使用する
+- ディレクトリ構造に従う
+- コード規約に合わせる
+- テストパターンを適用する
 
-**Content Generation:**
-- Boilerplate from existing code
-- Imports matching your style
-- Test structure from your patterns
-- Documentation in your format
+**コンテンツ生成:**
+- 既存のコードからのボイラープレート
+- あなたのスタイルに合わせたインポート
+- あなたのパターンからのテスト構造
+- あなたのフォーマットでのドキュメンテーション
 
-## Phase 4: Incremental Creation
+## フェーズ4：段階的な作成
 
-I'll create files systematically:
+体系的にファイルを作成します：
 
-**Execution Process:**
-1. Create directory structure
-2. Generate each component file
-3. Add appropriate tests
-4. Update integration points
-5. Track each creation in state
+**実行プロセス:**
+1. ディレクトリ構造を作成
+2. 各コンポーネントファイルを生成
+3. 適切なテストを追加
+4. 統合ポイントを更新
+5. 各作成を状態で追跡
 
-**Progress Tracking:**
-- Mark each file created in plan
-- Update state with file paths
-- Create meaningful commits
+**進捗追跡:**
+- 計画内で作成された各ファイルをマーク
+- ファイルパスで状態を更新
+- 意味のあるコミットを作成
 
-## Phase 5: Integration
+## フェーズ5：統合
 
-After scaffolding:
-- Update route configurations
-- Add to module exports
-- Update build configuration
-- Verify everything connects
+スキャフォールディング後：
+- ルート設定を更新
+- モジュールエクスポートに追加
+- ビルド設定を更新
+- すべてが接続されていることを確認
 
-## Context Continuity
+## コンテキストの継続性
 
-**Session Resume:**
-When you return and run `/scaffold` or `/scaffold resume`:
-- Load existing plan and progress
-- Show what was already created
-- Continue from last component
-- Maintain pattern consistency
+**セッションの再開:**
+あなたが戻ってきて`/scaffold`または`/scaffold resume`を実行すると：
+- 既存の計画と進捗をロード
+- すでに作成されたものを表示
+- 最後のコンポーネントから続行
+- パターンの一貫性を維持
 
-**Progress Example:**
+**進捗の例:**
 ```
-RESUMING SCAFFOLDING
-├── Feature: UserDashboard
-├── Created: 5 of 8 files
-├── Last: components/UserStats.tsx
-└── Next: tests/UserStats.test.tsx
+スキャフォールディングを再開中
+├── 機能: UserDashboard
+├── 作成済み: 8ファイル中5ファイル
+├── 最後: components/UserStats.tsx
+└── 次へ: tests/UserStats.test.tsx
 
-Continuing scaffolding...
-```
-
-## Practical Examples
-
-**Start Scaffolding:**
-```
-/scaffold UserProfile          # Create user profile feature
-/scaffold "auth module"        # Create authentication module
-/scaffold PaymentService       # Create payment service
+スキャフォールディングを続行中...
 ```
 
-**Session Control:**
+## 実用的な例
+
+**スキャフォールディングの開始:**
 ```
-/scaffold resume    # Continue existing scaffolding
-/scaffold status    # Check what's been created
-/scaffold new       # Start fresh scaffolding
+/scaffold UserProfile          # ユーザープロファイル機能を作成
+/scaffold "auth module"        # 認証モジュールを作成
+/scaffold PaymentService       # 支払いサービスを作成
 ```
 
-## Safety Guarantees
+**セッション制御:**
+```
+/scaffold resume    # 既存のスキャフォールディングを続行
+/scaffold status    # 作成されたものを確認
+/scaffold new       # 新しいスキャフォールディングを開始
+```
 
-**Protection Measures:**
-- Preview before creation
-- Incremental file generation
-- Pattern validation
-- Integration verification
+## 安全性の保証
 
-**Important:** I will NEVER:
-- Overwrite existing files
-- Break existing imports
-- Add AI attribution
-- Create without following patterns
+**保護措置:**
+- 作成前のプレビュー
+- 段階的なファイル生成
+- パターンの検証
+- 統合の検証
 
-## What I'll Actually Do
+**重要:** 私は決して以下のことは行いません：
+- 既存のファイルを上書きする
+- 既存のインポートを壊す
+- AIの帰属を追加する
+- パターンに従わずに作成する
 
-1. **Analyze deeply** - Understand your patterns
-2. **Plan completely** - Map all components
-3. **Generate intelligently** - Match your style
-4. **Track precisely** - Perfect continuity
-5. **Integrate seamlessly** - Connect everything
+## 私が実際に何をするか
 
-I'll maintain complete continuity between sessions, always resuming exactly where we left off with consistent pattern application.
+1. **深く分析** - あなたのパターンを理解する
+2. **完全に計画** - すべてのコンポーネントをマッピングする
+3. **インテリジェントに生成** - あなたのスタイルに合わせる
+4. **正確に追跡** - 完全な継続性
+5. **シームレスに統合** - すべてを接続する
+
+セッション間で完全な継続性を維持し、常に一貫したパターンの適用で中断したところから正確に再開します。

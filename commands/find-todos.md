@@ -1,38 +1,38 @@
-# Find Development Tasks
+# 開発タスクの検索
 
-I'll locate all TODO comments and unfinished work markers in your codebase.
+コードベース内のすべてのTODOコメントと未完了の作業マーカーを特定します。
 
-I'll use the Grep tool to efficiently search for task markers with context:
-- Pattern: "TODO|FIXME|HACK|XXX|NOTE"
-- Case insensitive search across all source files
-- Show surrounding lines for better understanding
+Grepツールを使用して、コンテキスト付きでタスクマーカーを効率的に検索します：
+- パターン: "TODO|FIXME|HACK|XXX|NOTE"
+- すべてのソースファイルで大文字と小文字を区別しない検索
+- より良い理解のために周囲の行を表示
 
-For each marker found, I'll show:
-1. **File location** with line number
-2. **The full comment** with context
-3. **Surrounding code** to understand what needs to be done
-4. **Priority assessment** based on the marker type
+見つかった各マーカーについて、以下を表示します：
+1. **ファイルの場所**と行番号
+2. コンテキスト付きの**完全なコメント**
+3. 何をすべきかを理解するための**周囲のコード**
+4. マーカーの種類に基づく**優先度の評価**
 
-When I find multiple items, I'll create a todo list to organize them by priority:
-- **Critical** (FIXME, HACK, XXX): Issues that could cause problems
-- **Important** (TODO): Features or improvements needed
-- **Informational** (NOTE): Context that might need attention
+複数の項目が見つかった場合、優先度別に整理するためにtodoリストを作成します：
+- **クリティカル** (FIXME, HACK, XXX): 問題を引き起こす可能性のある問題
+- **重要** (TODO): 必要な機能または改善
+- **情報** (NOTE): 注意が必要な可能性のあるコンテキスト
 
-I'll also identify:
-- TODOs that reference missing implementations
-- Placeholder code that needs replacement
-- Incomplete error handling
-- Stubbed functions awaiting implementation
+また、以下も特定します：
+- 不足している実装を参照するTODO
+- 置換が必要なプレースホルダーコード
+- 不完全なエラーハンドリング
+- 実装を待つスタブ化された関数
 
-After scanning, I'll ask: "Convert these to GitHub issues?"
-- Yes: I'll create properly categorized issues
-- Todos only: I'll maintain the local todo list
-- Summary: I'll provide organized report
+スキャン後、「これらをGitHubイシューに変換しますか？」と尋ねます：
+- はい：適切に分類されたイシューを作成します
+- TODOのみ：ローカルのtodoリストを維持します
+- 要約：整理されたレポートを提供します
 
-**Important**: I will NEVER:
-- Add "Created by Claude" or any AI attribution to issues
-- Include "Generated with Claude Code" in descriptions
-- Modify repository settings or permissions
-- Add any AI/assistant signatures or watermarks
+**重要**: 私は決して以下のことは行いません：
+- イシューに"Created by Claude"やAIの帰属を追加する
+- 説明に"Generated with Claude Code"を含める
+- リポジトリの設定や権限を変更する
+- AI/アシスタントの署名や透かしを追加する
 
-This helps track and prioritize unfinished work systematically.
+これにより、未完了の作業を体系的に追跡し、優先順位を付けることができます。

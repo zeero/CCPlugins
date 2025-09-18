@@ -1,88 +1,88 @@
-# Understand Project
+# プロジェクトの理解
 
-I'll analyze your entire application to understand its architecture, patterns, and how everything works together.
+アプリケーション全体を分析し、そのアーキテクチャ、パターン、そしてすべてがどのように連携して機能するかを理解します。
 
-**Phase 1: Project Discovery**
-Using native tools for comprehensive analysis:
-- **Glob** to map entire project structure
-- **Read** key files (README, docs, configs)
-- **Grep** to identify technology patterns
-- **Read** entry points and main files
+**フェーズ1：プロジェクトの発見**
+包括的な分析のためにネイティブツールを使用します：
+- **Glob**でプロジェクト全体の構造をマッピング
+- **Read**で主要なファイル（README、ドキュメント、設定）を読む
+- **Grep**で技術パターンを特定
+- **Read**でエントリポイントとメインファイルを読む
 
-I'll discover:
-- Project type and main technologies
-- Architecture patterns (MVC, microservices, etc.)
-- Directory structure and organization
-- Dependencies and external integrations
-- Build and deployment setup
+以下を発見します：
+- プロジェクトタイプと主要なテクノロジー
+- アーキテクチャパターン（MVC、マイクロサービスなど）
+- ディレクトリ構造と整理
+- 依存関係と外部統合
+- ビルドとデプロイの設定
 
-**Phase 2: Code Architecture Analysis**
-- **Entry points**: Main files, index files, app initializers
-- **Core modules**: Business logic organization
-- **Data layer**: Database, models, repositories
-- **API layer**: Routes, controllers, endpoints
-- **Frontend**: Components, views, templates
-- **Configuration**: Environment setup, constants
-- **Testing**: Test structure and coverage
+**フェーズ2：コードアーキテクチャ分析**
+- **エントリポイント**: メインファイル、インデックスファイル、アプリイニシャライザ
+- **コアモジュール**: ビジネスロジックの整理
+- **データレイヤー**: データベース、モデル、リポジトリ
+- **APIレイヤー**: ルート、コントローラー、エンドポイント
+- **フロントエンド**: コンポーネント、ビュー、テンプレート
+- **設定**: 環境設定、定数
+- **テスト**: テスト構造とカバレッジ
 
-**Phase 3: Pattern Recognition**
-I'll identify established patterns:
-- Naming conventions for files and functions
-- Code style and formatting rules
-- Error handling approaches
-- Authentication/authorization flow
-- State management strategy
-- Communication patterns between modules
+**フェーズ3：パターン認識**
+確立されたパターンを特定します：
+- ファイルと関数の命名規則
+- コードスタイルとフォーマットルール
+- エラー処理のアプローチ
+- 認証/認可フロー
+- 状態管理戦略
+- モジュール間の通信パターン
 
-**Phase 4: Dependency Mapping**
-- Internal dependencies between modules
-- External library usage patterns
-- Service integrations
-- API dependencies
-- Database relationships
-- Asset and resource management
+**フェーズ4：依存関係マッピング**
+- モジュール間の内部依存関係
+- 外部ライブラリの使用パターン
+- サービス統合
+- API依存関係
+- データベースの関係
+- アセットとリソース管理
 
-**Phase 5: Documentation Synthesis**
-After analysis, I'll provide:
-- **Architecture diagram** (in text/markdown)
-- **Key components** and their responsibilities
-- **Data flow** through the application
-- **Important patterns** to follow
-- **Tech stack summary**
-- **Development workflow**
+**フェーズ5：ドキュメンテーションの統合**
+分析後、以下を提供します：
+- **アーキテクチャ図**（テキスト/マークダウン形式）
+- **主要コンポーネント**とその責務
+- アプリケーション全体の**データフロー**
+- 従うべき**重要なパターン**
+- **技術スタックの要約**
+- **開発ワークフロー**
 
-**Integration Points:**
-I'll identify how components interact:
-- API endpoints and their consumers
-- Database queries and their callers
-- Event systems and listeners
-- Shared utilities and helpers
-- Cross-cutting concerns (logging, auth)
+**統合ポイント:**
+コンポーネントがどのように相互作用するかを特定します：
+- APIエンドポイントとその利用者
+- データベースクエリとその呼び出し元
+- イベントシステムとリスナー
+- 共有ユーティリティとヘルパー
+- 横断的関心事（ロギング、認証）
 
-**Output Format:**
+**出力形式:**
 ```
-PROJECT OVERVIEW
-├── Architecture: [Type]
-├── Main Technologies: [List]
-├── Key Patterns: [List]
-└── Entry Point: [File]
+プロジェクト概要
+├── アーキテクチャ: [タイプ]
+├── 主なテクノロジー: [リスト]
+├── 主要パターン: [リスト]
+└── エントリポイント: [ファイル]
 
-COMPONENT MAP
-├── Frontend
-│   └── [Structure]
-├── Backend
-│   └── [Structure]
-├── Database
-│   └── [Schema approach]
-└── Tests
-    └── [Test strategy]
+コンポーネントマップ
+├── フロントエンド
+│   └── [構造]
+├── バックエンド
+│   └── [構造]
+├── データベース
+│   └── [スキーマアプローチ]
+└── テスト
+    └── [テスト戦略]
 
-KEY INSIGHTS
-- [Important finding 1]
-- [Important finding 2]
-- [Unique patterns]
+主な洞察
+- [重要な発見1]
+- [重要な発見2]
+- [ユニークなパターン]
 ```
 
-When the analysis is large, I'll create a todo list to explore specific areas in detail.
+分析が大きい場合、特定の領域を詳細に調査するためのtodoリストを作成します。
 
-This gives you a complete mental model of how your application works.
+これにより、アプリケーションがどのように機能するかの完全なメンタルモデルが得られます。

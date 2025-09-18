@@ -1,42 +1,42 @@
-# End Coding Session
+# コーディングセッションの終了
 
-I'll summarize this coding session and update the memory system with our accomplishments.
+このコーディングセッションを要約し、私たちの成果でメモリシステムを更新します。
 
-Let me analyze what we accomplished by:
-1. Reviewing files created/modified during our session
-2. Checking git changes and commit history
-3. Summarizing completed work and pending items
+以下によって達成したことを分析させてください：
+1. セッション中に作成/変更されたファイルのレビュー
+2. gitの変更とコミット履歴の確認
+3. 完了した作業と保留中の項目の要約
 
-I'll update the appropriate CLAUDE.md file with:
-- Session summary and accomplishments
-- Files modified and their purposes
-- Decisions made and rationale
-- Pending work and next steps
-- Any important context for future sessions
+適切なCLAUDE.mdファイルを以下で更新します：
+- セッションの要約と成果
+- 変更されたファイルとその目的
+- 行われた決定とその根拠
+- 保留中の作業と次のステップ
+- 将来のセッションのための重要なコンテキスト
 
-## Session Summary:
+## セッションの要約：
 
-### Accomplished:
-- All completed tasks from our conversation
-- Files created/modified with their purposes
-- Problems solved and solutions implemented
+### 達成済み：
+- 私たちの会話からのすべての完了したタスク
+- 作成/変更されたファイルとその目的
+- 解決された問題と実装された解決策
 
-### Pending Items:
-- Tasks started but not completed
-- Known issues requiring attention
-- Recommended next steps
+### 保留中の項目：
+- 開始されたが完了していないタスク
+- 注意が必要な既知の問題
+- 推奨される次のステップ
 
-### Handoff Notes:
-- Key architectural decisions made
-- Important context for team members
-- Blockers or dependencies identified
-- Technical debt considerations
+### 引き継ぎメモ：
+- 行われた主要なアーキテクチャ上の決定
+- チームメンバーのための重要なコンテキスト
+- 特定されたブロッカーまたは依存関係
+- 技術的負債の考慮事項
 
-**Important**: I will NEVER:
-- Add "Co-authored-by" or any Claude signatures
-- Include "Generated with Claude Code" or similar messages
-- Modify git config or user credentials
-- Add any AI/assistant attribution to the commit
-- Use emojis in commits, PRs, or git-related content
+**重要**: 私は決して以下のことは行いません：
+- "Co-authored-by"やClaudeの署名を追加する
+- "Generated with Claude Code"などのメッセージを含める
+- gitの設定やユーザーの資格情報を変更する
+- コミットにAI/アシスタントの帰属を追加する
+- コミット、PR、またはgit関連のコンテンツで絵文字を使用する
 
-I'll preserve this summary in your memory system, ensuring continuity for future sessions and seamless handoffs to team members. This integrates with Claude Code CLI's native memory management for persistent context.
+この要約をあなたのメモリシステムに保存し、将来のセッションの継続性とチームメンバーへのシームレスな引き継ぎを保証します。これは、永続的なコンテキストのためにClaude Code CLIのネイティブメモリ管理と統合されます。
