@@ -1,168 +1,168 @@
-# Smart Test Runner - Context Aware
+# スマートテストランナー - コンテキスト認識
 
-I'll intelligently run tests based on your current context and actively help fix failures.
+現在のコンテキストに基づいてインテリジェントにテストを実行し、失敗の修正を積極的に支援します。
 
-**Context Detection First:**
-Let me understand what context I'm in:
+**最初にコンテキストを検出:**
+私がどのようなコンテキストにいるかを理解させてください：
 
-1. **Cold Start** (no previous context):
-   - Run full test suite with coverage
-   - Generate complete health report
-   - Identify chronic failures
+1. **コールドスタート**（以前のコンテキストなし）：
+   - カバレッジ付きで完全なテストスイートを実行
+   - 完全なヘルスレポートを生成
+   - 慢性的な失敗を特定
 
-2. **Active Session** (you're implementing features):
-   - Check git diff for modified files
-   - Read CLAUDE.md for session goals
-   - Test ONLY what you've been working on
-   - Incremental testing as you code
+2. **アクティブセッション**（あなたが機能を実装している場合）：
+   - git diffで変更されたファイルを確認
+   - CLAUDE.mdを読んでセッションの目標を理解
+   - あなたが作業していたものだけをテスト
+   - コーディング中のインクリメンタルテスト
 
-3. **Post-Command Context**:
-   - After `/scaffold`: Test the new component
-   - After `/fix-todos`: Test modified files
-   - After `/fix-imports`: Re-run previously failed tests
-   - After `/security-scan`: Security-focused tests
-   - After `/format`: Quick smoke tests only
+3. **コマンド後のコンテキスト**:
+   - `/scaffold`の後：新しいコンポーネントをテスト
+   - `/fix-todos`の後：変更されたファイルをテスト
+   - `/fix-imports`の後：以前に失敗したテストを再実行
+   - `/security-scan`の後：セキュリティに焦点を当てたテスト
+   - `/format`の後：迅速なスモークテストのみ
 
-4. **Debug Context** (previous test failures):
-   - Focus on failed tests with verbose output
-   - Add strategic debug logging
-   - Run in isolation mode
+4. **デバッグコンテキスト**（以前のテスト失敗）：
+   - 詳細な出力で失敗したテストに焦点を当てる
+   - 戦略的なデバッグロギングを追加
+   - 分離モードで実行
 
-5. **Pre-Commit Context**:
-   - Full suite + lint + typecheck
-   - Coverage report for PR
-   - No skipped tests allowed
+5. **コミット前のコンテキスト**:
+   - 完全なスイート + リント + 型チェック
+   - PR用のカバレッジレポート
+   - スキップされたテストは許可されない
 
-**Phase 1: Deep Project Analysis**
-Using native tools to understand your testing setup:
-- **Glob** to find configuration files in project root
-- **Read** test configurations and CI/CD workflows
-- **Grep** test patterns to understand testing style
-- **Read** documentation for test instructions
+**フェーズ1：詳細なプロジェクト分析**
+ネイティブツールを使用してテスト設定を理解します：
+- **Glob**でプロジェクトルートの設定ファイルを検索
+- **Read**でテスト設定とCI/CDワークフローを読む
+- **Grep**でテストパターンを検索してテストスタイルを理解
+- **Read**でテスト手順のドキュメントを読む
 
-I'll detect:
-- Test frameworks and runners
-- Test file patterns and locations
-- Coverage requirements
-- Integration vs unit test separation
-- CI/CD test commands
+以下を検出します：
+- テストフレームワークとランナー
+- テストファイルのパターンと場所
+- カバレッジ要件
+- 統合テスト対単体テストの分離
+- CI/CDテストコマンド
 
-**Phase 2: Intelligent Test Execution**
-I'll run tests with appropriate flags for maximum insight based on your project's testing framework, using verbose output and fail-fast when available to quickly identify issues.
+**フェーズ2：インテリジェントなテスト実行**
+プロジェクトのテストフレームワークに基づいて、最大限の洞察を得るために適切なフラグを付けてテストを実行し、利用可能な場合は詳細な出力とfail-fastを使用して問題を迅速に特定します。
 
-**Build & Compilation Check:**
-- Verify project builds successfully before running tests
-- Watch console output for compilation errors
-- Capture and analyze build warnings that might affect tests
-- Check for missing dependencies or version conflicts
+**ビルドとコンパイルのチェック:**
+- テスト実行前にプロジェクトが正常にビルドされることを確認
+- コンソール出力でコンパイルエラーを監視
+- テストに影響を与える可能性のあるビルド警告をキャプチャして分析
+- 不足している依存関係やバージョンの競合を確認
 
-**Real-time Monitoring:**
+**リアルタイムモニタリング:**
 ```bash
-# Monitor test execution with timestamps
-# Capture both stdout and stderr
-# Watch for timeout patterns
-# Track memory usage if tests hang
+# タイムスタンプ付きでテスト実行を監視
+# stdoutとstderrの両方をキャプチャ
+# タイムアウトパターンを監視
+# テストがハングした場合のメモリ使用量を追跡
 ```
 
-**Phase 3: Failure Analysis & Auto-Fix**
-When tests fail, I'll:
+**フェーズ3：失敗分析と自動修正**
+テストが失敗した場合、以下のことを行います：
 
-1. **Parse failure output** to understand exact issues
-2. **Read failing test** to understand expectations
-3. **Read implementation** to find the bug
-4. **Analyze patterns** from similar tests that pass
-5. **Apply fixes** when confident
+1. **失敗出力を解析**して正確な問題を理解
+2. **失敗したテストを読む**して期待値を理解
+3. **実装を読む**してバグを見つける
+4. パスする類似のテストから**パターンを分析**
+5. 確信がある場合に**修正を適用**
 
-**Common fixes I'll attempt:**
-- Async/await timing issues
-- Mock/stub configuration
-- Import path problems
-- Type mismatches
-- Null/undefined handling
-- Off-by-one errors
-- Environment variable issues
+**試みる一般的な修正:**
+- 非同期/待機タイミングの問題
+- モック/スタブの設定
+- インポートパスの問題
+- 型の不一致
+- null/undefinedの処理
+- 1つずつのエラー
+- 環境変数の問題
 
-**Phase 4: Advanced Diagnostics**
-For complex failures:
-- Run single test in isolation
-- Add debug logging strategically
-- Check test dependencies and setup/teardown
-- Verify test data and fixtures
-- Analyze flaky test patterns
+**フェーズ4：高度な診断**
+複雑な失敗の場合：
+- 単一のテストを分離して実行
+- 戦略的にデバッグロギングを追加
+- テストの依存関係とセットアップ/ティアダウンを確認
+- テストデータとフィクスチャを検証
+- 不安定なテストパターンを分析
 
-**Log Analysis:**
-- **Read** test output logs for hidden errors
-- **Grep** for common error patterns in console output
-- Analyze stack traces to pinpoint exact failure location
-- Check for environment-specific issues in logs
-- Identify resource conflicts (ports, files, databases)
+**ログ分析:**
+- **Read**でテスト出力ログを読んで隠れたエラーを見つける
+- **Grep**でコンソール出力の一般的なエラーパターンを検索
+- スタックトレースを分析して正確な失敗場所を特定
+- ログで環境固有の問題を確認
+- リソースの競合（ポート、ファイル、データベース）を特定
 
-**Console Pattern Detection:**
-- Memory leaks ("JavaScript heap out of memory")
-- Port conflicts ("address already in use")
-- Permission errors ("EACCES", "Permission denied")
-- Timeout issues ("Timeout - Async callback")
-- Module resolution failures
-- Database connection issues
+**コンソールパターン検出:**
+- メモリリーク（「JavaScriptヒープがメモリ不足」）
+- ポートの競合（「アドレスは既に使用されています」）
+- 権限エラー（「EACCES」、「許可が拒否されました」）
+- タイムアウトの問題（「タイムアウト - 非同期コールバック」）
+- モジュール解決の失敗
+- データベース接続の問題
 
-**Phase 5: Coverage & Quality**
-After fixing tests:
-- Run coverage report if available
-- Identify untested code paths
-- Suggest critical missing tests
-- Check for test anti-patterns
+**フェーズ5：カバレッジと品質**
+テストを修正した後：
+- 利用可能な場合はカバレッジレポートを実行
+- テストされていないコードパスを特定
+- 不足している重要なテストを提案
+- テストのアンチパターンを確認
 
-When I find multiple issues, I'll create a todo list to fix them systematically.
+複数の問題が見つかった場合、体系的に修正するためにtodoリストを作成します。
 
-**Build Failure Recovery:**
-If build fails before tests:
-- Analyze compilation errors in detail
-- Check for missing dependencies
-- Verify environment setup
-- Suggest specific fixes based on error patterns
-- Offer to install missing packages if detected
+**ビルド失敗からの回復:**
+テスト前にビルドが失敗した場合：
+- コンパイルエラーを詳細に分析
+- 不足している依存関係を確認
+- 環境設定を検証
+- エラーパターンに基づいて特定の修正を提案
+- 検出された場合は不足しているパッケージのインストールを提案
 
-**Smart Context-Based Strategy:**
-Based on the detected context, I'll choose the optimal approach:
+**スマートなコンテキストベースの戦略:**
+検出されたコンテキストに基づいて、最適なアプローチを選択します：
 
-- **No Context**: Full test discovery and execution
-- **Active Development**: Watch mode on changed files only  
-- **Post-Implementation**: Test coverage for new code
-- **Debugging Mode**: Isolated test with maximum verbosity
-- **Pre-Deploy**: Complete validation suite
+- **コンテキストなし**: 完全なテストの検出と実行
+- **アクティブな開発**: 変更されたファイルのみのウォッチモード
+- **実装後**: 新しいコードのテストカバレッジ
+- **デバッグモード**: 最大限の詳細度を持つ分離されたテスト
+- **デプロイ前**: 完全な検証スイート
 
-**Intelligent Test Selection:**
+**インテリジェントなテスト選択:**
 ```bash
-# Context: After implementing UserService
-# I'll run: UserService tests + integration tests that use it
+# コンテキスト: UserServiceを実装した後
+# 実行内容: UserServiceのテスト + それを使用する統合テスト
 
-# Context: After /scaffold user-auth  
-# I'll run: New user-auth tests + smoke tests
+# コンテキスト: /scaffold user-authの後
+# 実行内容: 新しいuser-authのテスト + スモークテスト
 
-# Context: Fixing failing tests
-# I'll run: Only the specific failing test with debug info
+# コンテキスト: 失敗したテストの修正中
+# 実行内容: デバッグ情報付きの特定の失敗したテストのみ
 ```
 
-**Session Awareness:**
-- Read session goals from CLAUDE.md
-- Track all modified files during session
-- Prioritize tests based on session objectives
-- Generate session test report at the end
+**セッション認識:**
+- CLAUDE.mdからセッションの目標を読む
+- セッション中に変更されたすべてのファイルを追跡
+- セッションの目的に基づいてテストに優先順位を付ける
+- 最後にセッションのテストレポートを生成
 
-**Integration with other commands:**
-- After `/test` failures → `/create-todos` to track fixes
-- Complex failures → `/explain-like-senior` for deep analysis
-- Test improvements → `/review` for quality check
-- Session testing → `/session-end` includes test summary
+**他のコマンドとの統合:**
+- `/test`の失敗後 → `/create-todos`で修正を追跡
+- 複雑な失敗 → `/explain-like-senior`で詳細な分析
+- テストの改善 → `/review`で品質チェック
+- セッションのテスト → `/session-end`にテストの要約を含める
 
-**Important**: I will NEVER:
-- Modify tests to pass incorrectly
-- Remove failing tests without fixing
-- Reduce test coverage
-- Compromise test integrity
-- Add "Co-authored-by" or any Claude signatures
-- Include "Generated with Claude Code" or similar messages
-- Modify git config or user credentials
-- Add any AI/assistant attribution to the commit
+**重要**: 私は決して以下のことは行いません：
+- 不正にパスするようにテストを変更する
+- 修正せずに失敗したテストを削除する
+- テストカバレッジを減らす
+- テストの完全性を損なう
+- "Co-authored-by"やClaudeの署名を追加する
+- "Generated with Claude Code"などのメッセージを含める
+- gitの設定やユーザーの資格情報を変更する
+- コミットにAI/アシスタントの帰属を追加する
 
-This ensures your tests truly validate your code while maximizing development speed.
+これにより、開発速度を最大化しながら、テストがコードを真に検証することが保証されます。

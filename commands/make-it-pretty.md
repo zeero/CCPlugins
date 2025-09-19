@@ -1,75 +1,75 @@
-# Make It Pretty
+# 見た目をきれいにする
 
-I'll improve code readability while preserving exact functionality.
+正確な機能を維持しながら、コードの可読性を向上させます。
 
-## Strategic Thinking Process
+## 戦略的思考プロセス
 
 <think>
-Before making any changes, I need to consider:
+変更を加える前に、以下を検討する必要があります：
 
-1. **Code Analysis**
-   - What makes this code "ugly" or hard to read?
-   - Are there complex nested structures that need simplification?
-   - Is the naming unclear or inconsistent?
-   - Are there repeated patterns that could be abstracted?
+1. **コード分析**
+   - 何がこのコードを「汚く」または読みにくくしていますか？
+   - 単純化が必要な複雑なネスト構造はありますか？
+   - 命名は不明確または一貫性がありませんか？
+   - 抽象化できる繰り返しのパターンはありますか？
 
-2. **Safety Considerations**
-   - Which changes are purely cosmetic (safe)?
-   - Which might affect behavior (risky)?
-   - Are there implicit dependencies on current structure?
-   - Could renaming break external references?
+2. **安全性の考慮事項**
+   - どの変更が純粋に見た目だけで（安全）？
+   - どの変更が動作に影響を与える可能性が（危険）？
+   - 現在の構造に暗黙の依存関係はありますか？
+   - 名前の変更は外部参照を壊す可能性がありますか？
 
-3. **Improvement Strategy**
-   - Priority 1: Clear naming (variables, functions, files)
-   - Priority 2: Reduce complexity (extract functions, simplify logic)
-   - Priority 3: Remove redundancy (DRY principle)
-   - Priority 4: Improve type safety (if applicable)
+3. **改善戦略**
+   - 優先度1：明確な命名（変数、関数、ファイル）
+   - 優先度2：複雑さの軽減（関数の抽出、ロジックの単純化）
+   - 優先度3：冗長性の排除（DRY原則）
+   - 優先度4：型安全性の向上（該当する場合）
 
-4. **Validation Approach**
-   - How can I ensure functionality remains identical?
-   - What tests exist to verify behavior?
-   - Should I add temporary logging to verify flow?
+4. **検証アプローチ**
+   - 機能が同一であることをどのように保証できますか？
+   - 動作を検証するためのテストは存在しますか？
+   - フローを検証するために一時的なロギングを追加すべきですか？
 </think>
 
-Based on this analysis, I'll proceed safely:
+この分析に基づいて、安全に進めます：
 
-**Safety First:**
-- Create git checkpoint before changes
-- Use **Write** tool to create backups
-- Track all modifications systematically
+**安全第一:**
+- 変更前にgitチェックポイントを作成する
+- **Write**ツールを使用してバックアップを作成する
+- すべての変更を体系的に追跡する
 
-I'll identify files to beautify based on:
-- Files you specify, or if none specified, analyze the entire application
-- Recently modified code
-- Our conversation context
+美しくするファイルを特定します：
+- あなたが指定したファイル、または指定がない場合はアプリケーション全体を分析
+- 最近変更されたコード
+- 私たちの会話のコンテキスト
 
-**Improvements I'll Make:**
-- Variable and function names for clarity
-- Code organization and structure
-- Remove unused code and clutter
-- Simplify complex expressions
-- Group related functionality
-- Fix loose or generic type declarations
-- Add missing type annotations where supported
-- Make types more specific based on usage
+**私が行う改善:**
+- 明確さのための変数名と関数名
+- コードの整理と構造
+- 未使用のコードと乱雑さの削除
+- 複雑な式の単純化
+- 関連機能のグループ化
+- 緩いまたは一般的な型宣言の修正
+- サポートされている場所に不足している型注釈を追加
+- 使用法に基づいて型をより具体的にする
 
-**My Approach:**
-1. Analyze current code patterns and type usage
-2. Apply consistent naming conventions
-3. Improve type safety where applicable
-4. Reorganize for better readability
-5. Remove redundancy without changing logic
+**私のアプローチ:**
+1. 現在のコードパターンと型の使用法を分析する
+2. 一貫した命名規則を適用する
+3. 該当する場合、型安全性を向上させる
+4. より良い可読性のために再編成する
+5. ロジックを変更せずに冗長性を排除する
 
-**Quality Assurance:**
-- All functionality remains identical
-- Tests continue to pass (if available)
-- No behavior changes occur
-- Clear commit messages for changes
+**品質保証:**
+- すべての機能は同一のままです
+- テストは引き続きパスします（利用可能な場合）
+- 動作の変更は発生しません
+- 変更に対する明確なコミットメッセージ
 
-**Important**: I will NEVER:
-- Add "Co-authored-by" or any Claude signatures
-- Include "Generated with Claude Code" or similar messages
-- Modify git config or user credentials
-- Add any AI/assistant attribution to the commit
+**重要**: 私は決して以下のことは行いません：
+- "Co-authored-by"やClaudeの署名を追加する
+- "Generated with Claude Code"などのメッセージを含める
+- gitの設定やユーザーの資格情報を変更する
+- コミットにAI/アシスタントの帰属を追加する
 
-This helps transform working code into maintainable code without risk.
+これにより、リスクなしに動作するコードを保守可能なコードに変換できます。

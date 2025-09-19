@@ -1,44 +1,44 @@
-# Code Review
+# コードレビュー
 
-I'll review your code for potential issues.
+潜在的な問題についてコードをレビューします。
 
-Let me create a checkpoint before detailed analysis:
+詳細な分析の前にチェックポイントを作成させてください：
 ```bash
 git add -A  
 git commit -m "Pre-review checkpoint" || echo "No changes to commit"
 ```
 
-I'll use specialized sub-agents for comprehensive analysis:
-- **Security sub-agent**: Credential exposure, input validation, vulnerabilities
-- **Performance sub-agent**: Bottlenecks, memory issues, optimization opportunities  
-- **Quality sub-agent**: Code complexity, maintainability, best practices
-- **Architecture sub-agent**: Layer separation, dependency direction, scalability patterns
+包括的な分析のために専門のサブエージェントを使用します：
+- **セキュリティサブエージェント**: 資格情報の露出、入力検証、脆弱性
+- **パフォーマンスサブエージェント**: ボトルネック、メモリの問題、最適化の機会
+- **品質サブエージェント**: コードの複雑さ、保守性、ベストプラクティス
+- **アーキテクチャサブエージェント**: レイヤーの分離、依存関係の方向、スケーラビリティのパターン
 
-I'll examine files using the Read and Grep tools to analyze:
-1. **Security Issues** - credential exposure, input validation
-2. **Logic Problems** - error handling, edge cases  
-3. **Performance Concerns** - inefficient patterns, bottlenecks
-4. **Code Quality** - complexity, maintainability
+ReadツールとGrepツールを使用してファイルを調査し、以下を分析します：
+1. **セキュリティ問題** - 資格情報の露出、入力検証
+2. **ロジックの問題** - エラー処理、エッジケース
+3. **パフォーマンスの懸念** - 非効率なパターン、ボトルネック
+4. **コード品質** - 複雑さ、保守性
 
-When I find multiple issues, I'll create a todo list to address them systematically.
+複数の問題が見つかった場合、体系的に対処するためにtodoリストを作成します。
 
-For each issue, I'll:
-- Show exact location with file references
-- Explain the problem and potential impact
-- Provide specific remediation steps
-- Prioritize by severity and effort
+各問題について、以下のことを行います：
+- ファイル参照付きの正確な場所を示す
+- 問題と潜在的な影響を説明する
+- 具体的な修正手順を提供する
+- 重大度と労力で優先順位を付ける
 
-After review, I'll ask: "Create GitHub issues for critical findings?"
-- Yes: I'll create prioritized issues with detailed descriptions
-- Todos only: I'll maintain local tracking for resolution
-- Summary: I'll provide actionable report
+レビュー後、「重要な検出事項についてGitHubイシューを作成しますか？」と尋ねます：
+- はい：詳細な説明付きで優先順位付けされたイシューを作成します
+- TODOのみ：解決のためにローカル追跡を維持します
+- 要約：実行可能なレポートを提供します
 
-**Important**: I will NEVER:
-- Add "Co-authored-by" or any Claude signatures to commits
-- Add "Created by Claude" or any AI attribution to issues
-- Include "Generated with Claude Code" in any output
-- Modify git config or repository settings
-- Add any AI/assistant signatures or watermarks
-- Use emojis in commits, PRs, issues, or git-related content
+**重要**: 私は決して以下のことは行いません：
+- コミットに"Co-authored-by"やClaudeの署名を追加する
+- イシューに"Created by Claude"やAIの帰属を追加する
+- "Generated with Claude Code"を出力に含める
+- gitの設定やリポジトリの設定を変更する
+- AI/アシスタントの署名や透かしを追加する
+- コミット、PR、イシュー、またはgit関連のコンテンツで絵文字を使用する
 
-This focuses on real problems that impact your application's reliability and maintainability.
+これは、アプリケーションの信頼性と保守性に影響を与える実際の問題に焦点を当てています。

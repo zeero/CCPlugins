@@ -1,197 +1,197 @@
-# Security Analysis
+# セキュリティ分析
 
-I'll perform comprehensive security analysis with tracking and remediation continuity across sessions.
+セッションをまたいで追跡と修正の継続性を持ちながら、包括的なセキュリティ分析を実行します。
 
-Arguments: `$ARGUMENTS` - specific paths or security focus areas
+引数: `$ARGUMENTS` - 特定のパスまたはセキュリティの焦点領域
 
-## Session Intelligence
+## セッションインテリジェンス
 
-I'll maintain security remediation progress:
+セキュリティ修正の進捗を維持します：
 
-**Session Files (in current project directory):**
-- `security-scan/plan.md` - All vulnerabilities and fixes
-- `security-scan/state.json` - Remediation progress
+**セッションファイル（現在のプロジェクトディレクトリ内）:**
+- `security-scan/plan.md` - すべての脆弱性と修正
+- `security-scan/state.json` - 修正の進捗
 
-**IMPORTANT:** Session files are stored in a `security-scan` folder in your current project root
+**重要:** セッションファイルは、現在のプロジェクトルートの`security-scan`フォルダに保存されます
 
-**Auto-Detection:**
-- If session exists: Show fixed vs pending vulnerabilities
-- If no session: Perform new security scan
-- Commands: `resume`, `status`, `new`
+**自動検出:**
+- セッションが存在する場合：修正済み対保留中の脆弱性を表示
+- セッションがない場合：新しいセキュリティスキャンを実行
+- コマンド：`resume`、`status`、`new`
 
-## Phase 1: Security Assessment
+## フェーズ1：セキュリティ評価
 
-### Extended Thinking for Security Analysis
+### セキュリティ分析のための拡張思考
 
-For complex security scenarios, I'll use extended thinking to identify sophisticated vulnerabilities:
+複雑なセキュリティシナリオでは、高度な脆弱性を特定するために拡張思考を使用します：
 
 <think>
-When analyzing security:
-- Attack vectors that aren't immediately obvious
-- Chain vulnerabilities that individually seem harmless
-- Business logic flaws that enable exploitation
-- Timing attacks and race conditions
-- Supply chain vulnerabilities in dependencies
-- Architectural weaknesses that enable lateral movement
+セキュリティを分析する際：
+- すぐには明らかでない攻撃ベクトル
+- 個々には無害に見える連鎖的な脆弱性
+- 悪用を可能にするビジネスロジックの欠陥
+- タイミング攻撃と競合状態
+- 依存関係におけるサプライチェーンの脆弱性
+- 横方向の移動を可能にするアーキテクチャの弱点
 </think>
 
-**Triggers for Extended Analysis:**
-- Authentication and authorization systems
-- Financial transaction processing
-- Cryptographic implementations
-- Multi-tenant architectures
-- API security boundaries
+**拡張分析のトリガー:**
+- 認証および認可システム
+- 金融取引処理
+- 暗号実装
+- マルチテナントアーキテクチャ
+- APIセキュリティ境界
 
-**MANDATORY FIRST STEPS:**
-1. Check if `security-scan` directory exists in current working directory
-2. If directory exists, check for session files:
-   - Look for `security-scan/state.json`
-   - Look for `security-scan/plan.md`
-   - If found, resume from existing session
-3. If no directory or session exists:
-   - Perform full security scan
-   - Create vulnerability report
-   - Initialize tracking
-4. Show risk summary before remediation
+**必須の最初のステップ:**
+1. 現在の作業ディレクトリに`security-scan`ディレクトリが存在するか確認
+2. ディレクトリが存在する場合、セッションファイルを確認：
+   - `security-scan/state.json`を探す
+   - `security-scan/plan.md`を探す
+   - 見つかった場合、既存のセッションから再開
+3. ディレクトリまたはセッションが存在しない場合：
+   - 完全なセキュリティスキャンを実行
+   - 脆弱性レポートを作成
+   - 追跡を初期化
+4. 修正前にリスクの要約を表示
 
-**Note:** Always look for session files in the current project's `security-scan/` folder, not `../../../security-scan/` or absolute paths
+**注意:** 常に現在のプロジェクトの`security-scan/`フォルダでセッションファイルを探し、`../../../security-scan/`や絶対パスではありません
 
-I'll analyze security across dimensions:
+次元を超えてセキュリティを分析します：
 
-**Vulnerability Detection:**
-- Hardcoded secrets and credentials
-- Dependency vulnerabilities
-- Insecure configurations
-- Input validation issues
-- Authentication weaknesses
+**脆弱性検出:**
+- ハードコードされたシークレットと資格情報
+- 依存関係の脆弱性
+- 安全でない設定
+- 入力検証の問題
+- 認証の弱点
 
-**Risk Categorization:**
-- **Critical**: Immediate exploitation possible
-- **High**: Serious vulnerabilities
-- **Medium**: Should be addressed
-- **Low**: Best practice improvements
+**リスク分類:**
+- **クリティカル**: 即時の悪用が可能
+- **高**: 重大な脆弱性
+- **中**: 対処すべき
+- **低**: ベストプラクティスの改善
 
-## Phase 2: Remediation Planning
+## フェーズ2：修正計画
 
-Based on findings, I'll create remediation plan:
+検出結果に基づいて、修正計画を作成します：
 
-**Priority Order:**
-1. Critical credential exposures
-2. High-risk vulnerabilities
-3. Dependency updates
-4. Configuration hardening
-5. Code pattern improvements
+**優先順位:**
+1. クリティカルな資格情報の露出
+2. 高リスクの脆弱性
+3. 依存関係の更新
+4. 設定の強化
+5. コードパターンの改善
 
-I'll write this plan to `security-scan/plan.md` with:
-- Each vulnerability details
-- Risk assessment
-- Remediation approach
-- Verification method
+この計画を`security-scan/plan.md`に書き込みます：
+- 各脆弱性の詳細
+- リスク評価
+- 修正アプローチ
+- 検証方法
 
-## Phase 3: Intelligent Remediation
+## フェーズ3：インテリジェントな修正
 
-I'll fix vulnerabilities appropriately:
+脆弱性を適切に修正します：
 
-**Remediation Patterns:**
-- Secrets → Environment variables
-- Hardcoded values → Configuration files
-- Weak validation → Strong patterns
-- Outdated deps → Safe updates
+**修正パターン:**
+- シークレット → 環境変数
+- ハードコードされた値 → 設定ファイル
+- 弱い検証 → 強力なパターン
+- 古い依存関係 → 安全な更新
 
-**Safe Practices:**
-- Never log sensitive data
-- Use secure defaults
-- Apply principle of least privilege
-- Implement defense in depth
+**安全な実践:**
+- 機密データを決してログに記録しない
+- 安全なデフォルトを使用する
+- 最小権限の原則を適用する
+- 多層防御を実装する
 
-## Phase 4: Incremental Fixing
+## フェーズ4：段階的な修正
 
-I'll remediate systematically:
+体系的に修正します：
 
-**Execution Process:**
-1. Create git checkpoint
-2. Fix vulnerability safely
-3. Verify fix doesn't break functionality
-4. Update plan with completion
-5. Move to next vulnerability
+**実行プロセス:**
+1. gitチェックポイントを作成
+2. 脆弱性を安全に修正
+3. 修正が機能を壊さないことを確認
+4. 完了をもって計画を更新
+5. 次の脆弱性に移動
 
-**Progress Tracking:**
-- Mark each fix in plan
-- Update state with decisions
-- Create security-focused commits
+**進捗追跡:**
+- 計画内の各修正をマーク
+- 決定事項を状態で更新
+- セキュリティに焦点を当てたコミットを作成
 
-## Phase 5: Verification
+## フェーズ5：検証
 
-After each remediation:
-- Test functionality preserved
-- Verify vulnerability resolved
-- Check for new issues introduced
-- Update security documentation
+各修正の後：
+- 機能が維持されていることをテスト
+- 脆弱性が解決されたことを確認
+- 新しい問題が導入されていないかチェック
+- セキュリティドキュメントを更新
 
-## Context Continuity
+## コンテキストの継続性
 
-**Session Resume:**
-When you return and run `/security-scan` or `/security-scan resume`:
-- Load vulnerability list and progress
-- Show remediation statistics
-- Continue from last fix
-- Maintain fix decisions
+**セッションの再開:**
+あなたが戻ってきて`/security-scan`または`/security-scan resume`を実行すると：
+- 脆弱性リストと進捗をロード
+- 修正統計を表示
+- 最後の修正から続行
+- 修正の決定を維持
 
-**Progress Example:**
+**進捗の例:**
 ```
-RESUMING SECURITY REMEDIATION
-├── Total Vulnerabilities: 23
-├── Fixed: 15 (65%)
-├── Critical: 0 remaining
-├── High: 3 remaining
-└── Next: SQL injection in UserQuery
+セキュリティ修正を再開中
+├── 脆弱性合計：23
+├── 修正済み：15 (65%)
+├── クリティカル：残り0
+├── 高：残り3
+└── 次へ：UserQueryのSQLインジェクション
 
-Continuing remediation...
-```
-
-## Practical Examples
-
-**Start Scanning:**
-```
-/security-scan                # Full project scan
-/security-scan src/api/       # Focus on API
-/security-scan "credentials"  # Credential focus
+修正を続行中...
 ```
 
-**Session Control:**
+## 実用的な例
+
+**スキャンの開始:**
 ```
-/security-scan resume    # Continue remediation
-/security-scan status    # Check progress
-/security-scan new       # Fresh scan
+/security-scan                # プロジェクト全体のスキャン
+/security-scan src/api/       # APIに焦点を当てる
+/security-scan "credentials"  # 資格情報に焦点を当てる
 ```
 
-## Safety Guarantees
+**セッション制御:**
+```
+/security-scan resume    # 修正を続行
+/security-scan status    # 進捗を確認
+/security-scan new       # 新規スキャン
+```
 
-**Protection Measures:**
-- Git checkpoint before fixes
-- Functionality preservation
-- No security regression
-- Clear audit trail
+## 安全性の保証
 
-**Important:** I will NEVER:
-- Expose secrets in commits
-- Break existing security
-- Add AI attribution
-- Log sensitive data
+**保護措置:**
+- 修正前のgitチェックポイント
+- 機能の維持
+- セキュリティのリグレッションなし
+- 明確な監査証跡
 
-## Command Integration
+**重要:** 私は決して以下のことは行いません：
+- コミットにシークレットを公開する
+- 既存のセキュリティを壊す
+- AIの帰属を追加する
+- 機密データをログに記録する
 
-When appropriate for critical security fixes:
-- `/test` - Verify functionality after security patches
-- `/commit` - Create security-focused commits with proper messages
+## コマンド統合
 
-## What I'll Actually Do
+重要なセキュリティ修正に適切な場合：
+- `/test` - セキュリティパッチ後の機能を検証するため
+- `/commit` - 適切なメッセージでセキュリティに焦点を当てたコミットを作成するため
 
-1. **Deep analysis** - Use extended thinking for complex threats
-2. **Scan thoroughly** - Find all vulnerabilities
-3. **Prioritize wisely** - Critical issues first
-4. **Fix safely** - Preserve functionality
-5. **Track completely** - Perfect continuity
-6. **Verify constantly** - Ensure security improved
+## 私が実際に何をするか
 
-I'll maintain complete continuity between sessions, always resuming exactly where we left off with full remediation context.
+1. **詳細な分析** - 複雑な脅威には拡張思考を使用
+2. **徹底的にスキャン** - すべての脆弱性を見つける
+3. **賢明に優先順位付け** - 重要な問題が最初
+4. **安全に修正** - 機能を維持
+5. **完全に追跡** - 完全な継続性
+6. **常に検証** - セキュリティが向上したことを確認
+
+セッション間で完全な継続性を維持し、常に完全な修正コンテキストで中断したところから正確に再開します。

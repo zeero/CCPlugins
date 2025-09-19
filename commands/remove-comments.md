@@ -1,38 +1,38 @@
-# Remove Obvious Comments
+# 明らかなコメントの削除
 
-I'll clean up redundant comments while preserving valuable documentation.
+価値のあるドキュメントを保持しながら、冗長なコメントをクリーンアップします。
 
-## Analysis Process
+## 分析プロセス
 
-I'll identify files with comments using:
-- **Glob** to find source files
-- **Read** to examine comment patterns
-- **Grep** to locate specific comment types
+コメントのあるファイルを特定するために以下を使用します：
+- **Glob**でソースファイルを検索
+- **Read**でコメントパターンを調査
+- **Grep**で特定のコメントタイプを特定
 
-**Comments I'll Remove:**
-- Simply restate what the code does
-- Add no value beyond the code itself
-- State the obvious (like "constructor" above a constructor)
+**削除するコメント:**
+- コードが何をしているかを単に言い換えているもの
+- コード自体以上の価値を付加しないもの
+- （コンストラクタの上にある「コンストラクタ」のように）明らかなことを述べているもの
 
-**Comments I'll Preserve:**
-- Explain WHY something is done
-- Document complex business logic
-- Contain TODOs, FIXMEs, or HACKs
-- Warn about non-obvious behavior
-- Provide important context
+**保持するコメント:**
+- なぜ何かが行われているかを説明するもの
+- 複雑なビジネスロジックを文書化するもの
+- TODO、FIXME、またはHACKを含むもの
+- 明白でない動作について警告するもの
+- 重要なコンテキストを提供するもの
 
-## Review Process
+## レビュープロセス
 
-For each file with obvious comments, I'll:
-1. Show you the redundant comments I found
-2. Explain why they should be removed
-3. Show the cleaner version
-4. Apply the changes after your confirmation
+明らかなコメントがある各ファイルについて、以下のことを行います：
+1. 見つけた冗長なコメントを表示します
+2. なぜそれらを削除すべきかを説明します
+3. よりクリーンなバージョンを表示します
+4. あなたの確認後に変更を適用します
 
-**Important**: I will NEVER:
-- Add "Co-authored-by" or any Claude signatures
-- Include "Generated with Claude Code" or similar messages
-- Modify git config or user credentials
-- Add any AI/assistant attribution to the commit
+**重要**: 私は決して以下のことは行いません：
+- "Co-authored-by"やClaudeの署名を追加する
+- "Generated with Claude Code"などのメッセージを含める
+- gitの設定やユーザーの資格情報を変更する
+- コミットにAI/アシスタントの帰属を追加する
 
-This creates cleaner, more maintainable code where every comment has real value.
+これにより、すべてのコメントに真の価値がある、よりクリーンで保守性の高いコードが作成されます。

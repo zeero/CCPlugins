@@ -1,45 +1,45 @@
-# Undo Last Operation
+# 最後の操作を取り消す
 
-I'll help you rollback the last destructive operation performed by CCPlugins commands.
+CCPluginsコマンドによって実行された最後の破壊的な操作をロールバックするのを手伝います。
 
-## Recovery Options
+## 回復オプション
 
-I'll check for available recovery methods:
+利用可能な回復方法を確認します：
 
-**1. Git-based Recovery**
-- Check uncommitted changes
-- Review recent commits
-- Identify safe restore points
+**1. Gitベースの回復**
+- 未コミットの変更を確認
+- 最近のコミットをレビュー
+- 安全な復元ポイントを特定
 
-**2. Project Backups**
-- Look for `undo/backups/` in your project
-- Check for operation-specific backups
-- Verify backup integrity
+**2. プロジェクトのバックアップ**
+- プロジェクト内の`undo/backups/`を探す
+- 操作固有のバックアップを確認
+- バックアップの整合性を検証
 
-**3. Change Analysis**
-- Show what was modified
-- Identify scope of changes
-- Suggest targeted recovery
+**3. 変更分析**
+- 何が変更されたかを表示
+- 変更の範囲を特定
+- 対象を絞った回復を提案
 
-## Recovery Process
+## 回復プロセス
 
-Based on what I find, I can:
+見つかったものに基づいて、以下を実行できます：
 
-1. **Restore from Git** - If changes haven't been committed yet
-2. **Use project backups** - If backups exist from previous operations
-3. **Selective restoration** - Choose specific files to restore
+1. **Gitから復元** - 変更がまだコミットされていない場合
+2. **プロジェクトのバックアップを使用** - 以前の操作からのバックアップが存在する場合
+3. **選択的な復元** - 復元する特定のファイルを選択
 
-I'll analyze the situation and suggest the safest recovery method.
+状況を分析し、最も安全な回復方法を提案します。
 
-If multiple restore options exist, I'll:
-- Show you what each option would restore
-- Explain the implications
-- Let you choose the best approach
+複数の復元オプションが存在する場合：
+- 各オプションが何を復元するかを表示します
+- その影響を説明します
+- 最善のアプローチを選択させます
 
-**Important**: I will NEVER:
-- Add "Co-authored-by" or any Claude signatures
-- Include "Generated with Claude Code" or similar messages
-- Modify git config or user credentials
-- Add any AI/assistant attribution to the commit
+**重要**: 私は決して以下のことは行いません：
+- "Co-authored-by"やClaudeの署名を追加する
+- "Generated with Claude Code"などのメッセージを含める
+- gitの設定やユーザーの資格情報を変更する
+- コミットにAI/アシスタントの帰属を追加する
 
-This ensures you can confidently undo operations without losing important work.
+これにより、重要な作業を失うことなく、自信を持って操作を取り消すことができます。

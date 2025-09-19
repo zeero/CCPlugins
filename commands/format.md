@@ -1,15 +1,15 @@
-# Auto Format Code
+# コードの自動フォーマット
 
-I'll format your code using the project's configured formatter.
+プロジェクトで設定されたフォーマッタを使用してコードをフォーマットします。
 
-I'll detect your project's formatter automatically by analyzing configuration files and project structure without assuming specific technologies.
+特定の技術を前提とせず、設定ファイルとプロジェクト構造を分析して、プロジェクトのフォーマッタを自動的に検出します。
 
-I'll format only modified files to avoid unnecessary changes and focus on your current work.
+不要な変更を避け、現在の作業に集中するために、変更されたファイルのみをフォーマットします。
 
-If no formatter is configured, I'll suggest appropriate options for your project type and offer to format using language conventions.
+フォーマッタが設定されていない場合は、プロジェクトタイプに適したオプションを提案し、言語の規約を使用してフォーマットすることを提案します。
 
-After formatting, I'll show what changed and ensure the code follows your project's established style patterns.
+フォーマット後、何が変更されたかを示し、コードがプロジェクトの確立されたスタイルパターンに従っていることを確認します。
 
-If formatting encounters issues, I'll provide specific error details and suggest solutions.
+フォーマットで問題が発生した場合は、具体的なエラーの詳細を提供し、解決策を提案します。
 
-This maintains consistent code style according to your project's standards efficiently.
+これにより、プロジェクトの標準に従って一貫したコードスタイルを効率的に維持します。

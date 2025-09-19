@@ -1,331 +1,331 @@
-# Complete Contribution Strategy - Context Aware
+# 貢献戦略の完成 - コンテキスト認識
 
-I'll analyze everything needed for your successful contribution based on your current context and work.
+現在のコンテキストと作業に基づいて、貢献が成功するために必要なすべてを分析します。
 
-## Strategic Thinking Process
+## 戦略的思考プロセス
 
 <think>
-For a successful contribution, I need to analyze:
+貢献を成功させるためには、以下を分析する必要があります：
 
-1. **Current Work Context**
-   - What has been done in this session?
-   - Are we mid-implementation or post-completion?
-   - What type of changes were made (feature, fix, refactor)?
-   - Is the work ready for contribution?
+1. **現在の作業コンテキスト**
+   - このセッションで何が行われましたか？
+   - 実装の途中ですか、それとも完了後ですか？
+   - どのような種類の変更が行われましたか（機能、修正、リファクタリング）？
+   - 作業は貢献の準備ができていますか？
 
-2. **Project Type & Standards**
-   - Is this open source, company, or personal project?
-   - What are the contribution guidelines?
-   - Are there specific workflows to follow?
-   - What quality gates exist (tests, lint, reviews)?
+2. **プロジェクトの種類と標準**
+   - これはオープンソース、企業、または個人プロジェクトですか？
+   - 貢献のガイドラインは何ですか？
+   - 従うべき特定のワークフローはありますか？
+   - どのような品質ゲートが存在しますか（テスト、リント、レビュー）？
 
-3. **Contribution Strategy**
-   - Should this be one PR or multiple?
-   - Which issues does this work address?
-   - What documentation needs updating?
-   - Who should review this?
+3. **貢献戦略**
+   - これは1つのPRにすべきですか、それとも複数にすべきですか？
+   - この作業はどのイシューに対応していますか？
+   - どのドキュメントを更新する必要がありますか？
+   - 誰がこれをレビューすべきですか？
 
-4. **Pre-flight Checklist**
-   - Do all tests pass?
-   - Is the code properly formatted?
-   - Are there any lint warnings?
-   - Is documentation updated?
-   - Are commits well-organized?
+4. **飛行前チェックリスト**
+   - すべてのテストはパスしますか？
+   - コードは適切にフォーマットされていますか？
+   - リントの警告はありますか？
+   - ドキュメントは更新されていますか？
+   - コミットはよく整理されていますか？
 </think>
 
-Based on this framework, I'll begin by detecting your context:
+このフレームワークに基づいて、まずあなたのコンテキストを検出することから始めます：
 
-**Context Detection First:**
-Let me understand what situation you're in:
+**最初にコンテキストを検出:**
+あなたがどのような状況にあるかを理解させてください：
 
-1. **Active Session Context** (you've been implementing):
-   - Read CLAUDE.md for session goals and work done
-   - Analyze ALL files modified during session
-   - Check if tests were run and passed
-   - Review commits made during session
-   - Understand the complete scope of changes
+1. **アクティブなセッションコンテキスト**（あなたが実装していた場合）：
+   - CLAUDE.mdを読んでセッションの目標と行われた作業を理解する
+   - セッション中に変更されたすべてのファイルを分析する
+   - テストが実行され、パスしたかを確認する
+   - セッション中に行われたコミットを確認する
+   - 変更の完全な範囲を理解する
 
-2. **Post-Implementation Context** (feature complete):
-   - Detect completed features/fixes
-   - Check test coverage for new code
-   - Verify documentation was updated
-   - Analyze code quality and standards
+2. **実装後のコンテキスト**（機能が完成している場合）：
+   - 完成した機能/修正を検出する
+   - 新しいコードのテストカバレッジを確認する
+   - ドキュメントが更新されたことを確認する
+   - コードの品質と標準を分析する
 
-3. **Mid-Development Context** (work in progress):
-   - Identify what's done vs. TODO
-   - Check partial implementations
-   - Assess readiness for contribution
+3. **開発途中のコンテキスト**（作業中の場合）：
+   - 完了したこととTODOを特定する
+   - 部分的な実装を確認する
+   - 貢献の準備状況を評価する
 
-4. **Cold Start Context** (no recent work):
-   - Analyze existing uncommitted changes
-   - Review branch differences from main
-   - Understand project state
+4. **コールドスタートコンテキスト**（最近の作業がない場合）：
+   - 既存の未コミットの変更を分析する
+   - mainブランチとの差分を確認する
+   - プロジェクトの状態を理解する
 
-**Smart Context Analysis:**
-Based on what I find, I'll adapt my approach:
-- **Session work**: Package all session changes properly
-- **Multiple features**: Suggest splitting into PRs
-- **Bug fixes**: Fast-track simple contributions
-- **Major changes**: Full contribution workflow
+**スマートなコンテキスト分析:**
+見つけたものに基づいて、アプローチを適応させます：
+- **セッション作業**: すべてのセッションの変更を適切にパッケージ化する
+- **複数の機能**: PRに分割することを提案する
+- **バグ修正**: 簡単な貢献を迅速に進める
+- **主要な変更**: 完全な貢献ワークフロー
 
-**Phase 0: MANDATORY Pre-Flight Checks**
-BEFORE anything else, I MUST verify:
-- **Build passes**: Run project's build command
-- **Tests pass**: All tests must be green
-- **Lint passes**: No linting errors
-- **Type check passes**: If TypeScript/Flow/etc
-- **Format check**: Code properly formatted
+**フェーズ0：必須の飛行前チェック**
+何よりも先に、以下を確認する必要があります：
+- **ビルドがパスする**: プロジェクトのビルドコマンドを実行
+- **テストがパスする**: すべてのテストがグリーンであること
+- **リントがパスする**: リンティングエラーがないこと
+- **型チェックがパスする**: TypeScript/Flowなどの場合
+- **フォーマットチェック**: コードが適切にフォーマットされていること
 
-If ANY check fails → STOP and fix first!
+いずれかのチェックが失敗した場合 → 停止して最初に修正！
 
-**Phase 1: Deep Context Analysis**
-I'll understand EVERYTHING about your situation:
+**フェーズ1：詳細なコンテキスト分析**
+あなたの状況についてすべてを理解します：
 
-**A. Session Context** (if you've been working):
-- Read CLAUDE.md for complete session history
-- Analyze ALL files changed during session
-- Check test results from `/test` runs
-- Review any `/review` or `/security-scan` results
-- Understand features implemented
+**A. セッションコンテキスト**（作業していた場合）：
+   - CLAUDE.mdを読んで完全なセッション履歴を理解する
+   - セッション中に変更されたすべてのファイルを分析する
+   - `/test`の実行からのテスト結果を確認する
+   - `/review`または`/security-scan`の結果を確認する
+   - 実装された機能を理解する
 
-**B. Cold Start Context** (running standalone):
-- Run `/understand` to map entire codebase
-- Analyze all local commits vs remote
-- Detect uncommitted changes
-- Compare fork with upstream (if applicable)
-- Identify what makes your version unique
+**B. コールドスタートコンテキスト**（スタンドアロンで実行する場合）：
+   - `/understand`を実行してコードベース全体をマッピングする
+   - リモートに対するすべてのローカルコミットを分析する
+   - 未コミットの変更を検出する
+   - フォークとアップストリームを比較する（該当する場合）
+   - あなたのバージョンをユニークにしているものを特定する
 
-**C. Implementation Context**:
-- Multiple features completed → Smart PR splitting
-- Bug fixes done → Link to issue tracker
-- Tests added → Update coverage reports
-- Docs updated → Ensure consistency
+**C. 実装コンテキスト**:
+- 複数の機能が完了 → スマートなPR分割
+- バグ修正が完了 → イシュートラッカーへのリンク
+- テストが追加された → カバレッジレポートの更新
+- ドキュメントが更新された → 一貫性の確保
 
-**Phase 2: Project Type Detection**
-I'll identify what kind of project this is:
-- **Open Source**: Full CONTRIBUTING.md compliance needed
-- **Company/Team**: Internal standards and workflows
-- **Personal**: Your own conventions
-- **Fork**: Upstream project requirements
-- **Client Work**: Specific deliverables
+**フェーズ2：プロジェクトタイプの検出**
+これがどのようなプロジェクトかを特定します：
+- **オープンソース**: 完全なCONTRIBUTING.mdの遵守が必要
+- **企業/チーム**: 内部の標準とワークフロー
+- **個人**: あなた自身の慣習
+- **フォーク**: アップストリームプロジェクトの要件
+- **クライアントワーク**: 特定の成果物
 
-**Phase 3: Repository Standards Analysis**
-Based on project type, I'll examine:
-- **Read** CONTRIBUTING.md, README.md, CHANGELOG.md, LICENSE files
-- **Analyze** .github workflows, issue templates, PR templates
-- **Check** code patterns, naming conventions, architectural decisions
-- **Review** commit history for maintainer preferences and patterns
-- **Detect** specific requirements (DCO, CLA, tests, docs)
+**フェーズ3：リポジトリ標準の分析**
+プロジェクトタイプに基づいて、以下を調査します：
+- CONTRIBUTING.md、README.md、CHANGELOG.md、LICENSEファイルを**読む**
+- .githubのワークフロー、イシューテンプレート、PRテンプレートを**分析する**
+- コードパターン、命名規則、アーキテクチャの決定を**確認する**
+- メンテナーの好みとパターンについてコミット履歴を**レビューする**
+- 特定の要件（DCO、CLA、テスト、ドキュメント）を**検出する**
 
-**Phase 4: Smart Comparison**
-I'll compare your work against requirements:
-- **Feature Completeness**: All acceptance criteria met?
-- **Test Coverage**: New code properly tested?
-- **Documentation**: Features documented?
-- **Code Standards**: Follows project style?
-- **Breaking Changes**: Handled properly?
+**フェーズ4：スマートな比較**
+あなたの作業を要件と比較します：
+- **機能の完全性**: すべての受け入れ基準が満たされていますか？
+- **テストカバレッジ**: 新しいコードは適切にテストされていますか？
+- **ドキュメンテーション**: 機能は文書化されていますか？
+- **コード標準**: プロジェクトのスタイルに従っていますか？
+- **破壊的変更**: 適切に処理されていますか？
 
-**Phase 5: Context-Aware Action Plan**
-Based on your specific situation:
+**フェーズ5：コンテキストに応じたアクションプラン**
+あなたの特定の状況に基づいて：
 
-**If you just finished a session:**
-- Package all session work into coherent PR(s)
-- Generate comprehensive test report
-- Create session-based PR description
-- Link to issues mentioned in session
+**セッションを終えたばかりの場合:**
+- すべてのセッション作業をまとまりのあるPRにパッケージ化する
+- 包括的なテストレポートを生成する
+- セッションベースのPR説明を作成する
+- セッションで言及されたイシューにリンクする
 
-**If you have multiple features:**
-- Suggest logical PR splits
-- Order PRs by dependencies
-- Create issue tracking for each
+**複数の機能がある場合:**
+- 論理的なPRの分割を提案する
+- 依存関係に基づいてPRを順序付ける
+- それぞれのトラッキング用のイシューを作成する
 
-**If contributing to open source:**
-- Full CONTRIBUTING.md compliance check
-- DCO/CLA signature verification
-- Community guidelines adherence
-- Issue linkage and proper labels
+**オープンソースに貢献する場合:**
+- 完全なCONTRIBUTING.mdのコンプライアンスチェック
+- DCO/CLA署名の検証
+- コミュニティガイドラインの遵守
+- イシューのリンケージと適切なラベル
 
-**Phase 6: Intelligent Remote Repository Scanning**
-I'll do a DEEP scan of the remote repository to maximize PR acceptance:
+**フェーズ6：インテリジェントなリモートリポジトリスキャン**
+PRの受け入れを最大化するために、リモートリポジトリの詳細なスキャンを行います：
 
-**Automatic Issue Discovery & Linking:**
-When you've made changes, I'll search for:
-- **Bug Reports**: "error", "bug", "broken" + your fixed files
-- **Feature Requests**: "feature", "enhancement" + your implementations
-- **Improvements**: "performance", "refactor" + your optimizations
-- **Documentation**: "docs", "readme" + your doc updates
+**自動イシュー発見とリンケージ:**
+変更を加えたとき、以下を検索します：
+- **バグレポート**: "error"、"bug"、"broken" + 修正したファイル
+- **機能リクエスト**: "feature"、"enhancement" + 実装した機能
+- **改善**: "performance"、"refactor" + 最適化
+- **ドキュメンテーション**: "docs"、"readme" + ドキュメントの更新
 
-**Smart Matching Algorithm:**
-For each change you made, I'll:
-1. Extract keywords from your code changes
-2. Search remote issues for matches
-3. Analyze issue descriptions and comments
-4. Find the BEST matches to link
+**スマートマッチングアルゴリズム:**
+あなたが行った各変更について：
+1. コードの変更からキーワードを抽出する
+2. リモートイシューで一致するものを検索する
+3. イシューの説明とコメントを分析する
+4. リンクするのに最適な一致を見つける
 
-**Proactive Issue Creation:**
-If NO matching issues exist, I'll:
-1. Detect what type of change (bug fix, feature, etc.)
-2. Use project's issue templates
-3. Create issues in project's style (NO EMOJIS):
-   - Bug: Steps to reproduce, expected vs actual
-   - Feature: User story, benefits, implementation  
-   - Enhancement: Current vs improved behavior
-   - Professional tone: Direct, factual, concise
-4. Follow project's labeling conventions
+**プロアクティブなイシュー作成:**
+一致するイシューが存在しない場合：
+1. 変更の種類（バグ修正、機能など）を検出する
+2. プロジェクトのイシューテンプレートを使用する
+3. プロジェクトのスタイルでイシューを作成する（絵文字なし）：
+   - バグ：再現手順、期待される動作と実際の動作
+   - 機能：ユーザーストーリー、利点、実装
+   - 拡張：現在の動作と改善された動作
+   - プロフェッショナルなトーン：直接的、事実に基づき、簡潔
+4. プロジェクトのラベリング規則に従う
 
-**Git Workflow Detection:**
-I'll analyze the project's workflow:
+**Gitワークフローの検出:**
+プロジェクトのワークフローを分析します：
 - **Git Flow**: feature/*, hotfix/*, release/*
-- **GitHub Flow**: feature branches → main
-- **GitLab Flow**: environment branches
-- **Custom**: Detect from existing PRs
+- **GitHub Flow**: featureブランチ → main
+- **GitLab Flow**: 環境ブランチ
+- **カスタム**: 既存のPRから検出
 
-**Smart PR Strategy:**
-Based on what I find:
-- **Issues exist**: Link with "Fixes #X", "Closes #Y"
-- **No issues**: Create them first, then link
-- **Multiple issues**: One PR per issue or grouped logically
-- **Discussion threads**: Reference with "See #Z"
+**スマートPR戦略:**
+見つけたものに基づいて：
+- **イシューが存在する場合**: "Fixes #X"、"Closes #Y"でリンクする
+- **イシューがない場合**: 最初に作成してからリンクする
+- **複数のイシュー**: イシューごとに1つのPR、または論理的にグループ化
+- **ディスカッションスレッド**: "See #Z"で参照する
 
-**PR/Issue Style:**
-- **Concise titles**: "Fix auth validation bug" not "Fixed the authentication validation bug that was causing issues"
-- **Bullet points**: Use lists, not paragraphs
-- **No emojis**: Professional tone only
-- **Direct language**: "This PR fixes X" not "I hope this PR might help with X"
-- **Match project tone**: Analyze existing PRs for style
+**PR/イシュースタイル:**
+- **簡潔なタイトル**: "Fixed the authentication validation bug that was causing issues"ではなく"Fix auth validation bug"
+- **箇条書き**: 段落ではなくリストを使用
+- **絵文字なし**: プロフェッショナルなトーンのみ
+- **直接的な言葉遣い**: "I hope this PR might help with X"ではなく"This PR fixes X"
+- **プロジェクトのトーンに合わせる**: 既存のPRを分析してスタイルを合わせる
 
-**Phase 7: Smart Decision Tree**
-When I find multiple items, I'll create a todo list with prioritized actions:
-- **Critical items** that could block PR acceptance
-- **Recommended improvements** for better approval chances
-- **Optional enhancements** based on project patterns
+**フェーズ7：スマートなデシジョンツリー**
+複数の項目を見つけた場合、優先順位を付けたアクションを含むtodoリストを作成します：
+- PRの受け入れを妨げる可能性のある**重要な項目**
+- 承認の可能性を高めるための**推奨される改善**
+- プロジェクトのパターンに基づいた**任意の拡張**
 
-I'll provide specific guidance:
-- Exact files to update and how
-- Required documentation changes
-- Testing strategies that fit the project
-- PR description template following project standards
+具体的なガイダンスを提供します：
+- 更新する正確なファイルとその方法
+- 必要なドキュメントの変更
+- プロジェクトに合ったテスト戦略
+- プロジェクト標準に従ったPR説明テンプレート
 
-**Context-Based Options**: "How should we proceed?"
+**コンテキストベースのオプション**: "どのように進めますか？"
 
-**For session work:**
-- "Package session work into PR" - I'll create PR from all session changes
-- "Create issues for TODOs" - Track remaining work
-- "Split into multiple PRs" - If you did multiple features
+**セッション作業の場合:**
+- "セッション作業をPRにパッケージ化する" - すべてのセッションの変更からPRを作成します
+- "TODOのイシューを作成する" - 残りの作業を追跡します
+- "複数のPRに分割する" - 複数の機能を実装した場合
 
-**For open source contributions:**
-- "Full compliance check & PR" - Complete CONTRIBUTING workflow
-- "Create tracking issues first" - For complex features
-- "Quick fix PR" - For simple bug fixes
+**オープンソースへの貢献の場合:**
+- "完全なコンプライアンスチェックとPR" - 完全なCONTRIBUTINGワークフロー
+- "最初にトラッキングイシューを作成する" - 複雑な機能の場合
+- "クイックフィックスPR" - 簡単なバグ修正の場合
 
-**For team/company projects:**
-- "Follow internal process" - Your team's specific workflow
-- "Create feature branch PR" - Standard git flow
-- "Deploy to staging first" - If required
+**チーム/企業プロジェクトの場合:**
+- "内部プロセスに従う" - あなたのチームの特定のワークフロー
+- "機能ブランチPRを作成する" - 標準的なgit flow
+- "最初にステージングにデプロイする" - 必要な場合
 
-**Smart PR Creation:**
-Based on context, I'll:
-- Use session summary for PR description
-- Include test results automatically
-- Link to related issues/discussions
-- Follow project's PR template exactly
-- Add appropriate labels and reviewers
+**スマートPR作成:**
+コンテキストに基づいて、以下を行います：
+- PRの説明にセッションの要約を使用する
+- テスト結果を自動的に含める
+- 関連するイシュー/ディスカッションにリンクする
+- プロジェクトのPRテンプレートに正確に従う
+- 適切なラベルとレビュー担当者を追加する
 
-**Automated Workflow Options:**
+**自動化されたワークフローオプション:**
 
-**Option 1: "Full Auto-Deploy with Issue Management"**:
+**オプション1：「イシュー管理付きの完全自動デプロイ」**:
 ```bash
-# I'll automatically:
-1. RUN ALL CHECKS FIRST:
-   - Build must pass
-   - All tests must pass
-   - Lint must pass
-   - Type check must pass
-2. Only if ALL pass, then:
-3. Scan remote for ALL related issues
-4. Create missing issues for your changes
-5. Update CHANGELOG.md 
-6. Create proper branch (feature/fix/etc)
-7. Push changes
-8. Create PR with:
-   - Links to all related issues
-   - "Fixes #123" for bugs
-   - "Implements #456" for features
-   - Perfect description following template
-9. Add labels and request reviewers
+# 自動的に以下を実行します：
+1. 最初にすべてのチェックを実行：
+   - ビルドがパスすること
+   - すべてのテストがパスすること
+   - リントがパスすること
+   - 型チェックがパスすること
+2. すべてがパスした場合のみ、次に進む：
+3. 関連するすべてのイシューをリモートでスキャンする
+4. 変更に対して不足しているイシューを作成する
+5. CHANGELOG.mdを更新する
+6. 適切なブランチ（feature/fix/など）を作成する
+7. 変更をプッシュする
+8. 以下を含むPRを作成する：
+   - 関連するすべてのイシューへのリンク
+   - バグに対する"Fixes #123"
+   - 機能に対する"Implements #456"
+   - テンプレートに従った完璧な説明
+9. ラベルを追加し、レビュー担当者をリクエストする
 ```
 
-**Option 2: "Prepare Everything"** (review before push):
+**オプション2：「すべてを準備する」**（プッシュ前にレビュー）：
 ```bash
-# I'll prepare but let you review:
-1. Stage all changes properly
-2. Generate PR description
-3. Create issue links
-4. Show you everything before push
+# 準備しますが、レビューしてもらいます：
+1. すべての変更を適切にステージングする
+2. PRの説明を生成する
+3. イシューリンクを作成する
+4. プッシュする前にすべてを表示する
 ```
 
-**Option 3: "Just Analyze"** (see what needs doing):
+**オプション3：「分析のみ」**（何が必要かを確認）：
 ```bash
-# I'll analyze and report:
-1. What's ready vs. what's missing
-2. Compliance gaps
-3. Suggested improvements
-4. Issue opportunities
+# 分析して報告します：
+1. 準備ができているものと不足しているもの
+2. コンプライアンスのギャップ
+3. 提案された改善点
+4. イシューの機会
 ```
 
-**Fork-Specific Intelligence:**
-- Compare with upstream changes
-- Suggest rebasing if needed
-- Identify conflicts early
-- Format for upstream acceptance
+**フォーク固有のインテリジェンス:**
+- アップストリームの変更と比較する
+- 必要に応じてリベースを提案する
+- 競合を早期に特定する
+- アップストリームでの受け入れのためにフォーマットする
 
-**Intelligent Session Analysis Example:**
-If you've been working and made changes:
+**インテリジェントなセッション分析の例:**
+作業中に変更を加えた場合：
 ```
-You: /contributing
+あなた: /contributing
 
-Me: Analyzing your session...
-- Found: You fixed auth bug in UserService.js
-- Found: You added rate limiting feature
-- Found: You improved performance in API
+私: セッションを分析しています...
+- 発見: UserService.jsの認証バグを修正しました
+- 発見: レート制限機能を追加しました
+- 発見: APIのパフォーマンスを改善しました
 
-Scanning remote repository...
-- Issue #45: "Auth fails randomly" → Your fix addresses this!
-- Issue #67: "Need rate limiting" → You implemented this!
-- No issue for performance improvement → I'll create one
+リモートリポジトリをスキャンしています...
+- イシュー #45: "認証がランダムに失敗する" → あなたの修正がこれに対応しています！
+- イシュー #67: "レート制限が必要" → あなたがこれを実装しました！
+- パフォーマンス改善のイシューなし → 私が作成します
 
-Options:
-1. Create issue for performance + 3 PRs (one per issue)
-2. Create issue + 1 PR fixing all three
-3. Just prepare everything for review
+オプション:
+1. パフォーマンスのイシューを作成 + 3つのPR（イシューごとに1つ）
+2. イシューを作成 + 3つすべてを修正する1つのPR
+3. レビューのためにすべてを準備するだけ
 ```
 
-**Post-Implementation Auto-Actions:**
-- Scan remote for linkable issues
-- Create missing issues automatically
-- Run `/format` on all changed files
-- Run `/test` to ensure everything passes
-- Run `/docs` to update documentation
-- Create PR with maximum context
+**実装後の自動アクション:**
+- リンク可能なイシューをリモートでスキャンする
+- 不足しているイシューを自動的に作成する
+- 変更されたすべてのファイルで`/format`を実行する
+- すべてがパスすることを確認するために`/test`を実行する
+- ドキュメントを更新するために`/docs`を実行する
+- 最大限のコンテキストを持つPRを作成する
 
-**Important**: I will NEVER:
-- Add "Created by Claude" or any AI attribution to issues/PRs
-- Include "Generated with Claude Code" in descriptions
-- Modify repository settings or permissions
-- Add any AI/assistant signatures or watermarks
-- Use emojis in PRs, issues, or commit messages
-- Be unnecessarily verbose in descriptions
-- Add flowery language or excessive explanations
-- **PUSH TO GITHUB WITHOUT PASSING TESTS**
-- **CREATE PR IF BUILD IS BROKEN**
-- **SUBMIT CODE WITH LINT ERRORS**
+**重要**: 私は決して以下のことは行いません：
+- "Created by Claude"やAIの帰属をイシュー/PRに追加する
+- "Generated with Claude Code"を説明に含める
+- リポジトリの設定や権限を変更する
+- AI/アシスタントの署名や透かしを追加する
+- PR、イシュー、またはコミットメッセージで絵文字を使用する
+- 説明で不必要に冗長になる
+- 派手な言葉遣いや過剰な説明を加える
+- **テストにパスせずにGITHUBにプッシュする**
+- **ビルドが壊れている場合にPRを作成する**
+- **リントエラーのあるコードを提出する**
 
-**Professional Standards:**
-- **Be concise**: Get to the point quickly
-- **Be objective**: Facts over feelings
-- **Follow project style**: Match existing PR/issue tone
-- **No emojis**: Keep it professional
-- **Clear and direct**: What changed and why
-- **Practical focus**: Implementation details that matter
+**プロフェッショナルスタンダード:**
+- **簡潔であること**: 要点を素早く伝える
+- **客観的であること**: 感情よりも事実
+- **プロジェクトのスタイルに従う**: 既存のPR/イシューのトーンに合わせる
+- **絵文字なし**: プロフェッショナルに保つ
+- **明確で直接的**: 何がなぜ変更されたか
+- **実践的な焦点**: 重要な実装の詳細
 
-This ensures maximum probability of PR acceptance by following all project standards and community expectations while avoiding duplicate work.
+これにより、すべてのプロジェクト標準とコミュニティの期待に従い、重複作業を避けることで、PRの受け入れ確率を最大化します。

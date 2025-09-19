@@ -1,303 +1,303 @@
-# Smart Implementation Engine
+# スマート実装エンジン
 
-I'll intelligently implement features from any source - adapting them perfectly to your project's architecture while maintaining your code patterns and standards.
+あらゆるソースからの機能をインテリジェントに実装し、あなたのコードパターンと標準を維持しながら、プロジェクトのアーキテクチャに完全に適応させます。
 
-Arguments: `$ARGUMENTS` - URLs, paths, or descriptions of what to implement
+引数: `$ARGUMENTS` - 実装するもののURL、パス、または説明
 
-## Session Intelligence
+## セッションインテリジェンス
 
-I'll check for existing implementation sessions to continue seamlessly:
+既存の実装セッションをチェックして、シームレスに続行します：
 
-**Session Files (in current project directory):**
-- `implement/plan.md` - Current implementation plan and progress
-- `implement/state.json` - Session state and checkpoints
+**セッションファイル（現在のプロジェクトディレクトリ内）:**
+- `implement/plan.md` - 現在の実装計画と進捗
+- `implement/state.json` - セッションの状態とチェックポイント
 
-**IMPORTANT:** Session files are stored in a `implement` folder in your current project root, NOT in home directory or parent folders. If a session exists, I'll resume from the exact checkpoint. Otherwise, I'll create a new implementation plan and track progress throughout.
+**重要:** セッションファイルは、現在のプロジェクトルートの`implement`フォルダに保存され、ホームディレクトリや親フォルダには保存されません。セッションが存在する場合、正確なチェックポイントから再開します。それ以外の場合は、新しい実装計画を作成し、進捗を追跡します。
 
-## Phase 1: Initial Setup & Analysis
+## フェーズ1：初期設定と分析
 
-**MANDATORY FIRST STEPS:**
-1. Check if `implement` directory exists in current working directory
-2. If directory exists, check for session files:
-   - Look for `implement/state.json`
-   - Look for `implement/plan.md`
-   - If found, resume from existing session
-3. If no directory or session exists:
-   - Create `implement/plan.md`
-   - Initialize `implement/state.json`
-4. Complete full analysis BEFORE any implementation
+**必須の最初のステップ:**
+1. 現在の作業ディレクトリに`implement`ディレクトリが存在するか確認
+2. ディレクトリが存在する場合、セッションファイルを確認：
+   - `implement/state.json`を探す
+   - `implement/plan.md`を探す
+   - 見つかった場合、既存のセッションから再開
+3. ディレクトリまたはセッションが存在しない場合：
+   - `implement/plan.md`を作成
+   - `implement/state.json`を初期化
+4. 実装前に完全な分析を完了する
 
-**Critical:** Use `implement` folder in current directory. Do NOT use `$HOME/implement` or any parent directory paths
+**重要:** 現在のディレクトリの`implement`フォルダを使用してください。`$HOME/implement`や親ディレクトリのパスは使用しないでください
 
-I'll examine what you've provided and your project structure:
+提供されたものとプロジェクトの構造を調査します：
 
-**Source Detection:**
-- Web URLs (GitHub, GitLab, CodePen, JSFiddle, documentation sites)
-- Local paths (files, folders, existing code)
-- Implementation plans (.md files with checklists)
-- Feature descriptions for research
+**ソース検出:**
+- Web URL（GitHub、GitLab、CodePen、JSFiddle、ドキュメンテーションサイト）
+- ローカルパス（ファイル、フォルダ、既存のコード）
+- 実装計画（チェックリスト付きの.mdファイル）
+- 調査用の機能説明
 
-**Project Understanding:**
-- Architecture patterns using **Glob** and **Read**
-- Existing dependencies and their versions
-- Code conventions and established patterns
-- Testing approach and quality standards
+**プロジェクトの理解:**
+- **Glob**と**Read**を使用したアーキテクチャパターン
+- 既存の依存関係とそのバージョン
+- コード規約と確立されたパターン
+- テストアプローチと品質基準
 
-## Phase 2: Strategic Planning
+## フェーズ2：戦略的計画
 
-Based on my analysis, I'll create an implementation plan:
+分析に基づいて、実装計画を作成します：
 
-**Plan Creation:**
-- Map source features to your architecture
-- Identify dependency compatibility
-- Design integration approach
-- Break work into testable chunks
+**計画の作成:**
+- ソース機能をあなたのアーキテクチャにマッピングする
+- 依存関係の互換性を特定する
+- 統合アプローチを設計する
+- 作業をテスト可能なチャンクに分割する
 
-I'll write this plan to `implement/plan.md`:
+この計画を`implement/plan.md`に書き込みます：
 
 ```markdown
-# Implementation Plan - [timestamp]
+# 実装計画 - [タイムスタンプ]
 
-## Source Analysis
-- **Source Type**: [URL/Local/Description]
-- **Core Features**: [identified features to implement]
-- **Dependencies**: [required libraries/frameworks]
-- **Complexity**: [estimated effort]
+## ソース分析
+- **ソースタイプ**: [URL/ローカル/説明]
+- **コア機能**: [実装するために特定された機能]
+- **依存関係**: [必要なライブラリ/フレームワーク]
+- **複雑さ**: [推定工数]
 
-## Target Integration
-- **Integration Points**: [where it connects]
-- **Affected Files**: [files to modify/create]
-- **Pattern Matching**: [how to adapt to project style]
+## ターゲット統合
+- **統合ポイント**: [接続する場所]
+- **影響を受けるファイル**: [変更/作成するファイル]
+- **パターンマッチング**: [プロジェクトスタイルに適応する方法]
 
-## Implementation Tasks
-[Prioritized checklist with progress tracking]
+## 実装タスク
+[進捗追跡付きの優先順位付けされたチェックリスト]
 
-## Validation Checklist
-- [ ] All features implemented
-- [ ] Tests written and passing
-- [ ] No broken functionality
-- [ ] Documentation updated
-- [ ] Integration points verified
-- [ ] Performance acceptable
+## 検証チェックリスト
+- [ ] すべての機能が実装された
+- [ ] テストが書かれ、パスしている
+- [ ] 壊れた機能がない
+- [ ] ドキュメントが更新された
+- [ ] 統合ポイントが検証された
+- [ ] パフォーマンスが許容範囲である
 
-## Risk Mitigation
-- **Potential Issues**: [identified risks]
-- **Rollback Strategy**: [git checkpoints]
+## リスク軽減
+- **潜在的な問題**: [特定されたリスク]
+- **ロールバック戦略**: [gitチェックポイント]
 ```
 
-## Phase 3: Intelligent Adaptation
+## フェーズ3：インテリジェントな適応
 
-I'll transform the source to fit your project perfectly:
+ソースをあなたのプロジェクトに完全に適合するように変換します：
 
-**Dependency Resolution:**
-- Map source libraries to your existing ones
-- Reuse your utilities instead of adding duplicates
-- Convert patterns to match your codebase
-- Update deprecated approaches to modern standards
+**依存関係の解決:**
+- ソースライブラリを既存のものにマッピングする
+- 重複を追加する代わりに、あなたのユーティリティを再利用する
+- パターンをあなたのコードベースに合わせて変換する
+- 非推奨のアプローチを最新の標準に更新する
 
-**Code Transformation:**
-- Match your naming conventions
-- Follow your error handling patterns
-- Maintain your state management approach
-- Preserve your testing style
+**コード変換:**
+- あなたの命名規則に合わせる
+- あなたのエラー処理パターンに従う
+- あなたの状態管理アプローチを維持する
+- あなたのテストスタイルを保持する
 
-**Repository Analysis Strategy:**
-For large repositories, I'll use smart sampling:
-- Core functionality first (main features, critical paths)
-- Supporting code as needed
-- Skip generated files, test data, documentation
-- Focus on actual implementation code
+**リポジトリ分析戦略:**
+大規模なリポジトリの場合、スマートサンプリングを使用します：
+- 最初にコア機能（主な機能、クリティカルパス）
+- 必要に応じてサポートコード
+- 生成されたファイル、テストデータ、ドキュメントをスキップ
+- 実際の実装コードに焦点を当てる
 
-## Phase 4: Implementation Execution
+## フェーズ4：実装の実行
 
-I'll implement features incrementally:
+機能を段階的に実装します：
 
-**Execution Process:**
-1. Implement core functionality
-2. Add supporting utilities
-3. Integrate with existing code
-4. Update tests to cover new features
-5. Validate everything works correctly
+**実行プロセス:**
+1. コア機能を実装する
+2. サポートユーティリティを追加する
+3. 既存のコードと統合する
+4. 新機能をカバーするようにテストを更新する
+5. すべてが正しく機能することを検証する
 
-**Progress Tracking:**
-- Update `implement/plan.md` as I complete each item
-- Mark checkpoints in `implement/state.json`
-- Create meaningful git commits at logical points
+**進捗追跡:**
+- 各項目を完了するたびに`implement/plan.md`を更新する
+- `implement/state.json`にチェックポイントをマークする
+- 論理的なポイントで意味のあるgitコミットを作成する
 
-## Phase 5: Quality Assurance
+## フェーズ5：品質保証
 
-I'll ensure the implementation meets your standards:
+実装があなたの基準を満たしていることを確認します：
 
-**Validation Steps:**
-- Run your existing lint commands
-- Execute test suite
-- Check for type errors
-- Verify integration points
-- Confirm no regressions
+**検証ステップ:**
+- 既存のリントコマンドを実行する
+- テストスイートを実行する
+- 型エラーをチェックする
+- 統合ポイントを検証する
+- リグレッションがないことを確認する
 
-## Deep Validation Process (All-in-One)
+## 詳細な検証プロセス（オールインワン）
 
-**ALL validation commands (`finish`, `verify`, `complete`, `enhance`) execute the SAME comprehensive process:**
+**すべての検証コマンド（`finish`、`verify`、`complete`、`enhance`）は、同じ包括的なプロセスを実行します：**
 
-When you run ANY of these: `/implement finish`, `/implement verify`, `/implement complete`, or `/implement enhance`
+これらのいずれかを実行すると：`/implement finish`、`/implement verify`、`/implement complete`、または`/implement enhance`
 
-**I will AUTOMATICALLY:**
+**自動的に以下を実行します：**
 
-1. **Deep Original Source Analysis**
-   - Thoroughly analyze EVERY aspect of original code/requirements
-   - Study ALL implementation patterns and architectures
-   - Document COMPLETE functionality and business logic
-   - Map entire code structure and dependencies
-   - Create comprehensive analysis in `implement/source-analysis.md`
+1. **詳細なオリジナルソース分析**
+   - オリジナルのコード/要件のあらゆる側面を徹底的に分析する
+   - すべての実装パターンとアーキテクチャを調査する
+   - 完全な機能とビジネスロジックを文書化する
+   - コード構造全体と依存関係をマッピングする
+   - `implement/source-analysis.md`に包括的な分析を作成する
 
-2. **Requirements Verification**
-   - Compare current implementation with original
-   - Map each original feature to new implementation
-   - Identify any missing features or behaviors
-   - Check edge cases from original code
+2. **要件の検証**
+   - 現在の実装とオリジナルを比較する
+   - 各オリジナル機能を新しい実装にマッピングする
+   - 不足している機能や動作を特定する
+   - オリジナルコードからエッジケースをチェックする
 
-3. **Comprehensive Testing**
-   - Write tests for ALL new code
-   - Run existing test suite
-   - Create integration tests
-   - Test error scenarios
-   - Verify performance requirements
+3. **包括的なテスト**
+   - すべての新しいコードのテストを作成する
+   - 既存のテストスイートを実行する
+   - 統合テストを作成する
+   - エラーシナリオをテストする
+   - パフォーマンス要件を検証する
 
-4. **Deep Code Analysis**
-   - Check for incomplete TODOs
-   - Find hardcoded values to configure
-   - Verify error handling completeness
-   - Analyze security implications
-   - Check accessibility requirements
+4. **詳細なコード分析**
+   - 未完了のTODOをチェックする
+   - 設定するハードコードされた値を見つける
+   - エラー処理の完全性を検証する
+   - セキュリティへの影響を分析する
+   - アクセシビリティ要件をチェックする
 
-5. **Automatic Refinement**
-   - Fix any failing tests
-   - Complete partial implementations
-   - Add missing error handling
-   - Optimize performance bottlenecks
-   - Improve code documentation
+5. **自動的な改良**
+   - 失敗したテストを修正する
+   - 部分的な実装を完了する
+   - 不足しているエラー処理を追加する
+   - パフォーマンスのボトルネックを最適化する
+   - コードのドキュメントを改善する
 
-6. **Integration Analysis**
-   - Analyze integration points thoroughly
-   - Verify API contracts match original
-   - Check database schema compatibility
-   - Validate UI/UX flows match requirements
-   - Ensure backward compatibility maintained
+6. **統合分析**
+   - 統合ポイントを徹底的に分析する
+   - APIコントラクトがオリジナルと一致することを確認する
+   - データベーススキーマの互換性を検証する
+   - UI/UXフローが要件と一致することを検証する
+   - 下位互換性が維持されていることを確認する
 
-7. **Completeness Report**
-   - Feature coverage: X/Y implemented
-   - Test coverage percentage
-   - Performance benchmarks
-   - Security audit results
-   - Remaining work (if any)
+7. **完全性レポート**
+   - 機能カバレッジ：X/Y実装済み
+   - テストカバレッジ率
+   - パフォーマンスベンチマーク
+   - セキュリティ監査結果
+   - 残りの作業（もしあれば）
 
-**The result:** 100% complete, tested, and production-ready implementation that matches ALL requirements.
+**結果:** すべての要件に一致する、100%完全で、テスト済みで、本番環境に対応した実装。
 
-## Context Continuity
+## コンテキストの継続性
 
-**Session Resume:**
-When you return and run `/implement` or `/implement resume`:
-- I'll load the existing plan and state
-- Show progress summary
-- Continue from the last checkpoint
-- Maintain all previous decisions and context
+**セッションの再開:**
+あなたが戻ってきて`/implement`または`/implement resume`を実行すると：
+- 既存の計画と状態をロードします
+- 進捗の要約を表示します
+- 最後のチェックポイントから続行します
+- 以前のすべての決定とコンテキストを維持します
 
-**Smart Detection:**
-- Auto-resume if session files exist
-- Start fresh with `/implement new [source]`
-- Check status with `/implement status`
+**スマート検出:**
+- セッションファイルが存在する場合に自動再開
+- `/implement new [source]`で新規開始
+- `/implement status`でステータスを確認
 
-## Practical Examples
+## 実用的な例
 
-**Single Source:**
+**単一ソース:**
 ```
 /implement https://github.com/user/feature
 /implement ./legacy-code/auth-system/
-/implement "payment processing like Stripe"
+/implement "Stripeのような支払い処理"
 ```
 
-**Multiple Sources:**
+**複数ソース:**
 ```
 /implement https://github.com/projectA ./local-examples/
 ```
 
-**Resume Session:**
+**セッションの再開:**
 ```
-/implement              # Auto-detects and resumes
-/implement resume       # Explicit resume
-/implement status       # Check progress
-/implement validate     # Validate integration completeness
-```
-
-**Deep Validation Commands:**
-```
-/implement finish       # Complete with exhaustive testing & validation
-/implement verify       # Deep verification against requirements
-/implement complete     # Ensure 100% feature completeness
-/implement enhance      # Refine and optimize implementation
+/implement              # 自動検出して再開
+/implement resume       # 明示的な再開
+/implement status       # 進捗を確認
+/implement validate     # 統合の完全性を検証
 ```
 
-## Execution Guarantee
-
-**My workflow ALWAYS follows this order:**
-
-1. **Setup session** - Create/load state files FIRST
-2. **Analyze source & target** - Complete understanding
-3. **Write plan** - Full implementation plan in `implement/plan.md`
-4. **Show plan** - Present summary before implementing
-5. **Execute systematically** - Follow plan with updates
-6. **Validate integration** - Run validation when requested
-
-**I will NEVER:**
-- Start implementing without a written plan
-- Skip source or project analysis
-- Bypass session file creation
-- Begin coding before showing the plan
-- Use emojis in commits, PRs, or git-related content
-
-## Phase 6: Implementation Validation
-
-When you run `/implement validate` after implementation:
-
-**Integration Analysis:**
-1. **Coverage Check** - Verify all planned features implemented
-2. **Integration Points** - Validate all connections work
-3. **Test Coverage** - Ensure new code is tested
-4. **TODO Scan** - Find any leftover TODOs
-5. **Documentation** - Check if docs reflect changes
-
-**Validation Report:**
+**詳細な検証コマンド:**
 ```
-IMPLEMENTATION VALIDATION
-├── Features Implemented: 12/12 (100%)
-├── Integration Points: 8/10 (2 pending)
-├── Test Coverage: 87%
-├── Build Status: Passing
-└── Documentation: Needs update
-
-PENDING ITEMS:
-- API endpoint /users/profile not connected
-- WebSocket integration incomplete
-- Missing tests for error scenarios
-- README needs feature documentation
-
-ENHANCEMENT OPPORTUNITIES:
-1. Add error boundary for new components
-2. Implement caching for API calls
-3. Add performance monitoring
-4. Create usage examples
+/implement finish       # 徹底的なテストと検証で完了
+/implement verify       # 要件に対する詳細な検証
+/implement complete     # 100%の機能完全性を確保
+/implement enhance      # 実装を改良し最適化
 ```
 
-**Validation Actions:**
-- Complete missing integrations
-- Generate comprehensive test suite
-- Update all affected documentation
-- Create migration guide if breaking changes
+## 実行の保証
 
-## Command Suggestions
+**私のワークフローは常にこの順序に従います：**
 
-After implementation milestones, I may suggest:
-- `/test` - To verify the implementation works correctly
-- `/commit` - To save progress at logical checkpoints
+1. **セッションの設定** - 最初に状態ファイルを作成/ロード
+2. **ソースとターゲットの分析** - 完全な理解
+3. **計画の作成** - `implement/plan.md`に完全な実装計画
+4. **計画の表示** - 実装前に要約を提示
+5. **体系的な実行** - 更新を伴う計画に従う
+6. **統合の検証** - 要求されたときに検証を実行
 
-I'll maintain perfect continuity across sessions, always picking up exactly where we left off with full context preservation.
+**私は決して以下のことは行いません：**
+- 書かれた計画なしに実装を開始する
+- ソースまたはプロジェクトの分析をスキップする
+- セッションファイルの作成をバイパスする
+- 計画を示す前にコーディングを開始する
+- コミット、PR、またはgit関連のコンテンツで絵文字を使用する
+
+## フェーズ6：実装の検証
+
+実装後に`/implement validate`を実行すると：
+
+**統合分析:**
+1. **カバレッジチェック** - 計画されたすべての機能が実装されたことを確認
+2. **統合ポイント** - すべての接続が機能することを確認
+3. **テストカバレッジ** - 新しいコードがテストされていることを確認
+4. **TODOスキャン** - 残っているTODOを見つける
+5. **ドキュメンテーション** - ドキュメントが変更を反映しているか確認
+
+**検証レポート:**
+```
+実装の検証
+├── 実装された機能：12/12 (100%)
+├── 統合ポイント：8/10（2つ保留中）
+├── テストカバレッジ：87%
+├── ビルドステータス：成功
+└── ドキュメンテーション：更新が必要
+
+保留中の項目：
+- APIエンドポイント/users/profileが接続されていません
+- WebSocketの統合が不完全です
+- エラーシナリオのテストが不足しています
+- READMEに機能のドキュメントが必要です
+
+改善の機会：
+1. 新しいコンポーネントにエラーバウンダリを追加する
+2. API呼び出しのキャッシュを実装する
+3. パフォーマンス監視を追加する
+4. 使用例を作成する
+```
+
+**検証アクション:**
+- 不足している統合を完了する
+- 包括的なテストスイートを生成する
+- 影響を受けるすべてのドキュメントを更新する
+- 破壊的変更がある場合は移行ガイドを作成する
+
+## コマンドの提案
+
+実装のマイルストーンの後、以下を提案することがあります：
+- `/test` - 実装が正しく機能することを確認するため
+- `/commit` - 論理的なチェックポイントで進捗を保存するため
+
+セッション間で完全な継続性を維持し、常に完全なコンテキストを保持して中断したところから正確に再開します。

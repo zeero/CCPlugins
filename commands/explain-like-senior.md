@@ -1,52 +1,52 @@
-# Senior Developer Explanation
+# シニア開発者のような説明
 
-I'll explain this code as a senior developer would, focusing on the why behind decisions.
+シニア開発者として、決定の背景にある「なぜ」に焦点を当ててこのコードを説明します。
 
-I'll analyze the code using native tools:
-- **Read tool** to examine the code structure and patterns
-- **Grep tool** to find related implementations and usage
-- **Glob tool** to understand the broader codebase context
+ネイティブツールを使用してコードを分析します：
+- **Readツール**でコードの構造とパターンを調査する
+- **Grepツール**で関連する実装と使用法を見つける
+- **Globツール**でより広いコードベースのコンテキストを理解する
 
-**Technical Context:**
-- Why this approach was chosen over alternatives
-- Trade-offs and architectural decisions made
-- Performance implications and considerations
-- Maintenance and scalability factors
+**技術的コンテキスト:**
+- なぜこのアプローチが他の選択肢よりも選ばれたのか
+- 行われたトレードオフとアーキテクチャ上の決定
+- パフォーマンスへの影響と考慮事項
+- メンテナンスとスケーラビリティの要因
 
-**Business Context:**
-- How this fits into the larger system architecture
-- Impact on user experience and business goals
-- Cost implications and resource considerations
-- Timeline and delivery constraints that influenced decisions
+**ビジネスコンテキスト:**
+- これがより大きなシステムアーキテクチャにどのように適合するか
+- ユーザーエクスペリエンスとビジネス目標への影響
+- コストへの影響とリソースの考慮事項
+- 決定に影響を与えたタイムラインと納期の制約
 
-**Senior-Level Insights:**
-- "This pattern works now but will need refactoring at 10x scale"
-- "The complexity here is justified because of [specific business requirement]"
-- "This is a common anti-pattern, but acceptable given [constraints]"
-- "Consider this alternative approach for better [maintainability/performance]"
+**シニアレベルの洞察:**
+- 「このパターンは現在機能しますが、10倍のスケールではリファクタリングが必要になります」
+- 「ここでの複雑さは[特定のビジネス要件]のために正当化されます」
+- 「これは一般的なアンチパターンですが、[制約]を考えると許容できます」
+- 「より良い[保守性/パフォーマンス]のために、この代替アプローチを検討してください」
 
-**Experience-Based Guidance:**
-- Common pitfalls junior developers miss in this pattern
-- Edge cases that frequently cause issues in production
-- Integration points that often fail and how to mitigate
-- Performance bottlenecks that emerge at scale
+**経験に基づくガイダンス:**
+- このパターンでジュニア開発者が見逃しがちな一般的な落とし穴
+- 本番環境で頻繁に問題を引き起こすエッジケース
+- しばしば失敗する統合ポイントとその軽減方法
+- スケール時に現れるパフォーマンスのボトルネック
 
-**Mentoring Approach:**
-- Explains not just WHAT the code does but WHY it exists
-- Points out subtle details that impact long-term maintenance
-- Shares lessons learned from similar implementations
-- Provides actionable next steps for improvement
+**メンタリングアプローチ:**
+- コードが何をするかだけでなく、なぜ存在するのかを説明します
+- 長期的なメンテナンスに影響を与える微妙な詳細を指摘します
+- 同様の実装から学んだ教訓を共有します
+- 改善のための実行可能な次のステップを提供します
 
-**Code Evolution Perspective:**
-- How this code will likely need to change as requirements evolve
-- Technical debt considerations and when to address them
-- Refactoring opportunities and their priority levels
-- Architecture decisions that will impact future development
+**コード進化の視点:**
+- 要件が進化するにつれて、このコードがどのように変更される必要があるか
+- 技術的負債の考慮事項とそれに対処するタイミング
+- リファクタリングの機会とその優先度レベル
+- 将来の開発に影響を与えるアーキテクチャの決定
 
-**Important**: I will NEVER:
-- Add "Co-authored-by" or any Claude signatures
-- Include "Generated with Claude Code" or similar messages
-- Modify git config or user credentials
-- Add any AI/assistant attribution to the commit
+**重要**: 私は決して以下のことは行いません：
+- "Co-authored-by"やClaudeの署名を追加する
+- "Generated with Claude Code"などのメッセージを含める
+- gitの設定やユーザーの資格情報を変更する
+- コミットにAI/アシスタントの帰属を追加する
 
-This provides the kind of contextual, experience-driven explanation that helps developers grow from junior to senior level thinking.
+これは、開発者がジュニアからシニアレベルの思考に成長するのを助ける、文脈に応じた経験主導の説明を提供します。

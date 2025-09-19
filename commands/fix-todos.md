@@ -1,172 +1,172 @@
-# Fix TODOs
+# TODOの修正
 
-I'll systematically find and resolve TODO comments in your codebase with intelligent understanding and continuity across sessions.
+コードベース内のTODOコメントを、セッションをまたいでインテリジェントな理解と継続性を持って体系的に見つけて解決します。
 
-Arguments: `$ARGUMENTS` - files, directories, or specific TODO patterns to fix
+引数: `$ARGUMENTS` - 修正するファイル、ディレクトリ、または特定のTODOパターン
 
-## Session Intelligence
+## セッションインテリジェンス
 
-I'll maintain TODO resolution progress across sessions:
+セッションをまたいでTODO解決の進捗を維持します：
 
-**Session Files (in current project directory):**
-- `fix-todos/plan.md` - All TODOs found and resolution status
-- `fix-todos/state.json` - Current progress and decisions
+**セッションファイル（現在のプロジェクトディレクトリ内）:**
+- `fix-todos/plan.md` - 見つかったすべてのTODOと解決状況
+- `fix-todos/state.json` - 現在の進捗と決定事項
 
-**IMPORTANT:** Session files are stored in a `fix-todos` folder in your current project directory
+**重要:** セッションファイルは、現在のプロジェクトディレクトリの`fix-todos`フォルダに保存されます
 
-**Auto-Detection:**
-- If session exists: Resume from last TODO
-- If no session: Scan and create new plan
-- Commands: `resume`, `status`, `new`
+**自動検出:**
+- セッションが存在する場合：最後のTODOから再開
+- セッションがない場合：スキャンして新しい計画を作成
+- コマンド：`resume`、`status`、`new`
 
-## Phase 1: Discovery & Analysis
+## フェーズ1：発見と分析
 
-**MANDATORY FIRST STEPS:**
-1. Check if `fix-todos` directory exists in current working directory
-2. If directory exists, check for session files:
-   - Look for `fix-todos/state.json`
-   - Look for `fix-todos/plan.md`
-   - If found, resume from existing session
-3. If no directory or session exists:
-   - Scan entire codebase for TODOs
-   - Create categorized plan
-   - Initialize progress tracking
-4. Show TODO summary before starting
+**必須の最初のステップ:**
+1. 現在の作業ディレクトリに`fix-todos`ディレクトリが存在するか確認
+2. ディレクトリが存在する場合、セッションファイルを確認：
+   - `fix-todos/state.json`を探す
+   - `fix-todos/plan.md`を探す
+   - 見つかった場合、既存のセッションから再開
+3. ディレクトリまたはセッションが存在しない場合：
+   - コードベース全体でTODOをスキャン
+   - 分類された計画を作成
+   - 進捗追跡を初期化
+4. 開始前にTODOの要約を表示
 
-I'll find and categorize all TODOs:
+すべてのTODOを見つけて分類します：
 
-**TODO Detection:**
-- TODO, FIXME, HACK, XXX markers
-- Different priority levels
-- Context and complexity assessment
-- Related code understanding
+**TODO検出:**
+- TODO、FIXME、HACK、XXXマーカー
+- 異なる優先度レベル
+- コンテキストと複雑さの評価
+- 関連コードの理解
 
-**Smart Categorization:**
-- **Quick fixes**: Simple validations, null checks
-- **Features**: Missing functionality
-- **Refactoring**: Code improvements
-- **Security**: Safety and validation needs
-- **Performance**: Optimization opportunities
+**スマートな分類:**
+- **迅速な修正**: 簡単な検証、nullチェック
+- **機能**: 不足している機能
+- **リファクタリング**: コードの改善
+- **セキュリティ**: 安全性と検証の必要性
+- **パフォーマンス**: 最適化の機会
 
-## Phase 2: Resolution Planning
+## フェーズ2：解決計画
 
-Based on analysis, I'll create a resolution plan:
+分析に基づいて、解決計画を作成します：
 
-**Priority Order:**
-1. Security-critical TODOs
-2. Bug-related TODOs
-3. Simple improvements
-4. Feature additions
-5. Performance optimizations
+**優先順位:**
+1. セキュリティ上重要なTODO
+2. バグ関連のTODO
+3. 簡単な改善
+4. 機能の追加
+5. パフォーマンスの最適化
 
-I'll write this plan to `fix-todos/plan.md` with:
-- Each TODO location and content
-- Proposed resolution approach
-- Risk assessment
-- Implementation order
+この計画を`fix-todos/plan.md`に書き込みます：
+- 各TODOの場所と内容
+- 提案された解決アプローチ
+- リスク評価
+- 実装順序
 
-## Phase 3: Intelligent Resolution
+## フェーズ3：インテリジェントな解決
 
-I'll fix TODOs matching your code patterns:
+あなたのコードパターンに一致するTODOを修正します：
 
-**Pattern Detection:**
-- Find similar implementations in your code
-- Match your error handling style
-- Use your validation patterns
-- Follow your naming conventions
+**パターン検出:**
+- コード内で類似の実装を見つける
+- エラー処理スタイルに合わせる
+- 検証パターンを使用する
+- 命名規則に従う
 
-**Resolution Strategies:**
-- Error handling → Your try/catch patterns
-- Validation → Your input checking style
-- Performance → Your optimization approach
-- Security → Your safety patterns
+**解決戦略:**
+- エラー処理 → あなたのtry/catchパターン
+- 検証 → あなたの入力チェックのスタイル
+- パフォーマンス → あなたの最適化アプローチ
+- セキュリティ → あなたの安全パターン
 
-## Phase 4: Incremental Implementation
+## フェーズ4：段階的な実装
 
-I'll resolve TODOs systematically:
+体系的にTODOを解決します：
 
-**Execution Process:**
-1. Create git checkpoint
-2. Fix TODO with contextual understanding
-3. Verify functionality preserved
-4. Update plan with completion
-5. Move to next TODO
+**実行プロセス:**
+1. gitチェックポイントを作成
+2. 文脈を理解してTODOを修正
+3. 機能が維持されていることを確認
+4. 完了をもって計画を更新
+5. 次のTODOに移動
 
-**Progress Tracking:**
-- Mark each TODO as resolved in plan
-- Update state file with decisions
-- Create meaningful commits
+**進捗追跡:**
+- 計画内で各TODOを解決済みとしてマーク
+- 決定事項を状態ファイルに更新
+- 意味のあるコミットを作成
 
-## Phase 5: Verification
+## フェーズ5：検証
 
-After each resolution:
-- Run relevant tests
-- Check for regressions
-- Validate integration points
-- Ensure code quality
+各解決の後：
+- 関連するテストを実行
+- リグレッションをチェック
+- 統合ポイントを検証
+- コードの品質を確保
 
-## Context Continuity
+## コンテキストの継続性
 
-**Session Resume:**
-When you return and run `/fix-todos` or `/fix-todos resume`:
-- Load existing plan and progress
-- Show completion statistics
-- Continue from last TODO
-- Maintain all resolution decisions
+**セッションの再開:**
+あなたが戻ってきて`/fix-todos`または`/fix-todos resume`を実行すると：
+- 既存の計画と進捗をロード
+- 完了統計を表示
+- 最後のTODOから続行
+- すべての解決決定を維持
 
-**Progress Example:**
+**進捗の例:**
 ```
-RESUMING TODO FIXES
-├── Total TODOs: 47
-├── Resolved: 23 (49%)
-├── Current: src/api/auth.js:42
-└── Next: src/utils/validation.js:15
+TODO修正を再開中
+├── TODO合計：47
+├── 解決済み：23 (49%)
+├── 現在：src/api/auth.js:42
+└── 次へ：src/utils/validation.js:15
 
-Continuing resolution...
-```
-
-## Practical Examples
-
-**Start Fixing:**
-```
-/fix-todos                    # Fix all TODOs
-/fix-todos src/              # Focus on directory
-/fix-todos "security"        # Fix security TODOs
+解決を続行中...
 ```
 
-**Session Control:**
+## 実用的な例
+
+**修正の開始:**
 ```
-/fix-todos resume    # Continue existing session
-/fix-todos status    # Check progress
-/fix-todos new       # Start fresh
+/fix-todos                    # すべてのTODOを修正
+/fix-todos src/              # ディレクトリに焦点を当てる
+/fix-todos "security"        # セキュリティTODOを修正
 ```
 
-## Safety Guarantees
+**セッション制御:**
+```
+/fix-todos resume    # 既存のセッションを続行
+/fix-todos status    # 進捗を確認
+/fix-todos new       # 新規開始
+```
 
-**Protection Measures:**
-- Git checkpoint before changes
-- Incremental commits
-- Functionality verification
-- No TODO removal without implementation
+## 安全性の保証
 
-**Important:** I will NEVER:
-- Remove TODOs without fixing them
-- Break existing functionality
-- Add AI attribution
-- Implement without understanding context
+**保護措置:**
+- 変更前のgitチェックポイント
+- 段階的なコミット
+- 機能の検証
+- 実装なしのTODO削除なし
 
-## Command Suggestions
+**重要:** 私は決して以下のことは行いません：
+- 修正せずにTODOを削除する
+- 既存の機能を壊す
+- AIの帰属を追加する
+- コンテキストを理解せずに実装する
 
-After resolving critical TODOs:
-- `/test` - To ensure fixes work correctly
-- `/commit` - To save TODO resolutions
+## コマンドの提案
 
-## What I'll Actually Do
+重要なTODOを解決した後：
+- `/test` - 修正が正しく機能することを確認するため
+- `/commit` - TODOの解決を保存するため
 
-1. **Scan comprehensively** - Find all TODOs with context
-2. **Plan strategically** - Order by priority and risk
-3. **Resolve intelligently** - Match your patterns
-4. **Track meticulously** - Perfect session continuity
-5. **Verify constantly** - Ensure quality maintained
+## 私が実際に何をするか
 
-I'll maintain complete continuity between sessions, always resuming exactly where we left off with full context of previous resolutions.
+1. **包括的にスキャン** - コンテキスト付きですべてのTODOを見つける
+2. **戦略的に計画** - 優先度とリスクで順序付け
+3. **インテリジェントに解決** - あなたのパターンに合わせる
+4. **細心の注意を払って追跡** - 完全なセッションの継続性
+5. **常に検証** - 品質が維持されていることを確認
+
+セッション間で完全な継続性を維持し、常に以前の解決の完全なコンテキストで中断したところから正確に再開します。
